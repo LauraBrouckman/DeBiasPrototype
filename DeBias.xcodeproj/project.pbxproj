@@ -7,18 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30333C7B1DDBC1B200902916 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30333C7A1DDBC1B200902916 /* Charts.framework */; };
+		30333C7C1DDBC1B200902916 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30333C7A1DDBC1B200902916 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30333C7F1DDBC5A800902916 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333C7E1DDBC5A800902916 /* Colors.swift */; };
 		308204871DD9590A008AD2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308204861DD9590A008AD2C4 /* AppDelegate.swift */; };
-		308204891DD9590A008AD2C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308204881DD9590A008AD2C4 /* ViewController.swift */; };
+		308204891DD9590A008AD2C4 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308204881DD9590A008AD2C4 /* PieChartViewController.swift */; };
 		3082048C1DD9590A008AD2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3082048A1DD9590A008AD2C4 /* Main.storyboard */; };
 		3082048F1DD9590A008AD2C4 /* DeBias.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3082048D1DD9590A008AD2C4 /* DeBias.xcdatamodeld */; };
 		308204911DD9590A008AD2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308204901DD9590A008AD2C4 /* Assets.xcassets */; };
 		308204941DD9590A008AD2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308204921DD9590A008AD2C4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		30333C7D1DDBC1B200902916 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				30333C7C1DDBC1B200902916 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		30333C7A1DDBC1B200902916 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Charts.framework; path = "/Users/elizabethbrouckman/Library/Developer/Xcode/DerivedData/DeBias-gleolwznmgkpvaeeclergljwjvvi/Build/Products/Debug-iphonesimulator/Charts.framework"; sourceTree = "<absolute>"; };
+		30333C7E1DDBC5A800902916 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		308204831DD9590A008AD2C4 /* DeBias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeBias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308204861DD9590A008AD2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		308204881DD9590A008AD2C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		308204881DD9590A008AD2C4 /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 		3082048B1DD9590A008AD2C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3082048E1DD9590A008AD2C4 /* DeBias.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeBias.xcdatamodel; sourceTree = "<group>"; };
 		308204901DD9590A008AD2C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30333C7B1DDBC1B200902916 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +60,7 @@
 		3082047A1DD9590A008AD2C4 = {
 			isa = PBXGroup;
 			children = (
+				30333C7A1DDBC1B200902916 /* Charts.framework */,
 				308204851DD9590A008AD2C4 /* DeBias */,
 				308204841DD9590A008AD2C4 /* Products */,
 			);
@@ -57,7 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				308204861DD9590A008AD2C4 /* AppDelegate.swift */,
-				308204881DD9590A008AD2C4 /* ViewController.swift */,
+				308204881DD9590A008AD2C4 /* PieChartViewController.swift */,
+				30333C7E1DDBC5A800902916 /* Colors.swift */,
 				3082048A1DD9590A008AD2C4 /* Main.storyboard */,
 				308204901DD9590A008AD2C4 /* Assets.xcassets */,
 				308204921DD9590A008AD2C4 /* LaunchScreen.storyboard */,
@@ -77,6 +99,7 @@
 				3082047F1DD9590A008AD2C4 /* Sources */,
 				308204801DD9590A008AD2C4 /* Frameworks */,
 				308204811DD9590A008AD2C4 /* Resources */,
+				30333C7D1DDBC1B200902916 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,7 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3082048F1DD9590A008AD2C4 /* DeBias.xcdatamodeld in Sources */,
-				308204891DD9590A008AD2C4 /* ViewController.swift in Sources */,
+				30333C7F1DDBC5A800902916 /* Colors.swift in Sources */,
+				308204891DD9590A008AD2C4 /* PieChartViewController.swift in Sources */,
 				308204871DD9590A008AD2C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +317,7 @@
 				3082049A1DD9590A008AD2C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
