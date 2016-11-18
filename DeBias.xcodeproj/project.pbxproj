@@ -10,6 +10,8 @@
 		30333C7B1DDBC1B200902916 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30333C7A1DDBC1B200902916 /* Charts.framework */; };
 		30333C7C1DDBC1B200902916 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30333C7A1DDBC1B200902916 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		30333C7F1DDBC5A800902916 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333C7E1DDBC5A800902916 /* Colors.swift */; };
+		30333C8C1DDBCF7700902916 /* me-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 30333C8B1DDBCF7700902916 /* me-icon2.png */; };
+		30333C8E1DDBCF7D00902916 /* friends-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 30333C8D1DDBCF7D00902916 /* friends-icon2.png */; };
 		308204871DD9590A008AD2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308204861DD9590A008AD2C4 /* AppDelegate.swift */; };
 		308204891DD9590A008AD2C4 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308204881DD9590A008AD2C4 /* PieChartViewController.swift */; };
 		3082048C1DD9590A008AD2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3082048A1DD9590A008AD2C4 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		30333C7A1DDBC1B200902916 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Charts.framework; path = "/Users/elizabethbrouckman/Library/Developer/Xcode/DerivedData/DeBias-gleolwznmgkpvaeeclergljwjvvi/Build/Products/Debug-iphonesimulator/Charts.framework"; sourceTree = "<absolute>"; };
 		30333C7E1DDBC5A800902916 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		30333C8B1DDBCF7700902916 /* me-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me-icon2.png"; sourceTree = "<group>"; };
+		30333C8D1DDBCF7D00902916 /* friends-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends-icon2.png"; sourceTree = "<group>"; };
 		308204831DD9590A008AD2C4 /* DeBias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeBias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308204861DD9590A008AD2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		308204881DD9590A008AD2C4 /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30333C801DDBCD7200902916 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				30333C8D1DDBCF7D00902916 /* friends-icon2.png */,
+				30333C8B1DDBCF7700902916 /* me-icon2.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		3082047A1DD9590A008AD2C4 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +97,7 @@
 				308204901DD9590A008AD2C4 /* Assets.xcassets */,
 				308204921DD9590A008AD2C4 /* LaunchScreen.storyboard */,
 				308204951DD9590A008AD2C4 /* Info.plist */,
+				30333C801DDBCD7200902916 /* Assets */,
 				3082048D1DD9590A008AD2C4 /* DeBias.xcdatamodeld */,
 			);
 			path = DeBias;
@@ -150,7 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				308204941DD9590A008AD2C4 /* LaunchScreen.storyboard in Resources */,
+				30333C8C1DDBCF7700902916 /* me-icon2.png in Resources */,
 				308204911DD9590A008AD2C4 /* Assets.xcassets in Resources */,
+				30333C8E1DDBCF7D00902916 /* friends-icon2.png in Resources */,
 				3082048C1DD9590A008AD2C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
