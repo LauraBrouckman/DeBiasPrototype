@@ -99,6 +99,7 @@ public class PieChartView: PieRadarChartViewBase
         if (valuesToHighlight())
         {
             renderer!.drawHighlighted(context: context, indices: _indicesToHighlight)
+//            spin(duration: NSTimeInterval(0.4), fromAngle: CGFloat(rotationAngle), toAngle: CGFloat(rotationAngle + 1), easingOption: ChartEasingOption.EaseInOutQuad)
         }
         
         renderer!.drawExtras(context: context)
@@ -380,7 +381,7 @@ public class PieChartView: PieRadarChartViewBase
                 attrString = NSMutableAttributedString(string: newValue!)
                 attrString?.setAttributes([
                     NSForegroundColorAttributeName: NSUIColor.blackColor(),
-                    NSFontAttributeName: NSUIFont.systemFontOfSize(12.0),
+                    NSFontAttributeName: NSUIFont.systemFontOfSize(20.0),
                     NSParagraphStyleAttributeName: paragraphStyle
                     ], range: NSMakeRange(0, attrString!.length))
             }

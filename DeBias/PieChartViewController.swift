@@ -12,15 +12,22 @@ import Charts
 class PieChartViewController: UIViewController {
     
     @IBOutlet weak var pieChartView: PieChartView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
         let categories = ["Very Conservative", "Conervative", "Neutral", "Liberal", "Very Liberal"]
-        let articlesRead = [1.0, 2.0, 5.0, 4.0, 3.0]
         
+        /* Get the number of articles read for each type from user defaults */
+        var articlesRead = Array<Double>()
+        for type in UserDefaults.articleTypes {
+            if let goal = UserDefaults.getArticleRead(type) {
+                articlesRead.append(Double(goal))
+            } else {
+                articlesRead.append(0.0)
+            }
+        }
+        /* Set up the pie chart */
         setChart(categories, values: articlesRead)
         
     }

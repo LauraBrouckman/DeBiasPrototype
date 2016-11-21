@@ -330,6 +330,8 @@ public class PieRadarChartViewBase: ChartViewBase
         }
         set
         {
+            let newAngle = ChartUtils.normalizedAngleFromAngle(newValue)
+            print("Setting raw rotation to \(newValue) and rotationt to \(newAngle)")
             _rawRotationAngle = newValue
             _rotationAngle = ChartUtils.normalizedAngleFromAngle(newValue)
             setNeedsDisplay()

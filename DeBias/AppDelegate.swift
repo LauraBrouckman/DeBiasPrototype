@@ -14,9 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        for type in UserDefaults.articleTypes {
+            UserDefaults.setArticleGoal(10, articleType: type)
+            UserDefaults.setArticleRead(4, articleType: type)
+            UserDefaults.addArticleToList("Test article name 1", articleType: type)
+            UserDefaults.addArticleToList("Test article name 2", articleType: type)
+            UserDefaults.addArticleToList("Test article name 3", articleType: type)
+            UserDefaults.addArticleToList("Test article name 4", articleType: type)
+        }
         return true
     }
 
