@@ -17,21 +17,23 @@ class ProgressBarView: UIView {
     var progressBarColor = UIColor.redColor()
     var goalLineProportion = 0.5
     var goal = 0
+    var type = "Very conservative"
     
-    var label = UILabel()
+    var typeLabel = UILabel()
+    var goalLabel = UILabel()
     
     override func drawRect(rect: CGRect) {
         //Make outer rectangle
         let maxBarWidth = bounds.size.width - 60
         let barStartX = bounds.minX + 10
         
-        let largeRect = UIBezierPath(roundedRect: CGRectMake(barStartX, bounds.minY + 20, maxBarWidth, 50), cornerRadius: 6)
+        let largeRect = UIBezierPath(roundedRect: CGRectMake(barStartX, bounds.minY + 30, maxBarWidth, 50), cornerRadius: 6)
         UIColor(red: 196/255, green: 196/255, blue: 196/255, alpha: 1.0).set()
         largeRect.fill()
         largeRect.lineWidth = 1.5
         largeRect.stroke()
         // Make inner rectangle to show progress
-        let progressRect = UIBezierPath(roundedRect: CGRectMake(barStartX, bounds.minY + 20, CGFloat(progressBarProportion) * maxBarWidth, 50), cornerRadius: 6)
+        let progressRect = UIBezierPath(roundedRect: CGRectMake(barStartX, bounds.minY + 30, CGFloat(progressBarProportion) * maxBarWidth, 50), cornerRadius: 6)
         progressBarColor.set()
         progressRect.fill()
         progressRect.lineWidth = 1.5
@@ -41,10 +43,10 @@ class ProgressBarView: UIView {
         
         
         let  path = UIBezierPath()
-        let  p0 = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.minY + 15)
+        let  p0 = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.minY + 35)
         path.moveToPoint(p0)
         
-        let p1 = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.maxY - 25)
+        let p1 = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.maxY - 20)
         path.addLineToPoint(p1)
         
         let  dashes: [ CGFloat ] = [ 4.0, 4.0 ]
@@ -55,13 +57,19 @@ class ProgressBarView: UIView {
         UIColor.blackColor().set()
         path.stroke()
         
-        // Add label
-        label.frame = CGRectMake(bounds.minX, bounds.minY, bounds.maxX, bounds.maxY)
-        label.center = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.maxY - 15)
-        label.textAlignment = NSTextAlignment.Center
-        label.text = String(goal)
-        self.addSubview(label)
-        // Add button ?
+        
+        // Add type label
+        typeLabel.frame = CGRectMake(barStartX, bounds.minY + 5, maxBarWidth, bounds.minY + 20)
+        
+        typeLabel.textAlignment = NSTextAlignment.Left
+        typeLabel.text = type
+        self.addSubview(typeLabel)
+        
+        goalLabel.frame = CGRectMake(bounds.minX, bounds.minY, bounds.maxX, bounds.maxY + 10)
+        goalLabel.center = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.maxY - 7)
+        goalLabel.textAlignment = NSTextAlignment.Center
+        goalLabel.text = String(goal)
+        self.addSubview(goalLabel)
         
     }
     

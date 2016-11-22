@@ -48,26 +48,31 @@ class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerView
         veryConservativeProgressBar.progressBarProportion = read["veryConservative"]! / maxGoal
         veryConservativeProgressBar.goalLineProportion = goals["veryConservative"]! / maxGoal
         veryConservativeProgressBar.goal = Int(goals["veryConservative"]!)
+        veryConservativeProgressBar.type = "Very Conservative Articles"
         
         conservativeProgressBar.progressBarProportion = read["conservative"]! / maxGoal
         conservativeProgressBar.progressBarColor = Colors.lightRed
         conservativeProgressBar.goalLineProportion = goals["conservative"]! / maxGoal
         conservativeProgressBar.goal = Int(goals["conservative"]!)
+        conservativeProgressBar.type = "Conservative Articles"
         
         neutralProgressBar.progressBarProportion = read["neutral"]! / maxGoal
         neutralProgressBar.progressBarColor = Colors.purple
         neutralProgressBar.goalLineProportion = goals["neutral"]! / maxGoal
         neutralProgressBar.goal = Int(goals["neutral"]!)
+        neutralProgressBar.type = "Neutral Articles"
         
         liberalProgressBar.progressBarProportion = read["liberal"]! / maxGoal
         liberalProgressBar.progressBarColor = Colors.lightBlue
         liberalProgressBar.goalLineProportion = goals["liberal"]! / maxGoal
         liberalProgressBar.goal = Int(goals["liberal"]!)
+        liberalProgressBar.type = "Liberal Articles"
         
         veryLiberalProgressBar.progressBarProportion = read["veryLiberal"]! / maxGoal
         veryLiberalProgressBar.progressBarColor = Colors.darkBlue
         veryLiberalProgressBar.goalLineProportion = goals["veryLiberal"]! / maxGoal
         veryLiberalProgressBar.goal = Int(goals["veryLiberal"]!)
+        veryLiberalProgressBar.type = "Very Liberal Articles"
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
