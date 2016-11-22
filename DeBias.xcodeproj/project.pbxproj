@@ -16,6 +16,9 @@
 		30333CDA1DE2359300902916 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333CD61DE2359300902916 /* Article.swift */; };
 		30333CDB1DE2359300902916 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333CD71DE2359300902916 /* User+CoreDataProperties.swift */; };
 		30333CDC1DE2359300902916 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333CD81DE2359300902916 /* User.swift */; };
+		30333CEA1DE4D76600902916 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333CE91DE4D76600902916 /* GoalsViewController.swift */; };
+		30333CEC1DE4D79200902916 /* ProgessBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333CEB1DE4D79200902916 /* ProgessBarView.swift */; };
+		30333CEE1DE4D90F00902916 /* edit-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 30333CED1DE4D90F00902916 /* edit-icon2.png */; };
 		308204871DD9590A008AD2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308204861DD9590A008AD2C4 /* AppDelegate.swift */; };
 		308204891DD9590A008AD2C4 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308204881DD9590A008AD2C4 /* PieChartViewController.swift */; };
 		3082048C1DD9590A008AD2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3082048A1DD9590A008AD2C4 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 		30333CD61DE2359300902916 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		30333CD71DE2359300902916 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		30333CD81DE2359300902916 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		30333CE91DE4D76600902916 /* GoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
+		30333CEB1DE4D79200902916 /* ProgessBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgessBarView.swift; sourceTree = "<group>"; };
+		30333CED1DE4D90F00902916 /* edit-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-icon2.png"; sourceTree = "<group>"; };
 		308204831DD9590A008AD2C4 /* DeBias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeBias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308204861DD9590A008AD2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		308204881DD9590A008AD2C4 /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				30333C8D1DDBCF7D00902916 /* friends-icon2.png */,
+				30333CED1DE4D90F00902916 /* edit-icon2.png */,
 				30333C8B1DDBCF7700902916 /* me-icon2.png */,
 			);
 			name = Assets;
@@ -103,6 +110,8 @@
 				308204881DD9590A008AD2C4 /* PieChartViewController.swift */,
 				30333C7E1DDBC5A800902916 /* Colors.swift */,
 				3082048A1DD9590A008AD2C4 /* Main.storyboard */,
+				30333CE91DE4D76600902916 /* GoalsViewController.swift */,
+				30333CEB1DE4D79200902916 /* ProgessBarView.swift */,
 				308204901DD9590A008AD2C4 /* Assets.xcassets */,
 				308204921DD9590A008AD2C4 /* LaunchScreen.storyboard */,
 				308204951DD9590A008AD2C4 /* Info.plist */,
@@ -173,6 +182,7 @@
 				308204941DD9590A008AD2C4 /* LaunchScreen.storyboard in Resources */,
 				30333C8C1DDBCF7700902916 /* me-icon2.png in Resources */,
 				308204911DD9590A008AD2C4 /* Assets.xcassets in Resources */,
+				30333CEE1DE4D90F00902916 /* edit-icon2.png in Resources */,
 				30333C8E1DDBCF7D00902916 /* friends-icon2.png in Resources */,
 				3082048C1DD9590A008AD2C4 /* Main.storyboard in Resources */,
 			);
@@ -191,9 +201,11 @@
 				30333CD41DE22CC300902916 /* UserDefaults.swift in Sources */,
 				30333CD91DE2359300902916 /* Article+CoreDataProperties.swift in Sources */,
 				30333CDC1DE2359300902916 /* User.swift in Sources */,
+				30333CEC1DE4D79200902916 /* ProgessBarView.swift in Sources */,
 				30333C7F1DDBC5A800902916 /* Colors.swift in Sources */,
 				308204891DD9590A008AD2C4 /* PieChartViewController.swift in Sources */,
 				308204871DD9590A008AD2C4 /* AppDelegate.swift in Sources */,
+				30333CEA1DE4D76600902916 /* GoalsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
