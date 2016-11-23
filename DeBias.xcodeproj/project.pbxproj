@@ -22,6 +22,10 @@
 		3082048F1DD9590A008AD2C4 /* DeBias.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3082048D1DD9590A008AD2C4 /* DeBias.xcdatamodeld */; };
 		308204911DD9590A008AD2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308204901DD9590A008AD2C4 /* Assets.xcassets */; };
 		308204941DD9590A008AD2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308204921DD9590A008AD2C4 /* LaunchScreen.storyboard */; };
+		9F2072D81DE39BD5003AD907 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072D71DE39BD5003AD907 /* FriendTableViewCell.swift */; };
+		9F2072DA1DE3A6D9003AD907 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072D91DE3A6D9003AD907 /* Friend.swift */; };
+		9F2072DE1DE3A8D6003AD907 /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */; };
+		9F2072E01DE3B425003AD907 /* default-profile-pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2072DF1DE3B425003AD907 /* default-profile-pic.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		308204901DD9590A008AD2C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		308204931DD9590A008AD2C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		308204951DD9590A008AD2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F2072D71DE39BD5003AD907 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		9F2072D91DE3A6D9003AD907 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
+		9F2072DF1DE3B425003AD907 /* default-profile-pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default-profile-pic.png"; path = "../../../../../Desktop/default-profile-pic.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 		30333C801DDBCD7200902916 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9F2072DF1DE3B425003AD907 /* default-profile-pic.png */,
 				30333C8D1DDBCF7D00902916 /* friends-icon2.png */,
 				30333C8B1DDBCF7700902916 /* me-icon2.png */,
 			);
@@ -102,7 +111,10 @@
 				308204861DD9590A008AD2C4 /* AppDelegate.swift */,
 				308204881DD9590A008AD2C4 /* PieChartViewController.swift */,
 				30333C7E1DDBC5A800902916 /* Colors.swift */,
+				9F2072D91DE3A6D9003AD907 /* Friend.swift */,
+				9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */,
 				3082048A1DD9590A008AD2C4 /* Main.storyboard */,
+				9F2072D71DE39BD5003AD907 /* FriendTableViewCell.swift */,
 				308204901DD9590A008AD2C4 /* Assets.xcassets */,
 				308204921DD9590A008AD2C4 /* LaunchScreen.storyboard */,
 				308204951DD9590A008AD2C4 /* Info.plist */,
@@ -175,6 +187,7 @@
 				308204911DD9590A008AD2C4 /* Assets.xcassets in Resources */,
 				30333C8E1DDBCF7D00902916 /* friends-icon2.png in Resources */,
 				3082048C1DD9590A008AD2C4 /* Main.storyboard in Resources */,
+				9F2072E01DE3B425003AD907 /* default-profile-pic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,12 +201,15 @@
 				30333CDA1DE2359300902916 /* Article.swift in Sources */,
 				3082048F1DD9590A008AD2C4 /* DeBias.xcdatamodeld in Sources */,
 				30333CDB1DE2359300902916 /* User+CoreDataProperties.swift in Sources */,
+				9F2072D81DE39BD5003AD907 /* FriendTableViewCell.swift in Sources */,
 				30333CD41DE22CC300902916 /* UserDefaults.swift in Sources */,
+				9F2072DE1DE3A8D6003AD907 /* FriendTableViewController.swift in Sources */,
 				30333CD91DE2359300902916 /* Article+CoreDataProperties.swift in Sources */,
 				30333CDC1DE2359300902916 /* User.swift in Sources */,
 				30333C7F1DDBC5A800902916 /* Colors.swift in Sources */,
 				308204891DD9590A008AD2C4 /* PieChartViewController.swift in Sources */,
 				308204871DD9590A008AD2C4 /* AppDelegate.swift in Sources */,
+				9F2072DA1DE3A6D9003AD907 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +328,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.debias.DeBias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -323,6 +340,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.debias.DeBias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
