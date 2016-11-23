@@ -280,10 +280,10 @@
             </objects>
             <point key="canvasLocation" x="1880" y="221"/>
         </scene>
-        <!--View Controller-->
+        <!--Trends View Controller-->
         <scene sceneID="8fF-Vf-pyW">
             <objects>
-                <viewController id="2SN-N8-3hQ" sceneMemberID="viewController">
+                <viewController id="2SN-N8-3hQ" customClass="TrendsViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cpn-iV-BJ1"/>
                         <viewControllerLayoutGuide type="bottom" id="IVn-iv-1j9"/>
@@ -292,19 +292,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRENDS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1b-Cl-Cxw">
-                                <rect key="frame" x="267" y="289" width="66" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjX-2f-cxG" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Y1b-Cl-Cxw" firstAttribute="centerY" secondItem="xE6-gC-sQ8" secondAttribute="centerY" id="i6Q-Em-J3x"/>
-                            <constraint firstItem="Y1b-Cl-Cxw" firstAttribute="centerX" secondItem="xE6-gC-sQ8" secondAttribute="centerX" id="o6k-DK-EcI"/>
+                            <constraint firstItem="gjX-2f-cxG" firstAttribute="leading" secondItem="xE6-gC-sQ8" secondAttribute="leading" id="8bJ-tm-bg9"/>
+                            <constraint firstItem="gjX-2f-cxG" firstAttribute="bottom" secondItem="IVn-iv-1j9" secondAttribute="top" id="Iiv-r6-Vie"/>
+                            <constraint firstItem="gjX-2f-cxG" firstAttribute="top" secondItem="Cpn-iV-BJ1" secondAttribute="bottom" id="l0h-fd-oEK"/>
+                            <constraint firstAttribute="trailing" secondItem="gjX-2f-cxG" secondAttribute="trailing" id="qAb-by-gfr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="barChart" destination="gjX-2f-cxG" id="VDd-wW-bKK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuR-xR-8pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,7 +359,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYg-Ib-kn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-251" y="-200"/>
+            <point key="canvasLocation" x="-7" y="-231"/>
         </scene>
     </scenes>
     <resources>

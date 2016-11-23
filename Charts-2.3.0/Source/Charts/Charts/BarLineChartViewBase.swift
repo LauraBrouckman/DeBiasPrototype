@@ -269,9 +269,9 @@ public class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChar
         _leftYAxisRenderer.renderAxisLabels(context: context)
         _rightYAxisRenderer.renderAxisLabels(context: context)
 
-        renderer!.drawValues(context: context)
+       // renderer!.drawValues(context: context)
 
-        _legendRenderer.renderLegend(context: context)
+        //_legendRenderer.renderLegend(context: context)
         // drawLegend()
 
         drawMarkers(context: context)
