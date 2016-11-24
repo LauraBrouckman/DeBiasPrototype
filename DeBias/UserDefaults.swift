@@ -91,7 +91,6 @@ class UserDefaults{
     static func setArticleRead(newValue: Int, articleType: String) {
         switch articleType{
         case "veryConservative":
-            print("Adding very conservative articles: \(newValue)")
             NSUserDefaults.standardUserDefaults().setValue(newValue, forKey: veryConservativeReadKey)
         case "conservative":
             NSUserDefaults.standardUserDefaults().setValue(newValue, forKey: conservativeReadyKey)

@@ -7,6 +7,8 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -71,6 +73,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="b4z-Iy-ujg"/>
                     <connections>
+                        <outlet property="detailsButton" destination="sDH-pT-rxt" id="fCf-2u-ihf"/>
                         <outlet property="pieChartView" destination="hgh-HX-7vk" id="WfL-Lv-sdC"/>
                     </connections>
                 </viewController>
@@ -78,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="495" y="-116"/>
         </scene>
-        <!--View Controller-->
+        <!--Goals View Controller-->
         <scene sceneID="yzk-NC-HOi">
             <objects>
-                <viewController id="t0q-ED-xdp" sceneMemberID="viewController">
+                <viewController id="t0q-ED-xdp" customClass="GoalsViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ceF-Sa-eu0"/>
                         <viewControllerLayoutGuide type="bottom" id="qWb-9T-1DY"/>
@@ -90,35 +93,163 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-vf-v9a">
-                                <rect key="frame" x="202" y="435" width="71" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Trends"/>
-                                <connections>
-                                    <segue destination="2SN-N8-3hQ" kind="show" identifier="showTrends" id="0gl-FH-3NH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa0-PI-UD5">
-                                <rect key="frame" x="336" y="433" width="61" height="31.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa0-PI-UD5">
+                                <rect key="frame" x="419" y="511" width="61" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="ArO-h1-xCG"/>
+                                </constraints>
                                 <state key="normal" title="Badges"/>
                                 <connections>
                                     <segue destination="pgn-j5-RVM" kind="show" identifier="showBadges" id="35e-gg-wWJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GOALS SCREEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ry-eC-NZG">
-                                <rect key="frame" x="238" y="289" width="125" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-uw-4zP">
+                                <rect key="frame" x="0.0" y="65" width="600" height="449"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4k-cP-VQV" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4B-Zc-wVF">
+                                                <rect key="frame" x="565" y="32" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="ZEi-m0-VOO"/>
+                                                    <constraint firstAttribute="height" constant="25" id="kGT-9T-y5E"/>
+                                                </constraints>
+                                                <state key="normal" image="edit-icon2.png"/>
+                                                <connections>
+                                                    <action selector="editVeryConservativeGoal:" destination="t0q-ED-xdp" eventType="touchUpInside" id="qjr-CC-bN2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="U4B-Zc-wVF" firstAttribute="centerY" secondItem="i4k-cP-VQV" secondAttribute="centerY" id="40Q-Si-i7E"/>
+                                            <constraint firstAttribute="trailing" secondItem="U4B-Zc-wVF" secondAttribute="trailing" constant="10" id="77u-Ex-pfU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQH-Bo-lPI" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="600" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7l-74-pCs">
+                                                <rect key="frame" x="565" y="31" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="MEO-4L-yh7"/>
+                                                    <constraint firstAttribute="width" constant="25" id="zjh-4g-iT8"/>
+                                                </constraints>
+                                                <state key="normal" image="edit-icon2.png"/>
+                                                <connections>
+                                                    <action selector="editConservativeGoal:" destination="t0q-ED-xdp" eventType="touchUpInside" id="uQ1-Wa-mff"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="q7l-74-pCs" secondAttribute="trailing" constant="10" id="U8C-TR-rvg"/>
+                                            <constraint firstItem="q7l-74-pCs" firstAttribute="centerY" secondItem="sQH-Bo-lPI" secondAttribute="centerY" id="Yhf-NY-vfK"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Vr-D1-2Fq" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="600" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqY-TK-iYD">
+                                                <rect key="frame" x="565" y="32" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="11D-IL-MDe"/>
+                                                    <constraint firstAttribute="width" constant="25" id="mH7-xX-bEH"/>
+                                                </constraints>
+                                                <state key="normal" image="edit-icon2.png"/>
+                                                <connections>
+                                                    <action selector="editNeutralGoal:" destination="t0q-ED-xdp" eventType="touchUpInside" id="dNh-T0-zbT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="UqY-TK-iYD" secondAttribute="trailing" constant="10" id="1fH-4T-l8v"/>
+                                            <constraint firstItem="UqY-TK-iYD" firstAttribute="centerY" secondItem="3Vr-D1-2Fq" secondAttribute="centerY" id="4BA-aC-1aT"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAQ-qx-0hb" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="270" width="600" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRo-DU-A0Z">
+                                                <rect key="frame" x="565" y="32" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="WUw-cO-8Nq"/>
+                                                    <constraint firstAttribute="height" constant="25" id="eAC-uO-hgN"/>
+                                                </constraints>
+                                                <state key="normal" image="edit-icon2.png"/>
+                                                <connections>
+                                                    <action selector="editLiberalGoal:" destination="t0q-ED-xdp" eventType="touchUpInside" id="1rD-W9-HbM"/>
+                                                    <action selector="editNeutralGoal:" destination="t0q-ED-xdp" eventType="touchUpInside" id="VDj-Zf-0tN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="YRo-DU-A0Z" secondAttribute="trailing" constant="10" id="1bx-4d-Bmk"/>
+                                            <constraint firstItem="YRo-DU-A0Z" firstAttribute="centerY" secondItem="nAQ-qx-0hb" secondAttribute="centerY" id="20r-70-Oac"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4h-v8-Fzt" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="359" width="600" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gy3-d5-cMO">
+                                                <rect key="frame" x="565" y="32" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="XZ0-rI-xfc"/>
+                                                    <constraint firstAttribute="width" constant="25" id="dLZ-5F-oGQ"/>
+                                                </constraints>
+                                                <state key="normal" image="edit-icon2.png"/>
+                                                <connections>
+                                                    <action selector="editVeryLiberalGoal:" destination="t0q-ED-xdp" eventType="touchUpInside" id="OD4-t2-GAz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gy3-d5-cMO" secondAttribute="trailing" constant="10" id="WE7-5N-Yvq"/>
+                                            <constraint firstItem="gy3-d5-cMO" firstAttribute="centerY" secondItem="n4h-v8-Fzt" secondAttribute="centerY" id="WjJ-PY-Kz3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="n4h-v8-Fzt" firstAttribute="height" secondItem="nAQ-qx-0hb" secondAttribute="height" id="iqu-ge-T3L"/>
+                                    <constraint firstItem="n4h-v8-Fzt" firstAttribute="height" secondItem="i4k-cP-VQV" secondAttribute="height" id="q9q-ZU-AFy"/>
+                                    <constraint firstItem="n4h-v8-Fzt" firstAttribute="height" secondItem="sQH-Bo-lPI" secondAttribute="height" id="tOn-5n-HrJ"/>
+                                    <constraint firstItem="n4h-v8-Fzt" firstAttribute="height" secondItem="3Vr-D1-2Fq" secondAttribute="height" id="ulj-Vd-U3A"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-vf-v9a">
+                                <rect key="frame" x="120" y="511" width="71" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="6zJ-Gm-HRF"/>
+                                </constraints>
+                                <state key="normal" title="Trends"/>
+                                <connections>
+                                    <segue destination="2SN-N8-3hQ" kind="show" identifier="showTrends" id="0gl-FH-3NH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4ry-eC-NZG" firstAttribute="centerX" secondItem="LH8-41-jQ9" secondAttribute="centerX" id="7ol-Px-hRE"/>
-                            <constraint firstItem="4ry-eC-NZG" firstAttribute="centerY" secondItem="LH8-41-jQ9" secondAttribute="centerY" id="Kpg-ub-uAh"/>
+                            <constraint firstItem="pRW-vf-v9a" firstAttribute="centerY" secondItem="Aa0-PI-UD5" secondAttribute="centerY" id="0jH-th-jvy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aa0-PI-UD5" secondAttribute="trailing" constant="100" id="0vk-gg-prj"/>
+                            <constraint firstAttribute="trailing" secondItem="yT8-uw-4zP" secondAttribute="trailing" id="GBD-bq-Dg6"/>
+                            <constraint firstAttribute="bottom" secondItem="yT8-uw-4zP" secondAttribute="bottom" constant="86" id="Mfp-mc-kRN"/>
+                            <constraint firstItem="qWb-9T-1DY" firstAttribute="top" secondItem="pRW-vf-v9a" secondAttribute="bottom" constant="10" id="My9-eS-0Cx"/>
+                            <constraint firstItem="yT8-uw-4zP" firstAttribute="top" secondItem="LH8-41-jQ9" secondAttribute="topMargin" constant="65" id="al6-KM-4PK"/>
+                            <constraint firstItem="yT8-uw-4zP" firstAttribute="leading" secondItem="LH8-41-jQ9" secondAttribute="leading" id="e4F-JB-I02"/>
+                            <constraint firstItem="pRW-vf-v9a" firstAttribute="leading" secondItem="LH8-41-jQ9" secondAttribute="leadingMargin" constant="100" id="qU1-zr-pUV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="conservativeProgressBar" destination="sQH-Bo-lPI" id="qWS-qj-6Y1"/>
+                        <outlet property="liberalProgressBar" destination="nAQ-qx-0hb" id="3ms-be-COv"/>
+                        <outlet property="neutralProgressBar" destination="3Vr-D1-2Fq" id="WJK-tx-W1c"/>
+                        <outlet property="veryConservativeProgressBar" destination="i4k-cP-VQV" id="ssT-Gv-O9c"/>
+                        <outlet property="veryLiberalProgressBar" destination="n4h-v8-Fzt" id="Zi8-JX-fSI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiV-S2-Aa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -268,6 +399,7 @@
     </scenes>
     <resources>
         <image name="DefaultProfilePic" width="250" height="250"/>
+        <image name="edit-icon2.png" width="512" height="512"/>
         <image name="friends-icon2.png" width="60" height="60"/>
         <image name="me-icon2.png" width="45" height="45"/>
     </resources>

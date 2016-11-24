@@ -13,6 +13,7 @@ class PieChartViewController: UIViewController {
     
     @IBOutlet weak var pieChartView: PieChartView!
 
+    @IBOutlet weak var detailsButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +30,11 @@ class PieChartViewController: UIViewController {
         }
         /* Set up the pie chart */
         setChart(categories, values: articlesRead)
+        
+        detailsButton.backgroundColor = UIColor.clearColor()
+        detailsButton.layer.cornerRadius = 6
+        detailsButton.layer.borderWidth = 1.5
+        detailsButton.layer.borderColor = UIColor.grayColor().CGColor
         
     }
     
