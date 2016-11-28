@@ -88,16 +88,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa0-PI-UD5">
-                                <rect key="frame" x="419" y="511" width="61" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="ArO-h1-xCG"/>
-                                </constraints>
-                                <state key="normal" title="Badges"/>
-                                <connections>
-                                    <segue destination="pgn-j5-RVM" kind="show" identifier="showBadges" id="35e-gg-wWJ"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-uw-4zP">
                                 <rect key="frame" x="0.0" y="65" width="600" height="449"/>
                                 <subviews>
@@ -176,7 +166,6 @@
                                                 <state key="normal" image="edit-icon2.png"/>
                                                 <connections>
                                                     <action selector="editLiberalGoal:" destination="t0q-ED-xdp" eventType="touchUpInside" id="1rD-W9-HbM"/>
-                                                    <action selector="editNeutralGoal:" destination="t0q-ED-xdp" eventType="touchUpInside" id="VDj-Zf-0tN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -216,32 +205,52 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-vf-v9a">
-                                <rect key="frame" x="120" y="511" width="71" height="30"/>
+                                <rect key="frame" x="70" y="510" width="85" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="71" id="6zJ-Gm-HRF"/>
+                                    <constraint firstAttribute="width" constant="85" id="TNl-VW-KfF"/>
+                                    <constraint firstAttribute="height" constant="33" id="ZGW-AN-fwv"/>
                                 </constraints>
-                                <state key="normal" title="Trends"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Trends">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="2SN-N8-3hQ" kind="show" identifier="showTrends" id="0gl-FH-3NH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa0-PI-UD5">
+                                <rect key="frame" x="445" y="510" width="85" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="Et5-51-d5w"/>
+                                    <constraint firstAttribute="height" constant="33" id="GgJ-Dq-B9S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Badges">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pgn-j5-RVM" kind="show" identifier="showBadges" id="35e-gg-wWJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pRW-vf-v9a" firstAttribute="centerY" secondItem="Aa0-PI-UD5" secondAttribute="centerY" id="0jH-th-jvy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Aa0-PI-UD5" secondAttribute="trailing" constant="100" id="0vk-gg-prj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aa0-PI-UD5" secondAttribute="trailing" constant="50" id="Aim-mz-icW"/>
                             <constraint firstAttribute="trailing" secondItem="yT8-uw-4zP" secondAttribute="trailing" id="GBD-bq-Dg6"/>
+                            <constraint firstItem="pRW-vf-v9a" firstAttribute="leading" secondItem="LH8-41-jQ9" secondAttribute="leadingMargin" constant="50" id="GgX-am-HDN"/>
                             <constraint firstAttribute="bottom" secondItem="yT8-uw-4zP" secondAttribute="bottom" constant="86" id="Mfp-mc-kRN"/>
-                            <constraint firstItem="qWb-9T-1DY" firstAttribute="top" secondItem="pRW-vf-v9a" secondAttribute="bottom" constant="10" id="My9-eS-0Cx"/>
                             <constraint firstItem="yT8-uw-4zP" firstAttribute="top" secondItem="LH8-41-jQ9" secondAttribute="topMargin" constant="65" id="al6-KM-4PK"/>
+                            <constraint firstItem="qWb-9T-1DY" firstAttribute="top" secondItem="pRW-vf-v9a" secondAttribute="bottom" constant="8" id="bF2-Re-Rlr"/>
                             <constraint firstItem="yT8-uw-4zP" firstAttribute="leading" secondItem="LH8-41-jQ9" secondAttribute="leading" id="e4F-JB-I02"/>
-                            <constraint firstItem="pRW-vf-v9a" firstAttribute="leading" secondItem="LH8-41-jQ9" secondAttribute="leadingMargin" constant="100" id="qU1-zr-pUV"/>
+                            <constraint firstItem="pRW-vf-v9a" firstAttribute="centerY" secondItem="Aa0-PI-UD5" secondAttribute="centerY" id="qIk-Fv-NMg"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="badgesButton" destination="Aa0-PI-UD5" id="F9C-9e-ARg"/>
                         <outlet property="conservativeProgressBar" destination="sQH-Bo-lPI" id="qWS-qj-6Y1"/>
                         <outlet property="liberalProgressBar" destination="nAQ-qx-0hb" id="3ms-be-COv"/>
                         <outlet property="neutralProgressBar" destination="3Vr-D1-2Fq" id="WJK-tx-W1c"/>
+                        <outlet property="trendsButton" destination="pRW-vf-v9a" id="cCw-Wb-StW"/>
                         <outlet property="veryConservativeProgressBar" destination="i4k-cP-VQV" id="ssT-Gv-O9c"/>
                         <outlet property="veryLiberalProgressBar" destination="n4h-v8-Fzt" id="Zi8-JX-fSI"/>
                     </connections>

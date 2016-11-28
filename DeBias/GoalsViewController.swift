@@ -16,10 +16,23 @@ class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerView
     @IBOutlet weak var liberalProgressBar: ProgressBarView!
     @IBOutlet weak var veryLiberalProgressBar: ProgressBarView!
     
+    @IBOutlet weak var trendsButton: UIButton!
+    @IBOutlet weak var badgesButton: UIButton!
+    
     let pickerData = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
     override func viewDidLoad() {
         super.viewDidLoad()
         updateProgressValues()
+        
+        trendsButton.backgroundColor = UIColor.clearColor()
+        trendsButton.layer.cornerRadius = 6
+        trendsButton.layer.borderWidth = 1.5
+        trendsButton.layer.borderColor = UIColor.grayColor().CGColor
+        
+        badgesButton.backgroundColor = UIColor.clearColor()
+        badgesButton.layer.cornerRadius = 6
+        badgesButton.layer.borderWidth = 1.5
+        badgesButton.layer.borderColor = UIColor.grayColor().CGColor
     }
 
     func updateProgressValues()
@@ -92,11 +105,10 @@ class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerView
     
     
     func addAlert(articleTypeName: String, articleType: String){
-        
         // create the alert
         let title = "Edit goal for " + articleTypeName + " articles"
         let currentGoal = UserDefaults.getArticleGoal(articleType)!
-        let message = "Current goal: " + String(currentGoal) + "\n\n\n\n\n\n\n"
+        let message = "Current goal: " + String(currentGoal) + "\n\n\n\n\n\n\n\n"
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert);
         alert.modalInPopover = true;
         
@@ -152,7 +164,6 @@ class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerView
     
     @IBAction func editLiberalGoal(sender: UIButton) {
         addAlert("liberal", articleType: "liberal")
-
     }
     
     @IBAction func editVeryLiberalGoal(sender: UIButton) {
