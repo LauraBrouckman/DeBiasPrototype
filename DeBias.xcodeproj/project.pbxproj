@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		301CDE161DEBBAAC007D3B94 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CDE151DEBBAAC007D3B94 /* FriendTableViewCell.swift */; };
 		301CDE181DEBBB41007D3B94 /* default-profile-pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 301CDE171DEBBB41007D3B94 /* default-profile-pic.png */; };
+		301CDE191DEBF693007D3B94 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30333C8F1DDF770F00902916 /* Charts.framework */; };
 		30333C7F1DDBC5A800902916 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333C7E1DDBC5A800902916 /* Colors.swift */; };
 		30333C8C1DDBCF7700902916 /* me-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 30333C8B1DDBCF7700902916 /* me-icon2.png */; };
 		30333C8E1DDBCF7D00902916 /* friends-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 30333C8D1DDBCF7D00902916 /* friends-icon2.png */; };
-		30333C901DDF770F00902916 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30333C8F1DDF770F00902916 /* Charts.framework */; };
 		30333CD41DE22CC300902916 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333CD31DE22CC300902916 /* UserDefaults.swift */; };
 		30333CD91DE2359300902916 /* Article+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333CD51DE2359300902916 /* Article+CoreDataProperties.swift */; };
 		30333CDA1DE2359300902916 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333CD61DE2359300902916 /* Article.swift */; };
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30333C901DDF770F00902916 /* Charts.framework in Frameworks */,
+				301CDE191DEBF693007D3B94 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +358,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DeBias/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.debias.DeBias;
