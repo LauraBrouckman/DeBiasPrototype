@@ -33,12 +33,7 @@ class ProgressBarView: UIView {
         largeRect.lineWidth = 1.5
         largeRect.stroke()
         // Make inner rectangle to show progress
-        var progressBarWidth = CGFloat(progressBarProportion) * maxBarWidth
-        if progressBarWidth > maxBarWidth {
-            progressBarWidth = maxBarWidth
-        }
-        
-        let progressRect = UIBezierPath(roundedRect: CGRectMake(barStartX, bounds.minY + 30, progressBarWidth, 50), cornerRadius: 6)
+        let progressRect = UIBezierPath(roundedRect: CGRectMake(barStartX, bounds.minY + 30, CGFloat(progressBarProportion) * maxBarWidth, 50), cornerRadius: 6)
         progressBarColor.set()
         progressRect.fill()
         progressRect.lineWidth = 1.5
@@ -48,10 +43,10 @@ class ProgressBarView: UIView {
         
         
         let  path = UIBezierPath()
-        let  p0 = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.minY + 30)
+        let  p0 = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.minY + 35)
         path.moveToPoint(p0)
         
-        let p1 = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.maxY - 22)
+        let p1 = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.maxY - 20)
         path.addLineToPoint(p1)
         
         let  dashes: [ CGFloat ] = [ 4.0, 4.0 ]
@@ -65,13 +60,13 @@ class ProgressBarView: UIView {
         
         // Add type label
         typeLabel.frame = CGRectMake(barStartX, bounds.minY + 5, maxBarWidth, bounds.minY + 20)
+        
         typeLabel.textAlignment = NSTextAlignment.Left
         typeLabel.text = type
         self.addSubview(typeLabel)
         
-        // Add goal label
         goalLabel.frame = CGRectMake(bounds.minX, bounds.minY, bounds.maxX, bounds.maxY + 10)
-        goalLabel.center = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.maxY - 14)
+        goalLabel.center = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.maxY - 7)
         goalLabel.textAlignment = NSTextAlignment.Center
         goalLabel.text = String(goal)
         self.addSubview(goalLabel)
