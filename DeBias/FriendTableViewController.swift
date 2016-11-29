@@ -9,29 +9,44 @@
 import UIKit
 
 class FriendTableViewController: UITableViewController {
-    //MARK: Properties 
     var friends = [Friend]()
+    var sortByFriends = true
+    
+    @IBAction func sortFriends(sender: AnyObject) {
+        if (sortByFriends)
+        {
+            sortFriendsDiversity()
+            sortByFriends = false
+        }else
+        {
+            sortFriendsNumArticles()
+            sortByFriends = true
+        }
+        //loadSampleFriends();
+        self.tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSampleFriends()
         sortFriendsNumArticles()
+        
     }
+    
     
     func loadSampleFriends()
     {
         let photo1 = UIImage(named: "default-profile-pic.png")!
-        let numArticles1 = 8
-        let friend1 = Friend(name:"Sarah Fisher", numArticles: numArticles1, profilePic: photo1)!
+        let articles1 = [2,2,2,2,2];
+        let friend1 = Friend(name:"Sarah Fisher", profilePic: photo1, articles: articles1)!
         
         let photo2 = UIImage(named:"default-profile-pic.png")!
-        let numArticles2 = 5
-        let friend2 = Friend(name:"Tim Wang", numArticles: numArticles2, profilePic: photo2)!
+        let articles2 = [5,3,2,0,0];
+        let friend2 = Friend(name:"Tim Wang", profilePic: photo2, articles: articles2)!
         
         let photo3 = UIImage(named:"default-profile-pic.png")!
-        let numArticles3 = 27
-        let friend3 = Friend(name:"Linda Kurt", numArticles: numArticles3, profilePic: photo3)!
-        
+        let articles3 = [1,2,3,2,1];
+        let friend3 = Friend(name:"Linda Kurt", profilePic: photo3, articles: articles3)!
         
         friends += [friend1, friend2, friend3]
     }
@@ -49,6 +64,11 @@ class FriendTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friends.count
+    }
+    
+    func sortFriendsDiversity()
+    {
+        friends.sortInPlace({ $0.diversity < $1.diversity })
     }
 
     func sortFriendsNumArticles()
