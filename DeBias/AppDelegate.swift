@@ -30,6 +30,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        
 //        UserDefaults.setArticleGoal(4, articleType: "veryLiberal")
 //        UserDefaults.setArticleRead(4, articleType: "veryLiberal")
+//        
+//        let longTermData = [
+//            ["veryConservative": 1,
+//            "conservative": 2,
+//            "neutral": 5,
+//            "liberal": 4,
+//            "veryLiberal": 5],
+//            ["veryConservative": 2,
+//                "conservative": 3,
+//                "neutral": 7,
+//                "liberal": 5,
+//                "veryLiberal":3],
+//            ["veryConservative": 2,
+//                "conservative": 5,
+//                "neutral": 10,
+//                "liberal": 7,
+//                "veryLiberal":2],
+//            
+//            
+//        ]
+//        UserDefaults.setLongTermData(longTermData)
         
         return true
     }

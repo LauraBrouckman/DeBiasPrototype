@@ -75,7 +75,7 @@ class ProgressBarView: UIView {
         typeLabel.textAlignment = NSTextAlignment.Left
         typeLabel.text = type
         self.addSubview(typeLabel)
-        
+
         goalLabel.frame = CGRectMake(bounds.minX, bounds.minY, bounds.maxX, bounds.maxY + 10)
         goalLabel.center = CGPointMake(barStartX + CGFloat(goalLineProportion) * maxBarWidth, bounds.maxY - 7)
         goalLabel.textAlignment = NSTextAlignment.Center

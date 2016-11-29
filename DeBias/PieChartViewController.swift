@@ -12,12 +12,11 @@ import Charts
 class PieChartViewController: UIViewController {
     
     @IBOutlet weak var pieChartView: PieChartView!
-
     @IBOutlet weak var detailsButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let categories = ["Very Conservative", "Conervative", "Neutral", "Liberal", "Very Liberal"]
+        let categories = ["Very Conservative", "Conservative", "Neutral", "Liberal", "Very Liberal"]
         
         /* Get the number of articles read for each type from user defaults */
         var articlesRead = Array<Double>()
@@ -37,6 +36,10 @@ class PieChartViewController: UIViewController {
         detailsButton.layer.borderColor = UIColor.grayColor().CGColor
         
     }
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        return false
+    }
+    
     
     func setChart(dataPoints: [String], values: [Double]) {
         
@@ -57,7 +60,6 @@ class PieChartViewController: UIViewController {
         colors = [Colors.darkRed, Colors.lightRed, Colors.purple, Colors.lightBlue, Colors.darkBlue]
         
         pieChartDataSet.colors = colors
-        
     }
     
     

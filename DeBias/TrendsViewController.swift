@@ -17,15 +17,24 @@ class TrendsViewController: UIViewController {
         super.viewDidLoad()
 
         let weeks = ["Nov 6-12", "Nov 13-19", "Nov 20-26"]
-        let veryConservativeArticlesRead = [1.0, 2.0, 3.0]
-        let conservativeArticlesRead = [4.0, 2.0, 6.0]
-        let neutralArticlesRead = [5.0, 6.0, 10.0]
-        let liberalArticlesRead = [6.0, 11.0, 3.0]
-        let veryLiberalArticlesRead = [1.0, 2.0, 5.0]
+        let longTermData = UserDefaults.getAllLongTermData()
+        
+        var veryConservativeArticlesRead = [Double]()
+        var conservativeArticlesRead = [Double]()
+        var neutralArticlesRead = [Double]()
+        var liberalArticlesRead = [Double]()
+        var veryLiberalArticlesRead = [Double]()
+        
+        for i in 0 ..< 3 {
+            veryConservativeArticlesRead.append(Double(longTermData[i]["veryConservative"]!))
+            conservativeArticlesRead.append(Double(longTermData[i]["conservative"]!))
+            neutralArticlesRead.append(Double(longTermData[i]["neutral"]!))
+            liberalArticlesRead.append(Double(longTermData[i]["liberal"]!))
+            veryLiberalArticlesRead.append(Double(longTermData[i]["veryLiberal"]!))
+        }
         
         let allData = [veryConservativeArticlesRead, conservativeArticlesRead, neutralArticlesRead, liberalArticlesRead, veryLiberalArticlesRead]
         
-        //setChart(weeks, values: articlesRead)
         setChartBarGroupDataSet(weeks, data: allData)
     }
     
@@ -62,14 +71,15 @@ class TrendsViewController: UIViewController {
         let dataSets: [BarChartDataSet] = [veryConservativeDataSet,conservativeDataSet, neutralDataSet, liberalDataSet, veryLiberalDataSet]
         
         let data = BarChartData(xVals: dataPoints, dataSets: dataSets)
-        
         barChart.data = data
-        
         barChart.descriptionText = ""
         barChart.animate(xAxisDuration: 0.0, yAxisDuration: 2.0)
         barChart.pinchZoomEnabled = true
         barChart.drawGridBackgroundEnabled = false
         barChart.xAxis.labelPosition = .Bottom
+        barChart.leftAxis.labelFont = UIFont(name: "Helvetica", size: CGFloat(15.0))!
+        barChart.xAxis.labelFont = UIFont(name: "Helvetica", size: CGFloat(13.0))!
+
 
     }
 

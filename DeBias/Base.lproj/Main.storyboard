@@ -35,9 +35,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgh-HX-7vk" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="27" y="145" width="547" height="310"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgh-HX-7vk" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="64" width="560" height="472"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDH-pT-rxt">
                                 <rect key="frame" x="240" y="484" width="121" height="47"/>
@@ -62,7 +63,9 @@
                             <constraint firstItem="sDH-pT-rxt" firstAttribute="centerX" secondItem="hgh-HX-7vk" secondAttribute="centerX" id="KOM-Mo-f2A"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sDH-pT-rxt" secondAttribute="bottom" constant="20" id="OHA-Tp-ta7"/>
                             <constraint firstItem="hgh-HX-7vk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PyI-f7-YFu"/>
-                            <constraint firstItem="sDH-pT-rxt" firstAttribute="top" secondItem="hgh-HX-7vk" secondAttribute="bottom" constant="29" id="Rz0-Vc-Xdf"/>
+                            <constraint firstItem="hgh-HX-7vk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WgC-Bp-Wwh"/>
+                            <constraint firstItem="hgh-HX-7vk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ymk-7Z-a3N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hgh-HX-7vk" secondAttribute="trailing" id="pQq-Hc-SHe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="b4z-Iy-ujg"/>
@@ -87,8 +90,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-vf-v9a">
-                                <rect key="frame" x="70" y="511" width="75" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-vf-v9a">
+                                <rect key="frame" x="70" y="508" width="75" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="FnI-3g-wPO"/>
                                 </constraints>
@@ -100,8 +103,8 @@
                                     <segue destination="2SN-N8-3hQ" kind="show" identifier="showTrends" id="0gl-FH-3NH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa0-PI-UD5">
-                                <rect key="frame" x="455" y="511" width="75" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa0-PI-UD5">
+                                <rect key="frame" x="455" y="508" width="75" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="TZh-qO-sDA"/>
                                 </constraints>
@@ -120,7 +123,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4B-Zc-wVF">
-                                                <rect key="frame" x="565" y="30.5" width="25" height="25"/>
+                                                <rect key="frame" x="565" y="31" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="ZEi-m0-VOO"/>
                                                     <constraint firstAttribute="height" constant="25" id="kGT-9T-y5E"/>
@@ -162,7 +165,7 @@
                                         <rect key="frame" x="0.0" y="174" width="600" height="87"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqY-TK-iYD">
-                                                <rect key="frame" x="565" y="30.5" width="25" height="25"/>
+                                                <rect key="frame" x="565" y="31" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="11D-IL-MDe"/>
                                                     <constraint firstAttribute="width" constant="25" id="mH7-xX-bEH"/>
@@ -183,7 +186,7 @@
                                         <rect key="frame" x="0.0" y="261" width="600" height="87"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRo-DU-A0Z">
-                                                <rect key="frame" x="565" y="30.5" width="25" height="25"/>
+                                                <rect key="frame" x="565" y="31" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="WUw-cO-8Nq"/>
                                                     <constraint firstAttribute="height" constant="25" id="eAC-uO-hgN"/>
@@ -204,7 +207,7 @@
                                         <rect key="frame" x="0.0" y="348" width="600" height="87"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gy3-d5-cMO">
-                                                <rect key="frame" x="565" y="30.5" width="25" height="25"/>
+                                                <rect key="frame" x="565" y="31" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="XZ0-rI-xfc"/>
                                                     <constraint firstAttribute="width" constant="25" id="dLZ-5F-oGQ"/>
@@ -391,7 +394,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYg-Ib-kn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7" y="-231"/>
+            <point key="canvasLocation" x="-330" y="-231"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5D6-ic-dpC">
