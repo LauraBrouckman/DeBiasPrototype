@@ -29,6 +29,7 @@
 		9F2072DA1DE3A6D9003AD907 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072D91DE3A6D9003AD907 /* Friend.swift */; };
 		9F2072DE1DE3A8D6003AD907 /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */; };
 		9F2072E01DE3B425003AD907 /* default-profile-pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F2072DF1DE3B425003AD907 /* default-profile-pic.png */; };
+		9F92842F1DED396900EBD85F /* FriendPieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9F2072D91DE3A6D9003AD907 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
 		9F2072DF1DE3B425003AD907 /* default-profile-pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default-profile-pic.png"; path = "../../../../../Desktop/default-profile-pic.png"; sourceTree = "<group>"; };
+		9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPieChartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				308204881DD9590A008AD2C4 /* PieChartViewController.swift */,
 				30333C7E1DDBC5A800902916 /* Colors.swift */,
 				9F2072D91DE3A6D9003AD907 /* Friend.swift */,
+				9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */,
 				9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */,
 				3082048A1DD9590A008AD2C4 /* Main.storyboard */,
 				9F2072D71DE39BD5003AD907 /* FriendTableViewCell.swift */,
@@ -218,6 +221,7 @@
 				30333CDC1DE2359300902916 /* User.swift in Sources */,
 				30333CEC1DE4D79200902916 /* ProgessBarView.swift in Sources */,
 				30333C7F1DDBC5A800902916 /* Colors.swift in Sources */,
+				9F92842F1DED396900EBD85F /* FriendPieChartViewController.swift in Sources */,
 				308204891DD9590A008AD2C4 /* PieChartViewController.swift in Sources */,
 				308204871DD9590A008AD2C4 /* AppDelegate.swift in Sources */,
 				9F2072DA1DE3A6D9003AD907 /* Friend.swift in Sources */,

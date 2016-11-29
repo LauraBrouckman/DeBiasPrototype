@@ -89,8 +89,26 @@ class FriendTableViewController: UITableViewController {
         cell.numArticlesLabel.text = String(friend.numArticles);
         return cell
     }
- 
+    
+//    let blogSegueIdentifier = "ShowBlogSegue"
+//    
+//    // MARK: - Navigation
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if  segue.identifier == blogSegueIdentifier,
+// 
 
+    let friendSegueIdentifier = "ShowFriendPieChart"
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if  segue.identifier == friendSegueIdentifier,
+            let destination = segue.destinationViewController as? FriendPieChartViewController,
+            friendIndex = tableView.indexPathForSelectedRow?.row
+            {
+                destination.name = friends[friendIndex].name
+                destination.profilePic = friends[friendIndex].profilePic!
+                destination.articles = friends[friendIndex].articles
+            }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

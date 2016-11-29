@@ -26,7 +26,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pal-XV-okh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-666" y="42"/>
+            <point key="canvasLocation" x="-774" y="231"/>
         </scene>
         <!--Pie Chart View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="-116"/>
+            <point key="canvasLocation" x="735" y="-203"/>
         </scene>
         <!--Goals View Controller-->
         <scene sceneID="yzk-NC-HOi">
@@ -252,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiV-S2-Aa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="-139"/>
+            <point key="canvasLocation" x="1543" y="-203"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bPw-Ri-VCj">
@@ -282,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIl-8B-21X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2818.4000000000001" y="220.83958020989508"/>
+            <point key="canvasLocation" x="2412" y="-533"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8fF-Vf-pyW">
@@ -312,7 +312,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuR-xR-8pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2122.4000000000001" y="584.25787106446785"/>
+            <point key="canvasLocation" x="2412" y="151"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="5vY-nI-Z19">
+            <objects>
+                <viewController id="NmW-mU-fvJ" customClass="FriendPieChartViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vhr-b5-VaY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jlh-pO-VZs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aN9-Uv-fFI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="33I-mz-WvZ"/>
+                    <connections>
+                        <outlet property="navTitle" destination="33I-mz-WvZ" id="lNg-Tc-Fka"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERD-Pu-iFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664.8" y="598.65067466266873"/>
         </scene>
         <!--Friends-->
         <scene sceneID="qxY-Mu-hly">
@@ -362,6 +384,7 @@
                                     <outlet property="numArticlesLabel" destination="jLL-eJ-Utt" id="lyJ-lp-Di0"/>
                                     <outlet property="profilePicture" destination="wQA-O3-SpH" id="gnJ-5v-UHa"/>
                                     <outlet property="rankingLabel" destination="Wfk-46-ONd" id="XB4-gI-QGl"/>
+                                    <segue destination="NmW-mU-fvJ" kind="show" identifier="ShowFriendPieChart" id="YOy-YG-wzx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -384,7 +407,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxQ-sE-1xX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="927" y="584"/>
+            <point key="canvasLocation" x="874" y="599"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FxP-CK-zfE">
@@ -403,7 +426,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYg-Ib-kn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-251" y="-200"/>
+            <point key="canvasLocation" x="22" y="-202"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5D6-ic-dpC">
