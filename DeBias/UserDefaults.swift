@@ -33,6 +33,11 @@ class UserDefaults{
     static var liberalArticles              = "liberalArticles"
     static var veryLiberalArticles          = "veryLiberalArticles"
     
+    static var firstWeekKey                 = "week1Articles"
+    static var secondWeekKey                = "week2Articles"
+    static var thirdWeekKey                 = "week3Articles"
+    static var weekKeys                            = [firstWeekKey, secondWeekKey, thirdWeekKey]
+
     static var articleTypes = ["veryConservative", "conservative", "neutral", "liberal", "veryLiberal"]
     
     /* Get and set basic fields like username and password */
@@ -218,6 +223,24 @@ class UserDefaults{
             setArticleRead(0, articleType: type)
             clearArticleList(type)
         }
+    }
+    
+    static func setLongTermData(data: [Dictionary<String, Int>]) {
+        for i in 0 ..< 3  {
+            NSUserDefaults.standardUserDefaults().setValue(data[i], forKey: weekKeys[i])
+        }
+    }
+    
+    static func getAllLongTermData() -> [Dictionary<String, Int>]{
+        var data = [Dictionary<String, Int>]()
+        for i in 0..<3 {
+            data.append((NSUserDefaults.standardUserDefaults().valueForKey(weekKeys[i]) as? Dictionary<String, Int>)!)
+        }
+        return data
+    }
+    
+    static func getLongTermData(forWeek week: Int) -> Dictionary<String, Int>! {
+        return NSUserDefaults.standardUserDefaults().valueForKey(weekKeys[week]) as? Dictionary<String, Int>
     }
     
 }

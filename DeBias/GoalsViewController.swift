@@ -9,22 +9,56 @@
 import UIKit
 
 class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate {
-
+    
     @IBOutlet weak var veryConservativeProgressBar: ProgressBarView!
     @IBOutlet weak var conservativeProgressBar: ProgressBarView!
     @IBOutlet weak var neutralProgressBar: ProgressBarView!
     @IBOutlet weak var liberalProgressBar: ProgressBarView!
     @IBOutlet weak var veryLiberalProgressBar: ProgressBarView!
     
+    @IBOutlet weak var badgesButton: UIButton!
+    @IBOutlet weak var trendsButton: UIButton!
+    
     let pickerData = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         updateProgressValues()
+        
+        badgesButton.backgroundColor = UIColor.clearColor()
+        badgesButton.layer.cornerRadius = 6
+        badgesButton.layer.borderWidth = 1.5
+        badgesButton.layer.borderColor = UIColor.grayColor().CGColor
+        
+        trendsButton.backgroundColor = UIColor.clearColor()
+        trendsButton.layer.cornerRadius = 6
+        trendsButton.layer.borderWidth = 1.5
+        trendsButton.layer.borderColor = UIColor.grayColor().CGColor
     }
-
+    
+    func updateForProgressBar(progressBar: ProgressBarView, key: String, maxGoal: Double, color: UIColor, type: String, goals: Dictionary<String, Double>, read: Dictionary<String, Double>) {
+        //Type 1: This way, the max goal is the width of the bar and all other bars are prop. there is a line indicating where the specific goal is set.
+                progressBar.progressBarProportion = read[key]! / maxGoal
+                progressBar.goalLineProportion = goals[key]! / maxGoal
+        //        //Type 2: his way, the bar width is set to the proportional specific goal and is filled based on articles read
+//                progressBar.progressBarProportion = read[key]! / goals[key]!
+//                progressBar.drawLine = false
+//                progressBar.goalLineProportion = 1.0
+        
+        //Type 3: his way, the bar width is set directly to goal and filled based on articles
+//        progressBar.drawLine = false
+//        progressBar.progressBarProportion = read[key]! / goals[key]!
+//        progressBar.totalBarWidthProportion = goals[key]! / maxGoal
+//        progressBar.goalLineProportion = 1.0
+//        
+        progressBar.progressBarColor = color
+        progressBar.goal = Int(goals[key]!)
+        progressBar.type = type
+    }
+    
     func updateProgressValues()
     {
-        
         let goals = [
             "veryConservative": Double(UserDefaults.getArticleGoal("veryConservative")!),
             "conservative": Double(UserDefaults.getArticleGoal("conservative")!),
@@ -40,39 +74,14 @@ class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerView
             "liberal": Double(UserDefaults.getArticleRead("liberal")!),
             "veryLiberal": Double(UserDefaults.getArticleRead("veryLiberal")!)
         ]
-        
-        let maxGoal = goals.values.maxElement()!
-        
 
-        veryConservativeProgressBar.progressBarColor = Colors.darkRed
-        veryConservativeProgressBar.progressBarProportion = read["veryConservative"]! / maxGoal
-        veryConservativeProgressBar.goalLineProportion = goals["veryConservative"]! / maxGoal
-        veryConservativeProgressBar.goal = Int(goals["veryConservative"]!)
-        veryConservativeProgressBar.type = "Very Conservative Articles"
+        let maxGoal = goals.values.maxElement()!
+        updateForProgressBar(veryConservativeProgressBar, key: "veryConservative", maxGoal: maxGoal, color: Colors.darkRed, type: "Very Conservative Articles", goals: goals, read: read)
+        updateForProgressBar(conservativeProgressBar, key: "conservative", maxGoal: maxGoal, color: Colors.lightRed, type: "Conservative Articles", goals: goals, read: read)
+        updateForProgressBar(neutralProgressBar, key: "neutral", maxGoal: maxGoal, color: Colors.purple, type: "Neutral Articles", goals: goals, read: read)
+        updateForProgressBar(liberalProgressBar, key: "liberal", maxGoal: maxGoal, color: Colors.lightBlue, type: "Liberal Articles", goals: goals, read: read)
+        updateForProgressBar(veryLiberalProgressBar, key: "veryLiberal", maxGoal: maxGoal, color: Colors.darkBlue, type: "Very Liberal Articles", goals: goals, read: read)
         
-        conservativeProgressBar.progressBarProportion = read["conservative"]! / maxGoal
-        conservativeProgressBar.progressBarColor = Colors.lightRed
-        conservativeProgressBar.goalLineProportion = goals["conservative"]! / maxGoal
-        conservativeProgressBar.goal = Int(goals["conservative"]!)
-        conservativeProgressBar.type = "Conservative Articles"
-        
-        neutralProgressBar.progressBarProportion = read["neutral"]! / maxGoal
-        neutralProgressBar.progressBarColor = Colors.purple
-        neutralProgressBar.goalLineProportion = goals["neutral"]! / maxGoal
-        neutralProgressBar.goal = Int(goals["neutral"]!)
-        neutralProgressBar.type = "Neutral Articles"
-        
-        liberalProgressBar.progressBarProportion = read["liberal"]! / maxGoal
-        liberalProgressBar.progressBarColor = Colors.lightBlue
-        liberalProgressBar.goalLineProportion = goals["liberal"]! / maxGoal
-        liberalProgressBar.goal = Int(goals["liberal"]!)
-        liberalProgressBar.type = "Liberal Articles"
-        
-        veryLiberalProgressBar.progressBarProportion = read["veryLiberal"]! / maxGoal
-        veryLiberalProgressBar.progressBarColor = Colors.darkBlue
-        veryLiberalProgressBar.goalLineProportion = goals["veryLiberal"]! / maxGoal
-        veryLiberalProgressBar.goal = Int(goals["veryLiberal"]!)
-        veryLiberalProgressBar.type = "Very Liberal Articles"
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -103,7 +112,7 @@ class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerView
         
         // now create our custom view - we are using a container view which can contain other views
         let containerViewWidth = 250
-        let containerViewHeight = 150
+        let containerViewHeight = 120
         let containerFrame = CGRectMake(10, 70, CGFloat(containerViewWidth), CGFloat(containerViewHeight));
         //let containerView: UIView = UIView(frame: containerFrame);
         let pickerView = UIPickerView(frame: containerFrame)
@@ -147,17 +156,17 @@ class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerView
     
     @IBAction func editNeutralGoal(sender: UIButton) {
         addAlert("neutral", articleType: "neutral")
-
+        
     }
     
     @IBAction func editLiberalGoal(sender: UIButton) {
         addAlert("liberal", articleType: "liberal")
-
+        
     }
     
     @IBAction func editVeryLiberalGoal(sender: UIButton) {
         addAlert("very liberal", articleType: "veryLiberal")
-
+        
     }
     
     override func didReceiveMemoryWarning() {
