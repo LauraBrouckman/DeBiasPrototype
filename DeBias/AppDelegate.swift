@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            
 //        ]
 //        UserDefaults.setLongTermData(longTermData)
-        
+//        
         return true
     }
     

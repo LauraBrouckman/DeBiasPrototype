@@ -23,5 +23,6 @@ class FriendTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
+    
 
 }
