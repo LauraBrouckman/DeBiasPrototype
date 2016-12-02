@@ -17,6 +17,9 @@ class FriendPieChartViewController: UIViewController
     var articles = Array<Int>()
     
     @IBOutlet weak var navTitle: UINavigationItem!
+//    @IBOutlet weak var navTitle: UINavigationItem!
+    //@IBOutlet weak var navTitle: UINavigationItem!
+    //@IBOutlet weak var navTitle: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         navTitle.title = name

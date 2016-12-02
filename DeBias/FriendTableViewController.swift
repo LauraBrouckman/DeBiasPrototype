@@ -12,6 +12,8 @@ class FriendTableViewController: UITableViewController {
     var friends = [Friend]()
     var sortByFriends = true
     
+//    @IBOutlet weak var navTitle: UINavigationItem!
+//    
     @IBAction func sortFriends(sender: AnyObject) {
         if (sortByFriends)
         {
@@ -30,6 +32,7 @@ class FriendTableViewController: UITableViewController {
         super.viewDidLoad()
         loadSampleFriends()
         sortFriendsNumArticles()
+        //navTitle.title = "Friends"
         
     }
     
@@ -63,7 +66,7 @@ class FriendTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friends.count
+        return friends.count + 1
     }
     
     func sortFriendsDiversity()
@@ -78,24 +81,28 @@ class FriendTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
+
+        if (indexPath.row == 0)
+        {
+            let cellIdentifier1 = "FriendToolbarViewCell"
+            let cell1 = tableView.dequeueReusableCellWithIdentifier(cellIdentifier1, forIndexPath: indexPath) as! FriendToolbarViewCell
+            //cell1.
+            tableView.rowHeight = 40
+            return cell1
+            
+        }
+        tableView.rowHeight = 90
         let cellIdentifier = "FriendTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! FriendTableViewCell
         
-        let friend = friends[indexPath.row]
+        let friend = friends[indexPath.row - 1]
         
         cell.nameLabel.text = friend.name
         cell.profilePicture.image = friend.profilePic
-        cell.rankingLabel.text = String(indexPath.row + 1)
+        cell.rankingLabel.text = String(indexPath.row)
         cell.numArticlesLabel.text = String(friend.numArticles);
         return cell
     }
-    
-//    let blogSegueIdentifier = "ShowBlogSegue"
-//    
-//    // MARK: - Navigation
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if  segue.identifier == blogSegueIdentifier,
-// 
 
     let friendSegueIdentifier = "ShowFriendPieChart"
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
