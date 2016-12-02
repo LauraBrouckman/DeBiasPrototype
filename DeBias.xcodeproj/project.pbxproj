@@ -41,7 +41,6 @@
 		9F9284351DEE5D4F00EBD85F /* add-friend-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9284341DEE5D4F00EBD85F /* add-friend-icon2.png */; };
 		9F9284371DEE5DBF00EBD85F /* add-friend-icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9284361DEE5DBF00EBD85F /* add-friend-icon3.png */; };
 		9F9284391DEF9DE100EBD85F /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9284381DEF9DE100EBD85F /* settings-icon.png */; };
-		9F92843B1DEFA34000EBD85F /* settings-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F92843A1DEFA34000EBD85F /* settings-icon1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +80,6 @@
 		9F9284341DEE5D4F00EBD85F /* add-friend-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-friend-icon2.png"; sourceTree = "<group>"; };
 		9F9284361DEE5DBF00EBD85F /* add-friend-icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-friend-icon3.png"; sourceTree = "<group>"; };
 		9F9284381DEF9DE100EBD85F /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon.png"; sourceTree = "<group>"; };
-		9F92843A1DEFA34000EBD85F /* settings-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +99,6 @@
 			children = (
 				305792501DF1E6980036495E /* settings-icon1.png */,
 				9F9284381DEF9DE100EBD85F /* settings-icon.png */,
-				9F92843A1DEFA34000EBD85F /* settings-icon1.png */,
 				9F9284341DEE5D4F00EBD85F /* add-friend-icon2.png */,
 				9F9284361DEE5DBF00EBD85F /* add-friend-icon3.png */,
 				301CDE171DEBBB41007D3B94 /* default-profile-pic.png */,
@@ -241,7 +238,6 @@
 				9F9284351DEE5D4F00EBD85F /* add-friend-icon2.png in Resources */,
 				3082048C1DD9590A008AD2C4 /* Main.storyboard in Resources */,
 				301CDE181DEBBB41007D3B94 /* default-profile-pic.png in Resources */,
-				9F92843B1DEFA34000EBD85F /* settings-icon1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -86,7 +86,6 @@ class FriendTableViewController: UITableViewController {
         {
             let cellIdentifier1 = "FriendToolbarViewCell"
             let cell1 = tableView.dequeueReusableCellWithIdentifier(cellIdentifier1, forIndexPath: indexPath) as! FriendToolbarViewCell
-            //cell1.
             tableView.rowHeight = 40
             return cell1
             
