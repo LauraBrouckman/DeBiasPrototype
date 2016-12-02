@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="878" y="-204"/>
         </scene>
-        <!--Goals View Controller-->
+        <!--Weekly Goals-->
         <scene sceneID="yzk-NC-HOi">
             <objects>
-                <viewController id="t0q-ED-xdp" customClass="GoalsViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Weekly Goals" id="t0q-ED-xdp" customClass="GoalsViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ceF-Sa-eu0"/>
                         <viewControllerLayoutGuide type="bottom" id="qWb-9T-1DY"/>
@@ -315,10 +315,10 @@
             </objects>
             <point key="canvasLocation" x="1721" y="-203"/>
         </scene>
-        <!--Article Table View Controller-->
+        <!--Articles-->
         <scene sceneID="Qvr-zx-rsT">
             <objects>
-                <tableViewController id="Cbv-iy-mkF" customClass="ArticleTableViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Articles" id="Cbv-iy-mkF" customClass="ArticleTableViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" id="AMK-O8-etX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,7 +378,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5C-L9-kxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2151" y="-899"/>
+            <point key="canvasLocation" x="2695" y="-187"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="8CJ-Be-51o">
@@ -429,12 +429,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUz-it-CPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2916" y="-905"/>
+            <point key="canvasLocation" x="3630" y="-188"/>
         </scene>
-        <!--View Controller-->
+        <!--Badges-->
         <scene sceneID="bPw-Ri-VCj">
             <objects>
-                <viewController id="pgn-j5-RVM" sceneMemberID="viewController">
+                <viewController title="Badges" id="pgn-j5-RVM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k9G-Ac-lPm"/>
                         <viewControllerLayoutGuide type="bottom" id="OVQ-PA-PQ0"/>
@@ -442,29 +442,17 @@
                     <view key="view" contentMode="scaleToFill" id="cpq-eV-G8Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BADGES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8u-y1-Tc3">
-                                <rect key="frame" x="154" y="323" width="67" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="w8u-y1-Tc3" firstAttribute="centerY" secondItem="cpq-eV-G8Q" secondAttribute="centerY" id="WPg-dj-LFK"/>
-                            <constraint firstItem="w8u-y1-Tc3" firstAttribute="centerX" secondItem="cpq-eV-G8Q" secondAttribute="centerX" id="aeS-A6-dSE"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIl-8B-21X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2477" y="-218"/>
+            <point key="canvasLocation" x="2538" y="-916"/>
         </scene>
-        <!--Trends View Controller-->
+        <!--Trends-->
         <scene sceneID="8fF-Vf-pyW">
             <objects>
-                <viewController id="2SN-N8-3hQ" customClass="TrendsViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Trends" id="2SN-N8-3hQ" customClass="TrendsViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cpn-iV-BJ1"/>
                         <viewControllerLayoutGuide type="bottom" id="IVn-iv-1j9"/>
@@ -492,7 +480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuR-xR-8pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2625" y="231"/>
+            <point key="canvasLocation" x="2670" y="557"/>
         </scene>
         <!--Title-->
         <scene sceneID="5vY-nI-Z19">
@@ -593,17 +581,7 @@
                             <outlet property="delegate" destination="EbE-oA-Hcf" id="F19-54-wqc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Friends" id="JCu-YC-qty">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="qbm-NY-c7z">
-                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="xZC-Xk-T2v">
-                                <rect key="frame" x="531" y="6" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="sortFriends:" destination="EbE-oA-Hcf" eventType="valueChanged" id="n6n-R5-jr8"/>
-                                </connections>
-                            </switch>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Friends" id="JCu-YC-qty"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxQ-sE-1xX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -615,10 +593,13 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xMg-jn-icK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="me-icon2.png" id="3P4-pe-Co4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="XIK-IN-RhO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="XIK-IN-RhO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.062745098039215685" green="0.86274509803921573" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -635,12 +616,13 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bIQ-er-LyS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="friends-icon2.png" id="S7i-CP-9ju"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="LGU-Y9-RaH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="LGU-Y9-RaH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.14859241247177124" green="0.8324134349822998" blue="0.47565209865570068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.061123378574848175" green="0.86395448446273804" blue="0.61787146329879761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

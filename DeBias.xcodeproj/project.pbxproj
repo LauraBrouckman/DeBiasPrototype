@@ -35,6 +35,7 @@
 		30C034521DF0FF80006E927A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C034511DF0FF80006E927A /* WebViewController.swift */; };
 		9F2072DA1DE3A6D9003AD907 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072D91DE3A6D9003AD907 /* Friend.swift */; };
 		9F2072DE1DE3A8D6003AD907 /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */; };
+		9F33AD121DF22A2B008DEED5 /* BadgesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33AD111DF22A2B008DEED5 /* BadgesCollectionViewController.swift */; };
 		9F92842F1DED396900EBD85F /* FriendPieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */; };
 		9F9284311DEE421500EBD85F /* FriendToolbarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9284301DEE421500EBD85F /* FriendToolbarViewCell.swift */; };
 		9F9284351DEE5D4F00EBD85F /* add-friend-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9284341DEE5D4F00EBD85F /* add-friend-icon2.png */; };
@@ -73,6 +74,7 @@
 		30C034511DF0FF80006E927A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		9F2072D91DE3A6D9003AD907 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
+		9F33AD111DF22A2B008DEED5 /* BadgesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BadgesCollectionViewController.swift; sourceTree = "<group>"; };
 		9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPieChartViewController.swift; sourceTree = "<group>"; };
 		9F9284301DEE421500EBD85F /* FriendToolbarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendToolbarViewCell.swift; sourceTree = "<group>"; };
 		9F9284341DEE5D4F00EBD85F /* add-friend-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-friend-icon2.png"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				30333CEF1DE4F9D600902916 /* TrendsViewController.swift */,
 				30333CE91DE4D76600902916 /* GoalsViewController.swift */,
 				30333CEB1DE4D79200902916 /* ProgessBarView.swift */,
+				9F33AD111DF22A2B008DEED5 /* BadgesCollectionViewController.swift */,
 				308204901DD9590A008AD2C4 /* Assets.xcassets */,
 				308204921DD9590A008AD2C4 /* LaunchScreen.storyboard */,
 				308204951DD9590A008AD2C4 /* Info.plist */,
@@ -198,6 +201,7 @@
 					308204821DD9590A008AD2C4 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = AZH8QXDTL7;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -254,6 +258,7 @@
 				30333CD41DE22CC300902916 /* UserDefaults.swift in Sources */,
 				9F9284311DEE421500EBD85F /* FriendToolbarViewCell.swift in Sources */,
 				9F2072DE1DE3A8D6003AD907 /* FriendTableViewController.swift in Sources */,
+				9F33AD121DF22A2B008DEED5 /* BadgesCollectionViewController.swift in Sources */,
 				30333CD91DE2359300902916 /* Article+CoreDataProperties.swift in Sources */,
 				301CDE1F1DEE3D15007D3B94 /* ArticleTableViewCell.swift in Sources */,
 				30333CDC1DE2359300902916 /* User.swift in Sources */,
@@ -383,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DeBias/Info.plist;
@@ -391,6 +397,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.debias.DeBias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -399,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DeBias/Info.plist;
@@ -407,6 +416,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.debias.DeBias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
