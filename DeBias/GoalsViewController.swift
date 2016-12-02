@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate {
+    var managedObjectContext: NSManagedObjectContext? =
+        (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
     @IBOutlet weak var veryConservativeProgressBar: ProgressBarView!
     @IBOutlet weak var conservativeProgressBar: ProgressBarView!
@@ -18,6 +21,12 @@ class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerView
     
     @IBOutlet weak var badgesButton: UIButton!
     @IBOutlet weak var trendsButton: UIButton!
+    
+    @IBOutlet weak var veryConservativeButton: UIButton!
+    @IBOutlet weak var conservativeButton: UIButton!
+    @IBOutlet weak var neutralButton: UIButton!
+    @IBOutlet weak var liberalButton: UIButton!
+    @IBOutlet weak var veryLiberalButton: UIButton!
     
     let pickerData = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
     
@@ -175,14 +184,27 @@ class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerView
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            if identifier == "showArticles" {
+                if let button = sender as? UIButton, let articlevc = segue.destinationViewController as? ArticleTableViewController {
+                    articlevc.managedObjectContext = managedObjectContext
+                    switch button {
+                    case veryConservativeButton:
+                        articlevc.typeOfArticle = "veryConservative"
+                    case conservativeButton:
+                        articlevc.typeOfArticle = "conservative"
+                    case neutralButton:
+                        articlevc.typeOfArticle = "neutral"
+                    case liberalButton:
+                        articlevc.typeOfArticle = "liberal"
+                    case veryLiberalButton:
+                        articlevc.typeOfArticle = "veryLiberal"
+                    default: break
+                    }
+                }
+            }
+        }
+    }
     
 }
