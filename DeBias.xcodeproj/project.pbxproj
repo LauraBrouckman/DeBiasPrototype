@@ -10,6 +10,9 @@
 		301CDE161DEBBAAC007D3B94 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CDE151DEBBAAC007D3B94 /* FriendTableViewCell.swift */; };
 		301CDE181DEBBB41007D3B94 /* default-profile-pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 301CDE171DEBBB41007D3B94 /* default-profile-pic.png */; };
 		301CDE191DEBF693007D3B94 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30333C8F1DDF770F00902916 /* Charts.framework */; };
+		301CDE1B1DEE3C8F007D3B94 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CDE1A1DEE3C8F007D3B94 /* CoreDataTableViewController.swift */; };
+		301CDE1D1DEE3CF6007D3B94 /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CDE1C1DEE3CF6007D3B94 /* ArticleTableViewController.swift */; };
+		301CDE1F1DEE3D15007D3B94 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CDE1E1DEE3D15007D3B94 /* ArticleTableViewCell.swift */; };
 		30333C7F1DDBC5A800902916 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333C7E1DDBC5A800902916 /* Colors.swift */; };
 		30333C8C1DDBCF7700902916 /* me-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 30333C8B1DDBCF7700902916 /* me-icon2.png */; };
 		30333C8E1DDBCF7D00902916 /* friends-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 30333C8D1DDBCF7D00902916 /* friends-icon2.png */; };
@@ -22,12 +25,14 @@
 		30333CEC1DE4D79200902916 /* ProgessBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333CEB1DE4D79200902916 /* ProgessBarView.swift */; };
 		30333CEE1DE4D90F00902916 /* edit-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 30333CED1DE4D90F00902916 /* edit-icon2.png */; };
 		30333CF01DE4F9D600902916 /* TrendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30333CEF1DE4F9D600902916 /* TrendsViewController.swift */; };
+		3067A9801DF007F500B8B550 /* ArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3067A97F1DF007F500B8B550 /* ArticleData.swift */; };
 		308204871DD9590A008AD2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308204861DD9590A008AD2C4 /* AppDelegate.swift */; };
 		308204891DD9590A008AD2C4 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308204881DD9590A008AD2C4 /* PieChartViewController.swift */; };
 		3082048C1DD9590A008AD2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3082048A1DD9590A008AD2C4 /* Main.storyboard */; };
 		3082048F1DD9590A008AD2C4 /* DeBias.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3082048D1DD9590A008AD2C4 /* DeBias.xcdatamodeld */; };
 		308204911DD9590A008AD2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308204901DD9590A008AD2C4 /* Assets.xcassets */; };
 		308204941DD9590A008AD2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308204921DD9590A008AD2C4 /* LaunchScreen.storyboard */; };
+		30C034521DF0FF80006E927A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C034511DF0FF80006E927A /* WebViewController.swift */; };
 		9F2072DA1DE3A6D9003AD907 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072D91DE3A6D9003AD907 /* Friend.swift */; };
 		9F2072DE1DE3A8D6003AD907 /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */; };
 		9F92842F1DED396900EBD85F /* FriendPieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */; };
@@ -36,6 +41,9 @@
 /* Begin PBXFileReference section */
 		301CDE151DEBBAAC007D3B94 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		301CDE171DEBBB41007D3B94 /* default-profile-pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-profile-pic.png"; sourceTree = "<group>"; };
+		301CDE1A1DEE3C8F007D3B94 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
+		301CDE1C1DEE3CF6007D3B94 /* ArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
+		301CDE1E1DEE3D15007D3B94 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		30333C7E1DDBC5A800902916 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		30333C8B1DDBCF7700902916 /* me-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me-icon2.png"; sourceTree = "<group>"; };
 		30333C8D1DDBCF7D00902916 /* friends-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends-icon2.png"; sourceTree = "<group>"; };
@@ -49,6 +57,7 @@
 		30333CEB1DE4D79200902916 /* ProgessBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgessBarView.swift; sourceTree = "<group>"; };
 		30333CED1DE4D90F00902916 /* edit-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-icon2.png"; sourceTree = "<group>"; };
 		30333CEF1DE4F9D600902916 /* TrendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendsViewController.swift; sourceTree = "<group>"; };
+		3067A97F1DF007F500B8B550 /* ArticleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleData.swift; sourceTree = "<group>"; };
 		308204831DD9590A008AD2C4 /* DeBias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeBias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308204861DD9590A008AD2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		308204881DD9590A008AD2C4 /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +66,7 @@
 		308204901DD9590A008AD2C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		308204931DD9590A008AD2C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		308204951DD9590A008AD2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30C034511DF0FF80006E927A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		9F2072D91DE3A6D9003AD907 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
 		9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPieChartViewController.swift; sourceTree = "<group>"; };
@@ -121,11 +131,16 @@
 				30333CD31DE22CC300902916 /* UserDefaults.swift */,
 				308204861DD9590A008AD2C4 /* AppDelegate.swift */,
 				308204881DD9590A008AD2C4 /* PieChartViewController.swift */,
+				301CDE1A1DEE3C8F007D3B94 /* CoreDataTableViewController.swift */,
 				30333C7E1DDBC5A800902916 /* Colors.swift */,
 				9F2072D91DE3A6D9003AD907 /* Friend.swift */,
 				9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */,
+				3067A97F1DF007F500B8B550 /* ArticleData.swift */,
 				9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */,
 				3082048A1DD9590A008AD2C4 /* Main.storyboard */,
+				301CDE1C1DEE3CF6007D3B94 /* ArticleTableViewController.swift */,
+				30C034511DF0FF80006E927A /* WebViewController.swift */,
+				301CDE1E1DEE3D15007D3B94 /* ArticleTableViewCell.swift */,
 				301CDE151DEBBAAC007D3B94 /* FriendTableViewCell.swift */,
 				30333CEF1DE4F9D600902916 /* TrendsViewController.swift */,
 				30333CE91DE4D76600902916 /* GoalsViewController.swift */,
@@ -216,15 +231,20 @@
 			files = (
 				30333CF01DE4F9D600902916 /* TrendsViewController.swift in Sources */,
 				30333CDA1DE2359300902916 /* Article.swift in Sources */,
+				3067A9801DF007F500B8B550 /* ArticleData.swift in Sources */,
 				3082048F1DD9590A008AD2C4 /* DeBias.xcdatamodeld in Sources */,
+				30C034521DF0FF80006E927A /* WebViewController.swift in Sources */,
 				30333CDB1DE2359300902916 /* User+CoreDataProperties.swift in Sources */,
+				301CDE1D1DEE3CF6007D3B94 /* ArticleTableViewController.swift in Sources */,
 				30333CD41DE22CC300902916 /* UserDefaults.swift in Sources */,
 				9F2072DE1DE3A8D6003AD907 /* FriendTableViewController.swift in Sources */,
 				30333CD91DE2359300902916 /* Article+CoreDataProperties.swift in Sources */,
+				301CDE1F1DEE3D15007D3B94 /* ArticleTableViewCell.swift in Sources */,
 				30333CDC1DE2359300902916 /* User.swift in Sources */,
 				30333CEC1DE4D79200902916 /* ProgessBarView.swift in Sources */,
 				30333C7F1DDBC5A800902916 /* Colors.swift in Sources */,
 				9F92842F1DED396900EBD85F /* FriendPieChartViewController.swift in Sources */,
+				301CDE1B1DEE3C8F007D3B94 /* CoreDataTableViewController.swift in Sources */,
 				308204891DD9590A008AD2C4 /* PieChartViewController.swift in Sources */,
 				308204871DD9590A008AD2C4 /* AppDelegate.swift in Sources */,
 				9F2072DA1DE3A6D9003AD907 /* Friend.swift in Sources */,
@@ -355,6 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.debias.DeBias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -370,6 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.debias.DeBias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

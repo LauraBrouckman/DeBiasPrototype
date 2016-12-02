@@ -13,45 +13,43 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-//        UserDefaults.setArticleGoal(4, articleType: "veryConservative")
-//        UserDefaults.setArticleRead(1, articleType: "veryConservative")
-//        
-//        UserDefaults.setArticleGoal(6, articleType: "conservative")
-//        UserDefaults.setArticleRead(4, articleType: "conservative")
-//        
-//        UserDefaults.setArticleGoal(10, articleType: "neutral")
-//        UserDefaults.setArticleRead(3, articleType: "neutral")
-//        
-//        UserDefaults.setArticleGoal(6, articleType: "liberal")
-//        UserDefaults.setArticleRead(2, articleType: "liberal")
-//        
-//        UserDefaults.setArticleGoal(4, articleType: "veryLiberal")
-//        UserDefaults.setArticleRead(4, articleType: "veryLiberal")
-//        
-//        let longTermData = [
-//            ["veryConservative": 1,
-//            "conservative": 2,
-//            "neutral": 5,
-//            "liberal": 4,
-//            "veryLiberal": 5],
-//            ["veryConservative": 2,
-//                "conservative": 3,
-//                "neutral": 7,
-//                "liberal": 5,
-//                "veryLiberal":3],
-//            ["veryConservative": 2,
-//                "conservative": 5,
-//                "neutral": 10,
-//                "liberal": 7,
-//                "veryLiberal":2],
-//            
-//            
-//        ]
-//        UserDefaults.setLongTermData(longTermData)
-//        
+        //        UserDefaults.setArticleGoal(4, articleType: "veryConservative")
+        //        UserDefaults.setArticleRead(1, articleType: "veryConservative")
+        //
+        //        UserDefaults.setArticleGoal(6, articleType: "conservative")
+        //        UserDefaults.setArticleRead(4, articleType: "conservative")
+        //
+        //        UserDefaults.setArticleGoal(10, articleType: "neutral")
+        //        UserDefaults.setArticleRead(3, articleType: "neutral")
+        //
+        //        UserDefaults.setArticleGoal(6, articleType: "liberal")
+        //        UserDefaults.setArticleRead(2, articleType: "liberal")
+        //
+        //        UserDefaults.setArticleGoal(4, articleType: "veryLiberal")
+        //        UserDefaults.setArticleRead(4, articleType: "veryLiberal")
+        //
+        //        let longTermData = [
+        //            ["veryConservative": 1,
+        //            "conservative": 2,
+        //            "neutral": 5,
+        //            "liberal": 4,
+        //            "veryLiberal": 5],
+        //            ["veryConservative": 2,
+        //                "conservative": 3,
+        //                "neutral": 7,
+        //                "liberal": 5,
+        //                "veryLiberal":3],
+        //            ["veryConservative": 2,
+        //                "conservative": 5,
+        //                "neutral": 10,
+        //                "liberal": 7,
+        //                "veryLiberal":2],
+        //
+        //
+        //        ]
+        //        UserDefaults.setLongTermData(longTermData)
         return true
     }
     

@@ -8,14 +8,21 @@
 
 import UIKit
 import Charts
+import CoreData
+
+
 
 class PieChartViewController: UIViewController {
+    
+    var managedObjectContext: NSManagedObjectContext? =
+        (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var detailsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("View did load")
         let categories = ["Very Conservative", "Conservative", "Neutral", "Liberal", "Very Liberal"]
         
         /* Get the number of articles read for each type from user defaults */
@@ -27,6 +34,7 @@ class PieChartViewController: UIViewController {
                 articlesRead.append(0.0)
             }
         }
+        
         /* Set up the pie chart */
         setChart(categories, values: articlesRead)
         
@@ -35,10 +43,28 @@ class PieChartViewController: UIViewController {
         detailsButton.layer.borderWidth = 1.5
         detailsButton.layer.borderColor = UIColor.grayColor().CGColor
         
+       // addArticleData()
     }
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-        return false
-    }
+ 
+//    func addArticleData() {
+//        
+////        let veryConservataiveArticles = getVeryConservativeArticles()
+////        let conservativeArticles =      getConservativeArticles()
+////        let neutralArticles =           getNeutralArticles()
+////        let liberalArticles =           getLiberalArticles()
+////        let veryLiberalArticles =       getVeryLiberalArticles()
+////        for a in (veryConservataiveArticles + conservativeArticles + neutralArticles + liberalArticles + veryLiberalArticles) {
+////            managedObjectContext?.performBlock { [weak weakSelf = self] in
+////                let article = Article.addArticleToDB(a["title"]!, author: a["author"]!, type: a["type"]!, source: a["source"]!, typeExplanation: a["typeExplanation"]!, url: a["url"]!, inManagedObjectContext: (weakSelf?.managedObjectContext)!)
+////                                do {
+////                                    try (weakSelf?.managedObjectContext)!.save()
+////                                } catch let error {
+////                                    print(error)
+////                                }
+////                                
+////            }
+////        }
+//    }
     
     
     func setChart(dataPoints: [String], values: [Double]) {
@@ -53,7 +79,13 @@ class PieChartViewController: UIViewController {
         let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "")
         let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
         pieChartView.data = pieChartData
-        pieChartView.centerText = "15 Articles"
+        
+        var sum = 0
+        for i in 0 ..< values.count {
+            sum = sum + Int(values[i])
+        }
+        pieChartView.centerText = String(sum) + " Articles"
+        
         pieChartView.drawSliceTextEnabled = false
         var colors: [UIColor] = []
         
