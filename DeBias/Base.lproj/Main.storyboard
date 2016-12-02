@@ -42,7 +42,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgh-HX-7vk" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="16" y="64" width="343" height="539"/>
-                                <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDH-pT-rxt">
@@ -52,17 +52,17 @@
                                     <constraint firstAttribute="width" constant="121" id="vlI-8C-puo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="tintColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Details">
-                                    <color key="titleColor" red="0.20277708768844604" green="0.20276418328285217" blue="0.20277169346809387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.53257948160171509" green="0.53254371881484985" blue="0.53256458044052124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.15275314450263977" green="0.15273827314376831" blue="0.15274718403816223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.45823311805725098" green="0.45818167924880981" blue="0.45821261405944824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="t0q-ED-xdp" kind="show" identifier="showGoals" id="uLv-dF-LhL"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hgh-HX-7vk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AuQ-Bs-5jq"/>
                             <constraint firstItem="sDH-pT-rxt" firstAttribute="centerX" secondItem="hgh-HX-7vk" secondAttribute="centerX" id="KOM-Mo-f2A"/>
@@ -102,7 +102,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Trends">
-                                    <color key="titleColor" red="0.26379796862602234" green="0.2637900710105896" blue="0.26379451155662537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.20277708768844604" green="0.20276418328285217" blue="0.20277169346809387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="2SN-N8-3hQ" kind="show" identifier="showTrends" id="0gl-FH-3NH"/>
@@ -115,7 +115,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Badges">
-                                    <color key="titleColor" red="0.26379796862602234" green="0.2637900710105896" blue="0.26379451155662537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.20277708768844604" green="0.20276418328285217" blue="0.20277169346809387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="pgn-j5-RVM" kind="show" identifier="showBadges" id="35e-gg-wWJ"/>
@@ -145,7 +145,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="U4B-Zc-wVF" firstAttribute="centerY" secondItem="i4k-cP-VQV" secondAttribute="centerY" id="40Q-Si-i7E"/>
                                             <constraint firstAttribute="trailing" secondItem="U4B-Zc-wVF" secondAttribute="trailing" constant="10" id="77u-Ex-pfU"/>
@@ -172,7 +172,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="RmO-xt-AHr" firstAttribute="top" secondItem="sQH-Bo-lPI" secondAttribute="top" id="9zD-eN-81G"/>
                                             <constraint firstAttribute="trailing" secondItem="q7l-74-pCs" secondAttribute="trailing" constant="10" id="U8C-TR-rvg"/>
@@ -203,7 +203,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="UqY-TK-iYD" secondAttribute="trailing" constant="10" id="1fH-4T-l8v"/>
                                             <constraint firstItem="UqY-TK-iYD" firstAttribute="centerY" secondItem="3Vr-D1-2Fq" secondAttribute="centerY" id="4BA-aC-1aT"/>
@@ -234,7 +234,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="YRo-DU-A0Z" secondAttribute="trailing" constant="10" id="1bx-4d-Bmk"/>
                                             <constraint firstItem="YRo-DU-A0Z" firstAttribute="centerY" secondItem="nAQ-qx-0hb" secondAttribute="centerY" id="20r-70-Oac"/>
@@ -265,7 +265,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="kQ2-Kx-uqP" firstAttribute="height" secondItem="n4h-v8-Fzt" secondAttribute="height" id="MCf-3R-i11"/>
                                             <constraint firstAttribute="trailing" secondItem="gy3-d5-cMO" secondAttribute="trailing" constant="10" id="WE7-5N-Yvq"/>
@@ -284,7 +284,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="yT8-uw-4zP" secondAttribute="trailing" id="GBD-bq-Dg6"/>
                             <constraint firstAttribute="bottom" secondItem="yT8-uw-4zP" secondAttribute="bottom" constant="100" id="Mfp-mc-kRN"/>
@@ -450,7 +450,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="w8u-y1-Tc3" firstAttribute="centerY" secondItem="cpq-eV-G8Q" secondAttribute="centerY" id="WPg-dj-LFK"/>
                             <constraint firstItem="w8u-y1-Tc3" firstAttribute="centerX" secondItem="cpq-eV-G8Q" secondAttribute="centerX" id="aeS-A6-dSE"/>
@@ -478,7 +478,7 @@
                                 <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gjX-2f-cxG" firstAttribute="leading" secondItem="xE6-gC-sQ8" secondAttribute="leading" id="8bJ-tm-bg9"/>
                             <constraint firstItem="gjX-2f-cxG" firstAttribute="bottom" secondItem="IVn-iv-1j9" secondAttribute="top" id="Iiv-r6-Vie"/>
@@ -505,7 +505,7 @@
                     <view key="view" contentMode="scaleToFill" id="aN9-Uv-fFI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="7tu-rD-x0w"/>
                     <connections>
@@ -523,7 +523,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="hvE-D6-kv5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendToolbarViewCell" rowHeight="45" id="4Ma-qo-4HF" customClass="FriendToolbarViewCell" customModule="DeBias" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="22" width="375" height="45"/>
@@ -593,7 +593,17 @@
                             <outlet property="delegate" destination="EbE-oA-Hcf" id="F19-54-wqc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Friends" id="JCu-YC-qty"/>
+                    <navigationItem key="navigationItem" title="Friends" id="JCu-YC-qty">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="qbm-NY-c7z">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="xZC-Xk-T2v">
+                                <rect key="frame" x="531" y="6" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sortFriends:" destination="EbE-oA-Hcf" eventType="valueChanged" id="n6n-R5-jr8"/>
+                                </connections>
+                            </switch>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxQ-sE-1xX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -628,9 +638,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="LGU-Y9-RaH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.12523138523101807" green="0.8492196798324585" blue="0.54901838302612305" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.14859241247177124" green="0.8324134349822998" blue="0.47565209865570068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
