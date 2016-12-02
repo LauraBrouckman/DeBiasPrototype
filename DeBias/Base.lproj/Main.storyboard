@@ -41,12 +41,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgh-HX-7vk" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="64" width="560" height="472"/>
+                                <rect key="frame" x="16" y="64" width="343" height="539"/>
                                 <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDH-pT-rxt">
-                                <rect key="frame" x="240" y="484" width="121" height="47"/>
+                                <rect key="frame" x="127.5" y="551" width="121" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="BRt-gq-x5K"/>
                                     <constraint firstAttribute="width" constant="121" id="vlI-8C-puo"/>
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="-203"/>
+            <point key="canvasLocation" x="878" y="-204"/>
         </scene>
         <!--Goals View Controller-->
         <scene sceneID="yzk-NC-HOi">
@@ -96,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-vf-v9a">
-                                <rect key="frame" x="70" y="508" width="75" height="33"/>
+                                <rect key="frame" x="66" y="575" width="75" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="FnI-3g-wPO"/>
                                 </constraints>
@@ -109,7 +109,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aa0-PI-UD5">
-                                <rect key="frame" x="455" y="508" width="75" height="33"/>
+                                <rect key="frame" x="234" y="575" width="75" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="TZh-qO-sDA"/>
                                 </constraints>
@@ -122,13 +122,13 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-uw-4zP">
-                                <rect key="frame" x="0.0" y="65" width="600" height="435"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="502"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4k-cP-VQV" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4B-Zc-wVF">
-                                                <rect key="frame" x="565" y="31" width="25" height="25"/>
+                                                <rect key="frame" x="340" y="37.5" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="ZEi-m0-VOO"/>
                                                     <constraint firstAttribute="height" constant="25" id="kGT-9T-y5E"/>
@@ -146,10 +146,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQH-Bo-lPI" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="87" width="600" height="87"/>
+                                        <rect key="frame" x="0.0" y="100.5" width="375" height="100.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7l-74-pCs">
-                                                <rect key="frame" x="565" y="31" width="25" height="25"/>
+                                                <rect key="frame" x="340" y="37.5" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="MEO-4L-yh7"/>
                                                     <constraint firstAttribute="width" constant="25" id="zjh-4g-iT8"/>
@@ -167,10 +167,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Vr-D1-2Fq" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="174" width="600" height="87"/>
+                                        <rect key="frame" x="0.0" y="201" width="375" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqY-TK-iYD">
-                                                <rect key="frame" x="565" y="31" width="25" height="25"/>
+                                                <rect key="frame" x="340" y="37.5" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="11D-IL-MDe"/>
                                                     <constraint firstAttribute="width" constant="25" id="mH7-xX-bEH"/>
@@ -188,10 +188,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAQ-qx-0hb" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="261" width="600" height="87"/>
+                                        <rect key="frame" x="0.0" y="301" width="375" height="100.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRo-DU-A0Z">
-                                                <rect key="frame" x="565" y="31" width="25" height="25"/>
+                                                <rect key="frame" x="340" y="38" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="WUw-cO-8Nq"/>
                                                     <constraint firstAttribute="height" constant="25" id="eAC-uO-hgN"/>
@@ -209,10 +209,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4h-v8-Fzt" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="348" width="600" height="87"/>
+                                        <rect key="frame" x="0.0" y="401.5" width="375" height="100.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gy3-d5-cMO">
-                                                <rect key="frame" x="565" y="31" width="25" height="25"/>
+                                                <rect key="frame" x="340" y="38" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="XZ0-rI-xfc"/>
                                                     <constraint firstAttribute="width" constant="25" id="dLZ-5F-oGQ"/>
@@ -262,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiV-S2-Aa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1543" y="-203"/>
+            <point key="canvasLocation" x="1721" y="-203"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bPw-Ri-VCj">
@@ -277,7 +277,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BADGES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8u-y1-Tc3">
-                                <rect key="frame" x="267" y="289" width="67" height="21"/>
+                                <rect key="frame" x="154" y="323" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -292,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIl-8B-21X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="-533"/>
+            <point key="canvasLocation" x="2625" y="-479"/>
         </scene>
         <!--Trends View Controller-->
         <scene sceneID="8fF-Vf-pyW">
@@ -325,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuR-xR-8pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="151"/>
+            <point key="canvasLocation" x="2625" y="231"/>
         </scene>
         <!--Title-->
         <scene sceneID="5vY-nI-Z19">
@@ -340,26 +340,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="33I-mz-WvZ"/>
+                    <navigationItem key="navigationItem" title="Title" id="7tu-rD-x0w"/>
                     <connections>
-                        <outlet property="navTitle" destination="33I-mz-WvZ" id="lNg-Tc-Fka"/>
+                        <outlet property="navTitle" destination="7tu-rD-x0w" id="39Z-ze-a65"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERD-Pu-iFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664.8" y="598.65067466266873"/>
+            <point key="canvasLocation" x="1721" y="599"/>
         </scene>
         <!--Friends-->
         <scene sceneID="qxY-Mu-hly">
             <objects>
                 <tableViewController id="EbE-oA-Hcf" customClass="FriendTableViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="hvE-D6-kv5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="1" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="hvE-D6-kv5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FriendTableViewCell" rowHeight="90" id="hd2-pN-H1e" userLabel="FriendTableViewCell" customClass="FriendTableViewCell" customModule="DeBias" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="22" width="375" height="90"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendToolbarViewCell" rowHeight="40" id="fBo-uq-CSc" customClass="FriendToolbarViewCell" customModule="DeBias" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBo-uq-CSc" id="Pxu-dp-NWy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P5r-ZH-pNO">
+                                            <rect key="frame" x="307" y="4" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="sortFriends:" destination="EbE-oA-Hcf" eventType="valueChanged" id="em5-0a-0mm"/>
+                                            </connections>
+                                        </switch>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmD-sV-h4s">
+                                            <rect key="frame" x="-231" y="-235" width="566" height="512"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="Button" image="add-friend-icon3.png">
+                                                <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FriendTableViewCell" rowHeight="90" id="hd2-pN-H1e" userLabel="FriendTableViewCell" customClass="FriendTableViewCell" customModule="DeBias" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="62" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hd2-pN-H1e" id="2W3-M4-sVn">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
@@ -398,26 +423,17 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="EbE-oA-Hcf" id="SSk-ad-fHc"/>
                             <outlet property="delegate" destination="EbE-oA-Hcf" id="F19-54-wqc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Friends" id="JCu-YC-qty">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="qbm-NY-c7z">
-                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="xZC-Xk-T2v">
-                                <rect key="frame" x="310" y="6" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="sortFriends:" destination="EbE-oA-Hcf" eventType="valueChanged" id="n6n-R5-jr8"/>
-                                </connections>
-                            </switch>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Friends" id="HrH-V9-EGa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxQ-sE-1xX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="599"/>
+            <point key="canvasLocation" x="878" y="599"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FxP-CK-zfE">
@@ -425,13 +441,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xMg-jn-icK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="me-icon2.png" id="3P4-pe-Co4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XIK-IN-RhO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="XIK-IN-RhO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.061123378574848175" green="0.86395448446273804" blue="0.61787146329879761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fis-jm-Sc4"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SCm-ev-xgT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYg-Ib-kn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -444,22 +461,27 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bIQ-er-LyS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="friends-icon2.png" id="S7i-CP-9ju"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LGU-Y9-RaH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="LGU-Y9-RaH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.061123378574848175" green="0.86395448446273804" blue="0.61787146329879761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="EbE-oA-Hcf" kind="relationship" relationship="rootViewController" id="1OH-yT-YFe"/>
+                        <segue destination="EbE-oA-Hcf" kind="relationship" relationship="rootViewController" id="mAc-s6-bNU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQS-bj-emn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23" y="599"/>
+            <point key="canvasLocation" x="22" y="599"/>
         </scene>
     </scenes>
     <resources>
         <image name="DefaultProfilePic" width="250" height="250"/>
+        <image name="add-friend-icon3.png" width="38" height="38"/>
         <image name="edit-icon2.png" width="512" height="512"/>
         <image name="friends-icon2.png" width="60" height="60"/>
         <image name="me-icon2.png" width="45" height="45"/>
