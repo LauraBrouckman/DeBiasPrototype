@@ -113,9 +113,9 @@ class FriendTableViewController: UITableViewController {
             let destination = segue.destinationViewController as? FriendPieChartViewController,
             let friendIndex = tableView.indexPathForSelectedRow?.row
             {
-                destination.name = friends[friendIndex].name
-                destination.profilePic = friends[friendIndex].profilePic!
-                destination.articles = friends[friendIndex].articles
+                destination.name = friends[friendIndex - 1].name
+                destination.profilePic = friends[friendIndex - 1].profilePic!
+                destination.articles = friends[friendIndex - 1].articles
             }
     }
     
