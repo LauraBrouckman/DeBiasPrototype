@@ -35,7 +35,15 @@
 		30C034521DF0FF80006E927A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C034511DF0FF80006E927A /* WebViewController.swift */; };
 		9F2072DA1DE3A6D9003AD907 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072D91DE3A6D9003AD907 /* Friend.swift */; };
 		9F2072DE1DE3A8D6003AD907 /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */; };
-		9F33AD121DF22A2B008DEED5 /* BadgesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33AD111DF22A2B008DEED5 /* BadgesCollectionViewController.swift */; };
+		9F33AD141DF232E2008DEED5 /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F33AD131DF232E2008DEED5 /* trophy.png */; };
+		9F33AD161DF23384008DEED5 /* BadgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33AD151DF23384008DEED5 /* BadgesViewController.swift */; };
+		9F33AD1C1DF23F4B008DEED5 /* BadgesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33AD1B1DF23F4B008DEED5 /* BadgesCollectionViewCell.swift */; };
+		9F33AD1E1DF248BE008DEED5 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33AD1D1DF248BE008DEED5 /* Badge.swift */; };
+		9F4D8EF71DF2885500AD6075 /* trophy-b-and-w.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F4D8EF61DF2885500AD6075 /* trophy-b-and-w.png */; };
+		9F4D8EF91DF28B4E00AD6075 /* red-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F4D8EF81DF28B4E00AD6075 /* red-circle.png */; };
+		9F4D8EFB1DF28B5300AD6075 /* purple-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F4D8EFA1DF28B5300AD6075 /* purple-circle.png */; };
+		9F4D8EFD1DF28B5700AD6075 /* gray-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F4D8EFC1DF28B5700AD6075 /* gray-circle.png */; };
+		9F4D8EFF1DF28B5B00AD6075 /* blue-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F4D8EFE1DF28B5B00AD6075 /* blue-circle.png */; };
 		9F92842F1DED396900EBD85F /* FriendPieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */; };
 		9F9284311DEE421500EBD85F /* FriendToolbarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9284301DEE421500EBD85F /* FriendToolbarViewCell.swift */; };
 		9F9284351DEE5D4F00EBD85F /* add-friend-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9284341DEE5D4F00EBD85F /* add-friend-icon2.png */; };
@@ -74,7 +82,15 @@
 		30C034511DF0FF80006E927A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		9F2072D91DE3A6D9003AD907 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
-		9F33AD111DF22A2B008DEED5 /* BadgesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BadgesCollectionViewController.swift; sourceTree = "<group>"; };
+		9F33AD131DF232E2008DEED5 /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy.png; sourceTree = "<group>"; };
+		9F33AD151DF23384008DEED5 /* BadgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgesViewController.swift; sourceTree = "<group>"; };
+		9F33AD1B1DF23F4B008DEED5 /* BadgesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F33AD1D1DF248BE008DEED5 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		9F4D8EF61DF2885500AD6075 /* trophy-b-and-w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trophy-b-and-w.png"; sourceTree = "<group>"; };
+		9F4D8EF81DF28B4E00AD6075 /* red-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-circle.png"; sourceTree = "<group>"; };
+		9F4D8EFA1DF28B5300AD6075 /* purple-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-circle.png"; sourceTree = "<group>"; };
+		9F4D8EFC1DF28B5700AD6075 /* gray-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray-circle.png"; sourceTree = "<group>"; };
+		9F4D8EFE1DF28B5B00AD6075 /* blue-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-circle.png"; sourceTree = "<group>"; };
 		9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPieChartViewController.swift; sourceTree = "<group>"; };
 		9F9284301DEE421500EBD85F /* FriendToolbarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendToolbarViewCell.swift; sourceTree = "<group>"; };
 		9F9284341DEE5D4F00EBD85F /* add-friend-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-friend-icon2.png"; sourceTree = "<group>"; };
@@ -97,6 +113,12 @@
 		30333C801DDBCD7200902916 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9F4D8EF81DF28B4E00AD6075 /* red-circle.png */,
+				9F4D8EFA1DF28B5300AD6075 /* purple-circle.png */,
+				9F4D8EFC1DF28B5700AD6075 /* gray-circle.png */,
+				9F4D8EFE1DF28B5B00AD6075 /* blue-circle.png */,
+				9F4D8EF61DF2885500AD6075 /* trophy-b-and-w.png */,
+				9F33AD131DF232E2008DEED5 /* trophy.png */,
 				9F9284381DEF9DE100EBD85F /* settings-icon.png */,
 				9F9284341DEE5D4F00EBD85F /* add-friend-icon2.png */,
 				9F9284361DEE5DBF00EBD85F /* add-friend-icon3.png */,
@@ -159,7 +181,9 @@
 				30333CEF1DE4F9D600902916 /* TrendsViewController.swift */,
 				30333CE91DE4D76600902916 /* GoalsViewController.swift */,
 				30333CEB1DE4D79200902916 /* ProgessBarView.swift */,
-				9F33AD111DF22A2B008DEED5 /* BadgesCollectionViewController.swift */,
+				9F33AD1B1DF23F4B008DEED5 /* BadgesCollectionViewCell.swift */,
+				9F33AD151DF23384008DEED5 /* BadgesViewController.swift */,
+				9F33AD1D1DF248BE008DEED5 /* Badge.swift */,
 				308204901DD9590A008AD2C4 /* Assets.xcassets */,
 				308204921DD9590A008AD2C4 /* LaunchScreen.storyboard */,
 				308204951DD9590A008AD2C4 /* Info.plist */,
@@ -195,7 +219,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = debias;
 				TargetAttributes = {
 					308204821DD9590A008AD2C4 = {
@@ -230,13 +254,19 @@
 			files = (
 				308204941DD9590A008AD2C4 /* LaunchScreen.storyboard in Resources */,
 				9F9284371DEE5DBF00EBD85F /* add-friend-icon3.png in Resources */,
+				9F4D8EFD1DF28B5700AD6075 /* gray-circle.png in Resources */,
 				30333C8C1DDBCF7700902916 /* me-icon2.png in Resources */,
 				9F9284391DEF9DE100EBD85F /* settings-icon.png in Resources */,
 				308204911DD9590A008AD2C4 /* Assets.xcassets in Resources */,
 				30333CEE1DE4D90F00902916 /* edit-icon2.png in Resources */,
 				30333C8E1DDBCF7D00902916 /* friends-icon2.png in Resources */,
 				9F9284351DEE5D4F00EBD85F /* add-friend-icon2.png in Resources */,
+				9F4D8EFF1DF28B5B00AD6075 /* blue-circle.png in Resources */,
 				3082048C1DD9590A008AD2C4 /* Main.storyboard in Resources */,
+				9F4D8EFB1DF28B5300AD6075 /* purple-circle.png in Resources */,
+				9F33AD141DF232E2008DEED5 /* trophy.png in Resources */,
+				9F4D8EF91DF28B4E00AD6075 /* red-circle.png in Resources */,
+				9F4D8EF71DF2885500AD6075 /* trophy-b-and-w.png in Resources */,
 				301CDE181DEBBB41007D3B94 /* default-profile-pic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,11 +284,11 @@
 				3082048F1DD9590A008AD2C4 /* DeBias.xcdatamodeld in Sources */,
 				30C034521DF0FF80006E927A /* WebViewController.swift in Sources */,
 				30333CDB1DE2359300902916 /* User+CoreDataProperties.swift in Sources */,
+				9F33AD1C1DF23F4B008DEED5 /* BadgesCollectionViewCell.swift in Sources */,
 				301CDE1D1DEE3CF6007D3B94 /* ArticleTableViewController.swift in Sources */,
 				30333CD41DE22CC300902916 /* UserDefaults.swift in Sources */,
 				9F9284311DEE421500EBD85F /* FriendToolbarViewCell.swift in Sources */,
 				9F2072DE1DE3A8D6003AD907 /* FriendTableViewController.swift in Sources */,
-				9F33AD121DF22A2B008DEED5 /* BadgesCollectionViewController.swift in Sources */,
 				30333CD91DE2359300902916 /* Article+CoreDataProperties.swift in Sources */,
 				301CDE1F1DEE3D15007D3B94 /* ArticleTableViewCell.swift in Sources */,
 				30333CDC1DE2359300902916 /* User.swift in Sources */,
@@ -267,7 +297,9 @@
 				9F92842F1DED396900EBD85F /* FriendPieChartViewController.swift in Sources */,
 				301CDE1B1DEE3C8F007D3B94 /* CoreDataTableViewController.swift in Sources */,
 				308204891DD9590A008AD2C4 /* PieChartViewController.swift in Sources */,
+				9F33AD161DF23384008DEED5 /* BadgesViewController.swift in Sources */,
 				308204871DD9590A008AD2C4 /* AppDelegate.swift in Sources */,
+				9F33AD1E1DF248BE008DEED5 /* Badge.swift in Sources */,
 				9F2072DA1DE3A6D9003AD907 /* Friend.swift in Sources */,
 				30333CEA1DE4D76600902916 /* GoalsViewController.swift in Sources */,
 				301CDE161DEBBAAC007D3B94 /* FriendTableViewCell.swift in Sources */,
@@ -417,7 +449,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

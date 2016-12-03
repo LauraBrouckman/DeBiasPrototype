@@ -118,7 +118,7 @@
                                     <color key="titleColor" red="0.20277708768844604" green="0.20276418328285217" blue="0.20277169346809387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pgn-j5-RVM" kind="show" identifier="showBadges" id="35e-gg-wWJ"/>
+                                    <segue destination="dkD-IH-Ylq" kind="show" id="Fql-Zi-8Rr"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-uw-4zP">
@@ -328,7 +328,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tBr-vy-76w" id="Zyy-s4-DvX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="103.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-3u-SK5">
@@ -432,22 +432,62 @@
             <point key="canvasLocation" x="3630" y="-188"/>
         </scene>
         <!--Badges-->
-        <scene sceneID="bPw-Ri-VCj">
+        <scene sceneID="RI2-7L-y2K">
             <objects>
-                <viewController title="Badges" id="pgn-j5-RVM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="k9G-Ac-lPm"/>
-                        <viewControllerLayoutGuide type="bottom" id="OVQ-PA-PQ0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cpq-eV-G8Q">
+                <collectionViewController title="Badges" id="dkD-IH-Ylq" customClass="BadgesViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="ixs-RL-duB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HIl-8B-21X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="blC-JG-R3v">
+                            <size key="itemSize" width="182" height="182"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BadgesCollectionViewCell" id="V04-JD-5kC" customClass="BadgesCollectionViewCell" customModule="DeBias" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g1H-B8-c2V" userLabel="BackgroundCircle">
+                                            <rect key="frame" x="36" y="20" width="110" height="110"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zKf-rM-AGd" userLabel="TrophyImage">
+                                            <rect key="frame" x="53" y="36" width="76" height="76"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccI-PQ-BJ4">
+                                            <rect key="frame" x="8" y="133" width="166" height="49"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <size key="customSize" width="182" height="182"/>
+                                <connections>
+                                    <outlet property="backgroundCircle" destination="g1H-B8-c2V" id="UI1-pl-vZe"/>
+                                    <outlet property="titleLabel" destination="ccI-PQ-BJ4" id="s90-kp-kxk"/>
+                                    <outlet property="trophyImage" destination="zKf-rM-AGd" id="f9m-ZR-uDn"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dkD-IH-Ylq" id="sUR-8Q-nNI"/>
+                            <outlet property="delegate" destination="dkD-IH-Ylq" id="TIs-Ed-QTp"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gm-by-RJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2538" y="-916"/>
+            <point key="canvasLocation" x="2640.8000000000002" y="-895.50224887556226"/>
         </scene>
         <!--Trends-->
         <scene sceneID="8fF-Vf-pyW">
@@ -480,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuR-xR-8pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2670" y="557"/>
+            <point key="canvasLocation" x="2642" y="558"/>
         </scene>
         <!--Title-->
         <scene sceneID="5vY-nI-Z19">
@@ -517,7 +557,7 @@
                                 <rect key="frame" x="0.0" y="22" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Ma-qo-4HF" id="g05-wX-NsM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xKD-9w-wRN">
@@ -539,7 +579,7 @@
                                 <rect key="frame" x="0.0" y="67" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hd2-pN-H1e" id="2W3-M4-sVn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DefaultProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="wQA-O3-SpH">
@@ -593,12 +633,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xMg-jn-icK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="me-icon2.png" id="3P4-pe-Co4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="XIK-IN-RhO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="XIK-IN-RhO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.062745098039215685" green="0.86274509803921573" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -619,6 +661,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="LGU-Y9-RaH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.061123378574848175" green="0.86395448446273804" blue="0.61787146329879761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

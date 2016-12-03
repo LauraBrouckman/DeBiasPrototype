@@ -43,28 +43,36 @@ class PieChartViewController: UIViewController {
         detailsButton.layer.borderWidth = 1.5
         detailsButton.layer.borderColor = UIColor.grayColor().CGColor
         
-        addArticleData()
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.darkGrayColor().CGColor
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSizeMake(2.0, 2.0);
+        self.navigationController?.navigationBar.layer.shadowRadius = 4;
+        self.navigationController?.navigationBar.layer.shadowOpacity = 1;
+        
+        //self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
+        //        self.navigationController.navigationBar.layer.shadowRadius = 4.0f;
+        //        self.navigationController.navigationBar.layer.shadowOpacity = 1.0;
+        //addArticleData()
     }
  
-    func addArticleData() {
-        
-        let veryConservataiveArticles = getVeryConservativeArticles()
-        let conservativeArticles =      getConservativeArticles()
-        let neutralArticles =           getNeutralArticles()
-        let liberalArticles =           getLiberalArticles()
-        let veryLiberalArticles =       getVeryLiberalArticles()
-        for a in (veryConservataiveArticles + conservativeArticles + neutralArticles + liberalArticles + veryLiberalArticles) {
-            managedObjectContext?.performBlock { [weak weakSelf = self] in
-                let article = Article.addArticleToDB(a["title"]!, author: a["author"]!, type: a["type"]!, source: a["source"]!, typeExplanation: a["typeExplanation"]!, url: a["url"]!, inManagedObjectContext: (weakSelf?.managedObjectContext)!)
-                                do {
-                                    try (weakSelf?.managedObjectContext)!.save()
-                                } catch let error {
-                                    print(error)
-                                }
-                                
-            }
-        }
-    }
+//    func addArticleData() {
+//
+//        let veryConservataiveArticles = getVeryConservativeArticles()
+//        let conservativeArticles =      getConservativeArticles()
+//        let neutralArticles =           getNeutralArticles()
+//        let liberalArticles =           getLiberalArticles()
+//        let veryLiberalArticles =       getVeryLiberalArticles()
+//        for a in (veryConservataiveArticles + conservativeArticles + neutralArticles + liberalArticles + veryLiberalArticles) {
+//            managedObjectContext?.performBlock { [weak weakSelf = self] in
+//                let article = Article.addArticleToDB(a["title"]!, author: a["author"]!, type: a["type"]!, source: a["source"]!, typeExplanation: a["typeExplanation"]!, url: a["url"]!, inManagedObjectContext: (weakSelf?.managedObjectContext)!)
+//                                do {
+//                                    try (weakSelf?.managedObjectContext)!.save()
+//                                } catch let error {
+//                                    print(error)
+//                                }
+//                                
+//            }
+//        }
+//    }
     
     
     func setChart(dataPoints: [String], values: [Double]) {
