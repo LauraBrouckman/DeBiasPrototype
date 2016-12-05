@@ -14,6 +14,7 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     
+    var title: String?
     var url: String?
     var type: String?
     var typeExplanation: String?

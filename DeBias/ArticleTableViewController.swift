@@ -13,6 +13,8 @@ class ArticleTableViewController: CoreDataTableViewController {
     
     var typeOfArticle: String?
     
+    @IBOutlet weak var noArticlesLabel: UILabel!
+    
     var managedObjectContext: NSManagedObjectContext? {
         didSet {
             updateUI()
@@ -47,9 +49,26 @@ class ArticleTableViewController: CoreDataTableViewController {
             }
         }
     }
+    
+    let typeToName: Dictionary<String, String> =
+        [
+            "veryConservative": "very conservative",
+            "conservative": "conservative",
+            "neutral": "neutral",
+            "liberal": "liberal",
+            "veryLiberal": "very liberal"
+        ]
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        tableView.autoresizesSubviews = true
+        if tableView.numberOfRowsInSection(1) == 0 {
+            noArticlesLabel.text = "You have not read any " + typeToName[typeOfArticle!]! + " articles"
+            //STYLE LABEL HERE
+        } else {
+            noArticlesLabel.text = ""
+        }
+        
     }
     
     
@@ -77,9 +96,28 @@ class ArticleTableViewController: CoreDataTableViewController {
             cell.type = type
             cell.typeExplanation = typeExplanation
             cell.sourceLabel?.text = source
+            cell.title = title
             urls[indexPath.row] = url!
         }
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! ArticleTableViewCell
+        let title = "Article Classification"
+        let starter = "The article " + cell.title! + " was classified as "
+        let message =  starter + typeToName[cell.type!]! + " because " + cell.typeExplanation!
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert);
+        alert.modalInPopover = true;
+        
+        alert.addAction(UIAlertAction(
+            title: "Got it!",
+            style: .Default)
+        { (action: UIAlertAction) ->  Void in
+            }
+        )
+        
+        presentViewController(alert, animated: true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

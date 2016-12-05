@@ -12,7 +12,7 @@ import CoreData
 
 class User: NSManagedObject {
     
-    class func addUserToDB(name: String, friend: Bool, articles: Array<Article>, inManagedObjectContext context: NSManagedObjectContext) -> User? {
+    class func addUserToDB(name: String, friend: Bool, canSeeArticles: Bool, picture_filename: String, diversity: Float, articles: Array<Article>, inManagedObjectContext context: NSManagedObjectContext) -> User? {
         let request = NSFetchRequest(entityName: "User")
         request.predicate = NSPredicate(format: "name = %@", name)
         
@@ -34,6 +34,10 @@ class User: NSManagedObject {
             result.name = name
             result.friend = friend
             result.articles = NSSet(array: articles)
+            result.canSeeArticles = canSeeArticles
+            result.picture_filename = picture_filename
+            result.numArticles = articles.count
+            result.diversity = diversity
             return result
         }
         return nil

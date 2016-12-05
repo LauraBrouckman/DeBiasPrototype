@@ -7,157 +7,147 @@
 //
 
 import UIKit
+import CoreData
 
-class FriendTableViewController: UITableViewController {
+class FriendTableViewController: CoreDataTableViewController {
     var friends = [Friend]()
-    var sortByFriends = true
+    var sortByNumArticles = true
     
-//    @IBOutlet weak var navTitle: UINavigationItem!
-//    
-    @IBAction func sortFriends(sender: AnyObject) {
-        if (sortByFriends)
-        {
-            sortFriendsDiversity()
-            sortByFriends = false
-        }else
-        {
-            sortFriendsNumArticles()
-            sortByFriends = true
-        }
-        //loadSampleFriends();
-        self.tableView.reloadData()
+//        @IBOutlet weak var navTitle: UINavigationItem!
+    
+    
+    var managedObjectContext: NSManagedObjectContext? =
+        (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
+    
+    @IBAction func switchSort(sender: UISwitch) {
+            if (sortByNumArticles)
+            {
+                print("Sort by numArticles")
+                updateUI("diversity")
+                sortByNumArticles = false
+            }else
+            {
+                print("sort by diversity")
+                updateUI("numArticles")
+                sortByNumArticles = true
+            }
+          //  self.tableView.reloadData()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleFriends()
-        sortFriendsNumArticles()
         //navTitle.title = "Friends"
-        
+        updateUI("numArticles")
+    }
+    
+    private func updateUI(sortKey: String) {
+        if let context = managedObjectContext {
+            let request = NSFetchRequest(entityName: "User")
+            request.predicate = NSPredicate(format: "friend == 1")
+            request.sortDescriptors = [NSSortDescriptor(key: sortKey, ascending: false)]
+            fetchedResultsController = NSFetchedResultsController(
+                fetchRequest: request,
+                managedObjectContext: context,
+                sectionNameKeyPath: nil,
+                cacheName: nil)
+        } else {
+            fetchedResultsController = nil
+        }
     }
     
     
-    func loadSampleFriends()
-    {
-        let photo1 = UIImage(named: "default-profile-pic.png")!
-        let articles1 = [2,2,2,2,2];
-        let friend1 = Friend(name:"Sarah Fisher", profilePic: photo1, articles: articles1)!
-        
-        let photo2 = UIImage(named:"default-profile-pic.png")!
-        let articles2 = [5,3,2,0,0];
-        let friend2 = Friend(name:"Tim Wang", profilePic: photo2, articles: articles2)!
-        
-        let photo3 = UIImage(named:"default-profile-pic.png")!
-        let articles3 = [1,2,3,2,1];
-        let friend3 = Friend(name:"Linda Kurt", profilePic: photo3, articles: articles3)!
-        
-        friends += [friend1, friend2, friend3]
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        tableView.rowHeight = 90
+        let cell = tableView.dequeueReusableCellWithIdentifier("FriendTableViewCell", forIndexPath: indexPath) as! FriendTableViewCell
+        if let friend = fetchedResultsController?.objectAtIndexPath(indexPath) as? User {
+            var name: String?
+            var profileImageFile: String?
+            var numArticles: Int?
+            var articles = [Article]()
+            var canSeeArticles: Bool?
+            
+            friend.managedObjectContext?.performBlockAndWait {
+                name = friend.name
+                profileImageFile = friend.picture_filename
+                numArticles = friend.articles!.count
+                articles = friend.articles!.allObjects as! [Article]
+                canSeeArticles = (friend.canSeeArticles == 1)
+            }
+            cell.nameLabel.text = name
+            cell.numArticlesLabel.text = String(numArticles!)
+            cell.profilePicture.image = UIImage(named: profileImageFile!)
+            cell.rankingLabel.text = String(indexPath.row + 1)
+            cell.articles = articles
+            cell.canSeeArticles = canSeeArticles!
+        }
+        return cell
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friends.count + 1
-    }
     
-    func sortFriendsDiversity()
-    {
-        friends.sortInPlace({ $0.diversity < $1.diversity })
-    }
-
-    func sortFriendsNumArticles()
-    {
-        friends.sortInPlace({ $0.numArticles > $1.numArticles })
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-    {
-
-        if (indexPath.row == 0)
-        {
-            let cellIdentifier1 = "FriendToolbarViewCell"
-            let cell1 = tableView.dequeueReusableCellWithIdentifier(cellIdentifier1, forIndexPath: indexPath) as! FriendToolbarViewCell
-            tableView.rowHeight = 40
-            return cell1
-            
-        }
-        tableView.rowHeight = 90
-        let cellIdentifier = "FriendTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! FriendTableViewCell
-        
-        let friend = friends[indexPath.row - 1]
-        
-        cell.nameLabel.text = friend.name
-        cell.profilePicture.image = friend.profilePic
-        cell.rankingLabel.text = String(indexPath.row)
-        cell.numArticlesLabel.text = String(friend.numArticles);
-        return cell
-    }
-
     let friendSegueIdentifier = "ShowFriendPieChart"
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if  segue.identifier == friendSegueIdentifier,
             let destination = segue.destinationViewController as? FriendPieChartViewController,
-            friendIndex = tableView.indexPathForSelectedRow?.row
-            {
-                destination.name = friends[friendIndex].name
-                destination.profilePic = friends[friendIndex].profilePic!
-                destination.articles = friends[friendIndex].articles
-            }
+            cell = sender as? FriendTableViewCell
+        {
+            destination.articles = cell.articles
+            destination.name = cell.nameLabel.text!
+            destination.canSeeArticles = cell.canSeeArticles
+        }
     }
     
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
+     // Override to support conditional editing of the table view.
+     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
     /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
+     // Override to support editing the table view.
+     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+     if editingStyle == .delete {
+     // Delete the row from the data source
+     tableView.deleteRows(at: [indexPath], with: .fade)
+     } else if editingStyle == .insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
+    
     /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
