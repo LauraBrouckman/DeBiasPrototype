@@ -13,21 +13,16 @@ class FriendTableViewController: CoreDataTableViewController {
     var friends = [Friend]()
     var sortByNumArticles = true
     
-//        @IBOutlet weak var navTitle: UINavigationItem!
-    
-    
     var managedObjectContext: NSManagedObjectContext? =
         (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
     @IBAction func switchSort(sender: UISwitch) {
             if (sortByNumArticles)
             {
-                print("Sort by numArticles")
                 updateUI("diversity")
                 sortByNumArticles = false
             }else
             {
-                print("sort by diversity")
                 updateUI("numArticles")
                 sortByNumArticles = true
             }
@@ -37,7 +32,12 @@ class FriendTableViewController: CoreDataTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navTitle.title = "Friends"
+        
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.darkGrayColor().CGColor
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSizeMake(2.0, 2.0);
+        self.navigationController?.navigationBar.layer.shadowRadius = 4;
+        self.navigationController?.navigationBar.layer.shadowOpacity = 1;
+        
         updateUI("numArticles")
     }
     
@@ -113,41 +113,5 @@ class FriendTableViewController: CoreDataTableViewController {
      }
      */
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

@@ -32,11 +32,11 @@ class BadgesViewController: UICollectionViewController{
         let badge1 = Badge(title: "Read 5 Conservative Articless", completed: true, backgroundCircle: UIImage(named: "red-circle.png")!)!
         let badge2 = Badge(title: "Read 5 Liberal Articles", completed: true, backgroundCircle: UIImage(named: "blue-circle.png")!)!
         let badge3 = Badge(title: "Read 5 Neutral Articles", completed: true, backgroundCircle: UIImage(named: "purple-circle.png")!)!
-        let badge4 = Badge(title: "Read 10 Neutral Articles", completed: false, backgroundCircle: UIImage(named: "gray-circle.png")!)!
-        let badge5 = Badge(title: "Read Equal Liberal And Conservative", completed: false, backgroundCircle: UIImage(named: "gray-circle.png")!)!
-        let badge6 = Badge(title: "#1 in Diversity Ranking", completed: false, backgroundCircle: UIImage(named: "gray-circle.png")!)!
-        let badge7 = Badge(title: "#1 in Articles Read Ranking", completed: false, backgroundCircle: UIImage(named: "gray-circle.png")!)!
-        let badge8 = Badge(title: "#1 in Both Rankings", completed: false, backgroundCircle: UIImage(named: "gray-circle.png")!)!
+        let badge4 = Badge(title: "Read 10 Neutral Articles", completed: false, backgroundCircle: UIImage(named: "gray-circle2.png")!)!
+        let badge5 = Badge(title: "Read Equal Liberal And Conservative", completed: false, backgroundCircle: UIImage(named: "gray-circle2.png")!)!
+        let badge6 = Badge(title: "#1 in Diversity Ranking", completed: false, backgroundCircle: UIImage(named: "gray-circle2.png")!)!
+        let badge7 = Badge(title: "#1 in Articles Read Ranking", completed: false, backgroundCircle: UIImage(named: "gray-circle2.png")!)!
+        let badge8 = Badge(title: "#1 in Both Rankings", completed: false, backgroundCircle: UIImage(named: "gray-circle2.png")!)!
         badges += [badge1, badge2, badge3, badge4, badge5, badge6, badge7, badge8]
     }
     

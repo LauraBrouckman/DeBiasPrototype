@@ -17,6 +17,8 @@ class FriendArticlesTableViewController: UITableViewController {
     @IBOutlet weak var noArticleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
         if articles.count == 0 {
             noArticleLabel.text = "No " + typeOfArticle!.lowercaseString + " articles read."
             //STYLE THE LABEL HERE!!

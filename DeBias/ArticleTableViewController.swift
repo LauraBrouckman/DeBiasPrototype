@@ -61,7 +61,9 @@ class ArticleTableViewController: CoreDataTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        tableView.autoresizesSubviews = true
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
+        
         if tableView.numberOfRowsInSection(1) == 0 {
             noArticlesLabel.text = "You have not read any " + typeToName[typeOfArticle!]! + " articles"
             //STYLE LABEL HERE

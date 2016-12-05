@@ -41,6 +41,11 @@ class PieChartViewController: UIViewController {
         detailsButton.layer.borderWidth = 1.5
         detailsButton.layer.borderColor = UIColor.grayColor().CGColor
         accentLabel.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.2)
+        
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.darkGrayColor().CGColor
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSizeMake(2.0, 2.0);
+        self.navigationController?.navigationBar.layer.shadowRadius = 4;
+        self.navigationController?.navigationBar.layer.shadowOpacity = 1;
         addCoreData()
     }
     
@@ -58,26 +63,6 @@ class PieChartViewController: UIViewController {
         return tempList
     }
  
-//    func addArticleData() {
-//
-//        let veryConservataiveArticles = getVeryConservativeArticles()
-//        let conservativeArticles =      getConservativeArticles()
-//        let neutralArticles =           getNeutralArticles()
-//        let liberalArticles =           getLiberalArticles()
-//        let veryLiberalArticles =       getVeryLiberalArticles()
-//        for a in (veryConservataiveArticles + conservativeArticles + neutralArticles + liberalArticles + veryLiberalArticles) {
-//            managedObjectContext?.performBlock { [weak weakSelf = self] in
-//                let article = Article.addArticleToDB(a["title"]!, author: a["author"]!, type: a["type"]!, source: a["source"]!, typeExplanation: a["typeExplanation"]!, url: a["url"]!, inManagedObjectContext: (weakSelf?.managedObjectContext)!)
-//                                do {
-//                                    try (weakSelf?.managedObjectContext)!.save()
-//                                } catch let error {
-//                                    print(error)
-//                                }
-//                                
-//            }
-//        }
-//    }
-    
     func addCoreData() {
 //        addArticles()
 //        let veryConservataiveArticles = getVeryConservativeArticles()
@@ -114,7 +99,7 @@ class PieChartViewController: UIViewController {
 //            }
 //        }
 //        
-//        let articles = veryConservataiveArticles + conservativeArticles + neutralArticles + liberalArticles + veryLiberalArticles as [AnyObject]
+//        var articles = veryConservataiveArticles + conservativeArticles + neutralArticles + liberalArticles + veryLiberalArticles as [AnyObject]
 //        let friends = ["Laura Brouckman", "Leslie Kurt", "Saamon Legoski", "Matthew Chen", "Harry Potter", "Ron Weasley", "Hermione Granger", "Bart Simpson", "Taylor Swift", "Barack Obama", "Sarah Brown", "Jeff Johnson", "Beyonce"]
 //        for f in friends {
 ////            // Choose random number of articles
@@ -123,8 +108,8 @@ class PieChartViewController: UIViewController {
 //            let numArticles = Int(arc4random_uniform(24))
 //            var friendArticleTypes = [0, 0, 0, 0, 0]
 //            for i in 0..<numArticles {
-//                friendArticles.append(articles[i]["title"]!)
-//                switch articles[i]["type"]!{
+//                friendArticles.append(articles[i]["title"]!!)
+//                switch articles[i]["type"]! as! String {
 //                case "veryConservative":
 //                    friendArticleTypes[0] += 1
 //                case "conservative":
@@ -156,9 +141,9 @@ class PieChartViewController: UIViewController {
 //                }
 //                
 //            }
-//        }
-        
-        //Add yourself as your own "friend" so that you show up in the friends list
+    //    }
+//        
+//        //Add yourself as your own "friend" so that you show up in the friends list
 //        var myArticles = [String]()
 //        var myArticlesRead = [0, 0, 0, 0, 0]
 //        for a in UserDefaults.getArticleList("veryConservative")! {
@@ -182,20 +167,20 @@ class PieChartViewController: UIViewController {
 //            myArticlesRead[4] += 1
 //        }
 //        let diversity = getDiversity(myArticlesRead, numArticles: myArticles.count)
-        //            managedObjectContext?.performBlock { [weak weakSelf = self] in
-        //                var myArticleObjects = [Article]()
-        //                for a in myArticles {
-        //                    let article = Article.getArticleByName(a as! String, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
-        //                    myArticleObjects.append(article!)
-        //                }
-        //                User.addUserToDB("Me", friend: true, canSeeArticles: true, picture_filename: "default-profile-pic.png", diversity: diversity, articles: myArticleObjects, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
-        //                do {
-        //                    try (weakSelf?.managedObjectContext)!.save()
-        //                } catch let error {
-        //                    print(error)
-        //                }
-        //                
-        //            }
+//                    managedObjectContext?.performBlock { [weak weakSelf = self] in
+//                        var myArticleObjects = [Article]()
+//                        for a in myArticles {
+//                            let article = Article.getArticleByName(a as! String, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
+//                            myArticleObjects.append(article!)
+//                        }
+//                        User.addUserToDB("Me", friend: true, canSeeArticles: true, picture_filename: "default-profile-pic.png", diversity: diversity, articles: myArticleObjects, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
+//                        do {
+//                            try (weakSelf?.managedObjectContext)!.save()
+//                        } catch let error {
+//                            print(error)
+//                        }
+//                        
+//                    }
     }
     
     func getDiversity(articles: Array<Int>, numArticles: Int) -> Float
