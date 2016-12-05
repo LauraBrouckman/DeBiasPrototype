@@ -24,10 +24,93 @@
             </objects>
             <point key="canvasLocation" x="-774" y="231"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="paa-bB-xDU">
+            <objects>
+                <tableViewController title="Settings" id="XHC-Yn-UMD" customClass="SettingsTableController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sq9-bn-Cme">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsFieldCell1" id="1DT-In-Ndl" customClass="SettingsTableCell" customModule="DeBias" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1DT-In-Ndl" id="iM4-z6-Uvz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dY-GU-peC">
+                                            <rect key="frame" x="8" y="14" width="83" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="FKA-t5-VSr">
+                                            <rect key="frame" x="355" y="13" width="12" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsFieldCell2" rowHeight="50" id="a1i-Df-cpx" customClass="SettingsTableCell" customModule="DeBias" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="78" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a1i-Df-cpx" id="2tH-xW-zhh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trZ-YT-hS9">
+                                            <rect key="frame" x="318" y="8" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Push Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Co-PI-BOq">
+                                            <rect key="frame" x="8" y="14" width="139" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsFieldCell3" rowHeight="50" id="MuW-ts-gby" customClass="SettingsTableCell" customModule="DeBias" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="128" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MuW-ts-gby" id="KX5-zV-Gid">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Up6-QT-cFf">
+                                            <rect key="frame" x="318" y="9" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allow Friends to View Articles I've Read" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSw-LQ-jZk">
+                                            <rect key="frame" x="8" y="14" width="300" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XHC-Yn-UMD" id="eHV-ua-azk"/>
+                            <outlet property="delegate" destination="XHC-Yn-UMD" id="HEe-su-hCR"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I8W-DS-HjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720.8" y="-1006.1469265367317"/>
+        </scene>
         <!--My Overview-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PieChartViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Overview" id="BYZ-38-t0r" customClass="PieChartViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -81,7 +164,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="hgh-HX-7vk" secondAttribute="trailing" id="pQq-Hc-SHe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Overview" id="b4z-Iy-ujg"/>
+                    <navigationItem key="navigationItem" title="My Overview" id="b4z-Iy-ujg">
+                        <barButtonItem key="rightBarButtonItem" image="settings-icon.png" id="P6t-Pj-bbC">
+                            <connections>
+                                <segue destination="XHC-Yn-UMD" kind="show" id="y7x-XS-OCN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="accentLabel" destination="MX7-T5-m3A" id="Nnz-Od-FdR"/>
                         <outlet property="detailsButton" destination="sDH-pT-rxt" id="fCf-2u-ihf"/>
@@ -92,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="878" y="-204"/>
         </scene>
-        <!--Goals View Controller-->
+        <!--Weekly Goals-->
         <scene sceneID="yzk-NC-HOi">
             <objects>
-                <viewController id="t0q-ED-xdp" customClass="GoalsViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Weekly Goals" id="t0q-ED-xdp" customClass="GoalsViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ceF-Sa-eu0"/>
                         <viewControllerLayoutGuide type="bottom" id="qWb-9T-1DY"/>
@@ -127,7 +216,7 @@
                                     <color key="titleColor" red="0.20277708768844604" green="0.20276418328285217" blue="0.20277169346809387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pgn-j5-RVM" kind="show" identifier="showBadges" id="35e-gg-wWJ"/>
+                                    <segue destination="dkD-IH-Ylq" kind="show" id="Fql-Zi-8Rr"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-uw-4zP">
@@ -327,9 +416,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiV-S2-Aa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="-203"/>
+            <point key="canvasLocation" x="1798" y="-203"/>
         </scene>
-        <!--Article Table View Controller-->
+        <!--Articles-->
         <scene sceneID="Qvr-zx-rsT">
             <objects>
                 <tableViewController id="Cbv-iy-mkF" customClass="ArticleTableViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
@@ -403,7 +492,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5C-L9-kxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2151" y="-899"/>
+            <point key="canvasLocation" x="2641" y="-205"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="8CJ-Be-51o">
@@ -453,10 +542,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUz-it-CPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2916" y="-905"/>
+            <point key="canvasLocation" x="3460" y="-206"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="bPw-Ri-VCj">
+        <!--Badges-->
+        <scene sceneID="RI2-7L-y2K">
             <objects>
                 <viewController id="pgn-j5-RVM" sceneMemberID="viewController">
                     <layoutGuides>
@@ -485,10 +574,10 @@
             </objects>
             <point key="canvasLocation" x="2477" y="-318"/>
         </scene>
-        <!--Trends View Controller-->
+        <!--Trends-->
         <scene sceneID="8fF-Vf-pyW">
             <objects>
-                <viewController id="2SN-N8-3hQ" customClass="TrendsViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Trends" id="2SN-N8-3hQ" customClass="TrendsViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cpn-iV-BJ1"/>
                         <viewControllerLayoutGuide type="bottom" id="IVn-iv-1j9"/>
@@ -1021,14 +1110,23 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xMg-jn-icK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Me" image="profile-icon" id="3P4-pe-Co4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="XIK-IN-RhO">
+                    <navigationBar key="navigationBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="XIK-IN-RhO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.062745098039215685" green="0.86274509803921573" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="sFW-CE-O3x">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SCm-ev-xgT"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QlI-rE-BFJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYg-Ib-kn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1041,12 +1139,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bIQ-er-LyS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Friends" image="Friends_Logo_60_60" id="S7i-CP-9ju"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="LGU-Y9-RaH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="LGU-Y9-RaH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.14859241247177124" green="0.8324134349822998" blue="0.47565209865570068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.061123378574848175" green="0.86395448446273804" blue="0.61787146329879761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

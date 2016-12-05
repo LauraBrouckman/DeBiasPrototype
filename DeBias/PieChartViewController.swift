@@ -57,6 +57,26 @@ class PieChartViewController: UIViewController {
         }
         return tempList
     }
+ 
+//    func addArticleData() {
+//
+//        let veryConservataiveArticles = getVeryConservativeArticles()
+//        let conservativeArticles =      getConservativeArticles()
+//        let neutralArticles =           getNeutralArticles()
+//        let liberalArticles =           getLiberalArticles()
+//        let veryLiberalArticles =       getVeryLiberalArticles()
+//        for a in (veryConservataiveArticles + conservativeArticles + neutralArticles + liberalArticles + veryLiberalArticles) {
+//            managedObjectContext?.performBlock { [weak weakSelf = self] in
+//                let article = Article.addArticleToDB(a["title"]!, author: a["author"]!, type: a["type"]!, source: a["source"]!, typeExplanation: a["typeExplanation"]!, url: a["url"]!, inManagedObjectContext: (weakSelf?.managedObjectContext)!)
+//                                do {
+//                                    try (weakSelf?.managedObjectContext)!.save()
+//                                } catch let error {
+//                                    print(error)
+//                                }
+//                                
+//            }
+//        }
+//    }
     
     func addCoreData() {
 //        addArticles()
