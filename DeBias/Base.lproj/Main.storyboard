@@ -632,7 +632,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7cd-WC-ztj">
-                            <rect key="frame" x="0.0" y="133" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="197" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -640,26 +640,26 @@
                         </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="105" id="Ra8-PH-MN8" customClass="ArticleTableViewCell" customModule="DeBias" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="105"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ra8-PH-MN8" id="stt-Un-wDH">
                                     <rect key="frame" x="0.0" y="0.0" width="553" height="104.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="270" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bU-rS-HAm">
-                                            <rect key="frame" x="13" y="13" width="574" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="270" text="Title" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bU-rS-HAm">
+                                            <rect key="frame" x="13" y="13" width="527" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" misplaced="YES" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llw-tC-gAi">
-                                            <rect key="frame" x="23" y="61.5" width="564" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llw-tC-gAi">
+                                            <rect key="frame" x="23" y="61.5" width="517" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" misplaced="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTR-Nf-gph">
-                                            <rect key="frame" x="23" y="38" width="564" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTR-Nf-gph">
+                                            <rect key="frame" x="23" y="38" width="517" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -711,7 +711,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dh6-0W-ThJ">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dh6-0W-ThJ">
                                 <rect key="frame" x="0.0" y="64" width="606" height="487"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
@@ -759,11 +759,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EUL-D3-CfF" customClass="PieChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUL-D3-CfF" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="20" y="64" width="560" height="472"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ9-5r-QXZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ9-5r-QXZ">
                                 <rect key="frame" x="239" y="484" width="121" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="121" id="CaS-Gm-fwQ"/>
@@ -812,13 +812,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yds-3v-GUL">
-                                <rect key="frame" x="20" y="64" width="560" height="545"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yds-3v-GUL">
+                                <rect key="frame" x="20" y="64" width="560" height="452"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7l-cA-8cl" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="109"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="90.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRi-bb-xTo" userLabel="InteractionButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRi-bb-xTo" userLabel="InteractionButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="520" height="90.5"/>
                                                 <connections>
                                                     <segue destination="cj9-b5-DSn" kind="show" identifier="showFriendArticles" id="3m3-2r-7D0"/>
@@ -834,9 +834,9 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wab-9H-RH7" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="109" width="560" height="109"/>
+                                        <rect key="frame" x="0.0" y="90.5" width="560" height="90.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ju-Lj-UmA" userLabel="InteractionButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ju-Lj-UmA" userLabel="InteractionButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="520" height="90.5"/>
                                                 <connections>
                                                     <segue destination="cj9-b5-DSn" kind="show" identifier="showFriendArticles" id="dk9-kf-eyP"/>
@@ -852,9 +852,9 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuL-Ad-Jmb" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="218" width="560" height="109"/>
+                                        <rect key="frame" x="0.0" y="181" width="560" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0Z-Gi-nAy" userLabel="InteractionButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0Z-Gi-nAy" userLabel="InteractionButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="520" height="90"/>
                                                 <connections>
                                                     <segue destination="cj9-b5-DSn" kind="show" identifier="showFriendArticles" id="osi-K2-OOB"/>
@@ -870,9 +870,9 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcb-17-aLW" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="327" width="560" height="109"/>
+                                        <rect key="frame" x="0.0" y="271" width="560" height="90.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHs-KJ-0ga" userLabel="InteractionButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHs-KJ-0ga" userLabel="InteractionButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="520" height="90.5"/>
                                                 <connections>
                                                     <segue destination="cj9-b5-DSn" kind="show" identifier="showFriendArticles" id="Mdg-2e-5i3"/>
@@ -888,9 +888,9 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMG-m1-lCA" customClass="ProgressBarView" customModule="DeBias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="436" width="560" height="109"/>
+                                        <rect key="frame" x="0.0" y="361.5" width="560" height="90.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnf-C1-EEl" userLabel="InteractionButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnf-C1-EEl" userLabel="InteractionButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="520" height="90.5"/>
                                                 <connections>
                                                     <segue destination="cj9-b5-DSn" kind="show" identifier="showFriendArticles" id="Knc-QF-smc"/>
@@ -948,7 +948,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="zgT-IP-y5J" customClass="FriendToolbarView" customModule="DeBias" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="68"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Var-LL-o8d">
@@ -959,7 +959,7 @@
                                     </constraints>
                                     <state key="normal" image="addFriend.png"/>
                                     <connections>
-                                        <segue destination="Fxh-cJ-2GV" kind="presentation" id="kfg-wX-8Ey"/>
+                                        <segue destination="Fxh-cJ-2GV" kind="show" id="Tv9-DU-mxB"/>
                                     </connections>
                                 </button>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKO-Ms-RvQ">
@@ -979,7 +979,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FriendTableViewCell" rowHeight="90" id="hd2-pN-H1e" userLabel="FriendTableViewCell" customClass="FriendTableViewCell" customModule="DeBias" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="90" width="600" height="90"/>
+                                <rect key="frame" x="0.0" y="154" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hd2-pN-H1e" id="2W3-M4-sVn">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
@@ -1030,64 +1030,37 @@
         <scene sceneID="xuj-3Q-rdF">
             <objects>
                 <tableViewController id="Fxh-cJ-2GV" customClass="AddFriendTableViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lj6-1B-Taw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lj6-1B-Taw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="YJ3-Ra-VFW">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Hpf-BB-hs4">
-                                    <rect key="frame" x="0.0" y="25" width="508" height="37"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2D-au-QxX">
-                                    <rect key="frame" x="508" y="25" width="92" height="37"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="92" id="LIl-y4-2bz"/>
-                                    </constraints>
-                                    <state key="normal" title="Cancel"/>
-                                    <connections>
-                                        <segue destination="EbE-oA-Hcf" kind="show" id="Ty1-O1-aC4"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="Hpf-BB-hs4" firstAttribute="leading" secondItem="YJ3-Ra-VFW" secondAttribute="leading" id="0A2-Ws-dza"/>
-                                <constraint firstItem="q2D-au-QxX" firstAttribute="centerY" secondItem="YJ3-Ra-VFW" secondAttribute="centerY" id="PRH-rq-mRp"/>
-                                <constraint firstItem="q2D-au-QxX" firstAttribute="leading" secondItem="Hpf-BB-hs4" secondAttribute="trailing" id="QLX-fJ-paT"/>
-                                <constraint firstAttribute="trailing" secondItem="q2D-au-QxX" secondAttribute="trailing" id="Uts-NU-btz"/>
-                                <constraint firstItem="Hpf-BB-hs4" firstAttribute="top" secondItem="YJ3-Ra-VFW" secondAttribute="top" constant="25" id="iNv-UI-yvm"/>
-                                <constraint firstItem="q2D-au-QxX" firstAttribute="height" secondItem="Hpf-BB-hs4" secondAttribute="height" id="jja-QR-Mnj"/>
-                                <constraint firstItem="Hpf-BB-hs4" firstAttribute="centerY" secondItem="YJ3-Ra-VFW" secondAttribute="centerY" id="kM2-k7-aiI"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addFriendCell" rowHeight="90" id="uCQ-R9-5Md" customClass="AddFriendTableViewCell" customModule="DeBias" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="115" width="600" height="90"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uCQ-R9-5Md" id="Qqi-05-Np5">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name of Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOF-kK-asF">
-                                            <rect key="frame" x="108" y="26.5" width="118" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOF-kK-asF">
+                                            <rect key="frame" x="108" y="34.5" width="118" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnF-j6-MUn">
-                                            <rect key="frame" x="537" y="5" width="40" height="39.5"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnF-j6-MUn">
+                                            <rect key="frame" x="537" y="25" width="40" height="39.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="39.5" id="BHJ-5h-1cY"/>
                                                 <constraint firstAttribute="width" constant="40" id="mBb-l8-0PD"/>
                                             </constraints>
                                             <state key="normal" image="addFriend.png"/>
+                                            <connections>
+                                                <action selector="addFriend:" destination="Fxh-cJ-2GV" eventType="touchUpInside" id="vwD-tR-eQ4"/>
+                                            </connections>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1X-zM-8ba">
-                                            <rect key="frame" x="18" y="2" width="70" height="70"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h1X-zM-8ba">
+                                            <rect key="frame" x="18" y="10" width="70" height="70"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="70" id="MZl-k8-C0Z"/>
                                                 <constraint firstAttribute="height" constant="70" id="Wy7-Jy-kuc"/>
@@ -1186,8 +1159,7 @@
         <image name="settings-icon1.png" width="38" height="38"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NrN-8g-qfT"/>
-        <segue reference="Ty1-O1-aC4"/>
         <segue reference="osi-K2-OOB"/>
+        <segue reference="NrN-8g-qfT"/>
     </inferredMetricsTieBreakers>
 </document>

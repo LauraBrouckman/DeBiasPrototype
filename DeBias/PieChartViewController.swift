@@ -88,7 +88,7 @@ class PieChartViewController: UIViewController {
 //        
 //        
 //        for a in (veryConservataiveArticles + conservativeArticles + neutralArticles + liberalArticles + veryLiberalArticles) {
-//            managedObjectContext?.performBlock { [weak weakSelf = self] in
+//            self.managedObjectContext?.performBlock { [weak weakSelf = self] in
 //                Article.addArticleToDB(a["title"]!, author: a["author"]!, type: a["type"]!, source: a["source"]!, typeExplanation: a["typeExplanation"]!, url: a["url"]!, inManagedObjectContext: (weakSelf?.managedObjectContext)!)
 //                do {
 //                    try (weakSelf?.managedObjectContext)!.save()
@@ -127,7 +127,7 @@ class PieChartViewController: UIViewController {
 //            print("IS FRIEND \(isFriend)")
 //            let canSeeArticles = (Int(arc4random_uniform(2)) == 1)
 //            let diversity = getDiversity(friendArticleTypes, numArticles: friendArticles.count)
-//            managedObjectContext?.performBlock { [weak weakSelf = self] in
+//            self.managedObjectContext?.performBlock { [weak weakSelf = self] in
 //                var friendArticleObjects = [Article]()
 //                for a in friendArticles {
 //                    let article = Article.getArticleByName(a as! String, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
