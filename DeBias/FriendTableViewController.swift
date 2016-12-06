@@ -94,7 +94,6 @@ class FriendTableViewController: CoreDataTableViewController {
             pickerLabel = UILabel()
             
             pickerLabel?.font = UIFont(name: "Montserrat", size: 8)
-//            pickerLabel?.textAlignment = NSTextAlignment.Center
         }
         
         pickerLabel?.text = self.list[row]

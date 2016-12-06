@@ -9,23 +9,46 @@
 import UIKit
 import CoreData
 
-class AddFriendTableViewController: CoreDataTableViewController {
+extension AddFriendTableViewController: UISearchResultsUpdating {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
 
+class AddFriendTableViewController: CoreDataTableViewController {
+    
+
+    var names = [String]()
+    
+    let searchController = UISearchController(searchResultsController: nil)
+
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        updateUI(searchText)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navTitle.title = "Friends"
-        updateUI()
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+        updateUI("")
     }
     
     var managedObjectContext: NSManagedObjectContext? =
         (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
-
     
-    private func updateUI() {
+    
+    private func updateUI(searchText: String) {
         if let context = managedObjectContext {
             let request = NSFetchRequest(entityName: "User")
-            request.predicate = NSPredicate(format: "friend == 0")
+            if searchText == "" {
+                request.predicate = NSPredicate(format: "friend == 0", searchText)
+            } else {
+                request.predicate = NSPredicate(format: "friend == 0 and name contains[cd] %@", searchText)
+            }
             request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))]
             fetchedResultsController = NSFetchedResultsController(
                 fetchRequest: request,
@@ -51,6 +74,7 @@ class AddFriendTableViewController: CoreDataTableViewController {
             }
             cell.nameLabel.text = name
             cell.profilePicture.image = UIImage(named: profileImageFile!)
+            cell.addFriendButton.tag = indexPath.row
         }
         return cell
     }
@@ -61,19 +85,46 @@ class AddFriendTableViewController: CoreDataTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table view data source
+    @IBAction func addFriend(sender: UIButton) {
+        let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: sender.tag, inSection: 0)) as! AddFriendTableViewCell
+        let name = cell.nameLabel!.text!
+        let title = "Confirmation"
+        let message =  "Are you sure you want to " + name + " as a friend?"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert);
+        alert.modalInPopover = true
+        
+        alert.addAction(UIAlertAction(
+            title: "Add Friend",
+            style: .Default)
+        { (action: UIAlertAction) ->  Void in
+            self.managedObjectContext?.performBlock { [weak weakSelf = self] in
+                User.changeFriendStatusOfUser(name, friend: true, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
+                let confirm = UIAlertController(title: "Sucess!", message: "Added " + name + " as a friend", preferredStyle: UIAlertControllerStyle.Alert)
+                confirm.modalInPopover = true
+                confirm.addAction(UIAlertAction(title: "Got it!", style: .Default) { (action: UIAlertAction) -> Void in
+                    weakSelf?.updateUI("")
+                    weakSelf?.searchController.active = false
+                })
+                weakSelf!.presentViewController(confirm, animated: true, completion: nil)
+                do {
+                    try (weakSelf?.managedObjectContext)!.save()
+                } catch let error {
+                    print(error)
+                }
+            }
+            }
+        )
+        
+        alert.addAction(UIAlertAction(
+            title: "Cancel",
+            style: .Default)
+        { (action: UIAlertAction) ->  Void in
+            }
+        )
+        
+        presentViewController(alert, animated: true, completion: nil)
+        
+    }
     
-//    let friendSegueIdentifier = "ShowFriendPieChart"
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if  segue.identifier == friendSegueIdentifier,
-//            let destination = segue.destinationViewController as? FriendPieChartViewController,
-//            cell = sender as? FriendTableViewCell
-//        {
-//            destination.articles = cell.articles
-//            destination.name = cell.nameLabel.text!
-//            destination.canSeeArticles = cell.canSeeArticles
-//        }
-//    }
-
-
+    
 }
