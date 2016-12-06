@@ -16,29 +16,104 @@ class FriendTableViewController: CoreDataTableViewController {
     var managedObjectContext: NSManagedObjectContext? =
         (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
-    @IBAction func switchSort(sender: UISwitch) {
-            if (sortByNumArticles)
-            {
-                updateUI("diversity")
-                sortByNumArticles = false
-            }else
-            {
-                updateUI("numArticles")
-                sortByNumArticles = true
-            }
-          //  self.tableView.reloadData()
+//    @IBAction func switchSort(sender: UISwitch) {
+//            if (sortByNumArticles)
+//            {
+//                updateUI("diversity")
+//                sortByNumArticles = false
+//            }else
+//            {
+//                updateUI("numArticles")
+//                sortByNumArticles = true
+//            }
+//    }
+    
+    
+    @IBOutlet weak var sortTextbox: UITextField!
+    @IBOutlet weak var sortDropDown: UIPickerView!
+    var list = ["Number Articles","Diversity"]
+
+    
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+        
     }
     
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return list.count
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        
+        self.view.endEditing(true)
+        return list[row]
+        
+        
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        self.sortTextbox.text = self.list[row]
+        self.sortDropDown.hidden = true
+        if (self.list[row] == "Number Articles")
+        {
+            updateUI("diversity")
+            sortByNumArticles = false
+        }
+        else
+        {
+            updateUI("numArticles")
+            sortByNumArticles = true
+        }
+        
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        if textField == self.sortTextbox {
+            self.sortDropDown.hidden = false
+            //if you dont want the users to se the keyboard type:
+            
+            textField.endEditing(true)
+            
+        }
+        
+        
+    }
+
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
+        
+        var pickerLabel = view as? UILabel;
+        
+        if (pickerLabel == nil)
+        {
+            pickerLabel = UILabel()
+            
+            pickerLabel?.font = UIFont(name: "Montserrat", size: 8)
+//            pickerLabel?.textAlignment = NSTextAlignment.Center
+        }
+        
+        pickerLabel?.text = self.list[row]
+        
+        return pickerLabel!;
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         self.navigationController?.navigationBar.layer.shadowColor = UIColor.darkGrayColor().CGColor
         self.navigationController?.navigationBar.layer.shadowOffset = CGSizeMake(2.0, 2.0);
         self.navigationController?.navigationBar.layer.shadowRadius = 4;
         self.navigationController?.navigationBar.layer.shadowOpacity = 1;
         
-        updateUI("numArticles")
+        self.sortDropDown.hidden = true
+        self.sortTextbox.text = "Number Articles"
+        updateUI("diversity")
+        sortByNumArticles = false
     }
     
     private func updateUI(sortKey: String) {

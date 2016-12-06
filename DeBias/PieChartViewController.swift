@@ -141,7 +141,7 @@ class PieChartViewController: UIViewController {
 //                }
 //                
 //            }
-    //    }
+//        }
 //        
 //        //Add yourself as your own "friend" so that you show up in the friends list
 //        var myArticles = [String]()

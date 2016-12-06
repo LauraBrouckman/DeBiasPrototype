@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        
+        
 //                UserDefaults.setArticleGoal(4, articleType: "veryConservative")
 //                UserDefaults.setArticleRead(4, articleType: "veryConservative")
 //        
