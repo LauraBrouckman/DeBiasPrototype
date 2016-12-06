@@ -14,9 +14,14 @@ class FriendArticlesTableViewController: UITableViewController {
     var typeOfArticle: String?
     var name: String?
     
+    @IBOutlet weak var navTitle: UINavigationItem!
+    
     @IBOutlet weak var noArticleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let strSplit = title!.characters.split(" ")
+        let firstName = String(strSplit.first!)
+        navTitle.title = firstName + " " + typeOfArticle! + " Articles"
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
         if articles.count == 0 {
@@ -68,6 +73,9 @@ class FriendArticlesTableViewController: UITableViewController {
                 if let cell = sender as? ArticleTableViewCell, let indexPath = tableView.indexPathForCell(cell),
                     let webvc = segue.destinationViewController as? WebViewController {
                     webvc.url = articles[indexPath.row].url
+                    let backItem = UIBarButtonItem()
+                    backItem.title = ""
+                    navigationItem.backBarButtonItem = backItem
                 }
             }
         }

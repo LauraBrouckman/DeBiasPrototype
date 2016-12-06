@@ -55,6 +55,15 @@
 		9F4D8F051DF29A1000AD6075 /* SettingsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D8F041DF29A1000AD6075 /* SettingsTableController.swift */; };
 		9F4D8F091DF29D7800AD6075 /* SettingsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D8F081DF29D7800AD6075 /* SettingsTableCell.swift */; };
 		9F92842F1DED396900EBD85F /* FriendPieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */; };
+		9FEB11A01DF7838200E32920 /* Beyonce.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB119F1DF7838200E32920 /* Beyonce.png */; };
+		9FEB11A21DF7847000E32920 /* HarryPotter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11A11DF7847000E32920 /* HarryPotter.png */; };
+		9FEB11A41DF784DB00E32920 /* Obama.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11A31DF784DB00E32920 /* Obama.png */; };
+		9FEB11A61DF7854F00E32920 /* Ron.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11A51DF7854F00E32920 /* Ron.png */; };
+		9FEB11A81DF785ED00E32920 /* Bart.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11A71DF785ED00E32920 /* Bart.png */; };
+		9FEB11AA1DF786AD00E32920 /* Serena.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11A91DF786AD00E32920 /* Serena.png */; };
+		9FEB11AC1DF7877100E32920 /* Taylor.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11AB1DF7877100E32920 /* Taylor.png */; };
+		9FEB11AE1DF787B900E32920 /* Kanye.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11AD1DF787B900E32920 /* Kanye.png */; };
+		9FEB11B01DF7881C00E32920 /* Justin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11AF1DF7881C00E32920 /* Justin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +117,15 @@
 		9F4D8F041DF29A1000AD6075 /* SettingsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableController.swift; sourceTree = "<group>"; };
 		9F4D8F081DF29D7800AD6075 /* SettingsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableCell.swift; sourceTree = "<group>"; };
 		9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPieChartViewController.swift; sourceTree = "<group>"; };
+		9FEB119F1DF7838200E32920 /* Beyonce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Beyonce.png; sourceTree = "<group>"; };
+		9FEB11A11DF7847000E32920 /* HarryPotter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HarryPotter.png; sourceTree = "<group>"; };
+		9FEB11A31DF784DB00E32920 /* Obama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obama.png; sourceTree = "<group>"; };
+		9FEB11A51DF7854F00E32920 /* Ron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ron.png; sourceTree = "<group>"; };
+		9FEB11A71DF785ED00E32920 /* Bart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bart.png; sourceTree = "<group>"; };
+		9FEB11A91DF786AD00E32920 /* Serena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Serena.png; sourceTree = "<group>"; };
+		9FEB11AB1DF7877100E32920 /* Taylor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Taylor.png; sourceTree = "<group>"; };
+		9FEB11AD1DF787B900E32920 /* Kanye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kanye.png; sourceTree = "<group>"; };
+		9FEB11AF1DF7881C00E32920 /* Justin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Justin.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +143,15 @@
 		30333C801DDBCD7200902916 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9FEB11AF1DF7881C00E32920 /* Justin.png */,
+				9FEB119F1DF7838200E32920 /* Beyonce.png */,
+				9FEB11A11DF7847000E32920 /* HarryPotter.png */,
+				9FEB11A31DF784DB00E32920 /* Obama.png */,
+				9FEB11A51DF7854F00E32920 /* Ron.png */,
+				9FEB11A71DF785ED00E32920 /* Bart.png */,
+				9FEB11A91DF786AD00E32920 /* Serena.png */,
+				9FEB11AB1DF7877100E32920 /* Taylor.png */,
+				9FEB11AD1DF787B900E32920 /* Kanye.png */,
 				305792661DF52FAA0036495E /* addFriend.png */,
 				305792681DF530DB0036495E /* arrow2.png */,
 				305792641DF52FA20036495E /* gray-circle2.png */,
@@ -270,21 +297,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEB11A01DF7838200E32920 /* Beyonce.png in Resources */,
+				9FEB11A61DF7854F00E32920 /* Ron.png in Resources */,
 				305792651DF52FA20036495E /* gray-circle2.png in Resources */,
+				9FEB11B01DF7881C00E32920 /* Justin.png in Resources */,
 				308204941DD9590A008AD2C4 /* LaunchScreen.storyboard in Resources */,
 				30333C8C1DDBCF7700902916 /* me-icon2.png in Resources */,
+				9FEB11AA1DF786AD00E32920 /* Serena.png in Resources */,
 				3057927D1DF531D50036495E /* trophy.png in Resources */,
+				9FEB11A41DF784DB00E32920 /* Obama.png in Resources */,
 				308204911DD9590A008AD2C4 /* Assets.xcassets in Resources */,
 				305792511DF1E6980036495E /* settings-icon1.png in Resources */,
 				30333CEE1DE4D90F00902916 /* edit-icon2.png in Resources */,
 				30333C8E1DDBCF7D00902916 /* friends-icon2.png in Resources */,
 				305792671DF52FAA0036495E /* addFriend.png in Resources */,
+				9FEB11A21DF7847000E32920 /* HarryPotter.png in Resources */,
 				3082048C1DD9590A008AD2C4 /* Main.storyboard in Resources */,
 				305792791DF531D50036495E /* blue-circle.png in Resources */,
+				9FEB11A81DF785ED00E32920 /* Bart.png in Resources */,
 				305792691DF530DB0036495E /* arrow2.png in Resources */,
 				301CDE181DEBBB41007D3B94 /* default-profile-pic.png in Resources */,
 				3057927A1DF531D50036495E /* purple-circle.png in Resources */,
+				9FEB11AE1DF787B900E32920 /* Kanye.png in Resources */,
 				3057927C1DF531D50036495E /* trophy-b-and-w.png in Resources */,
+				9FEB11AC1DF7877100E32920 /* Taylor.png in Resources */,
 				3057927B1DF531D50036495E /* red-circle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

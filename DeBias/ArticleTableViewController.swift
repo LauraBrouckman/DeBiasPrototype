@@ -15,6 +15,7 @@ class ArticleTableViewController: CoreDataTableViewController {
     
     @IBOutlet weak var noArticlesLabel: UILabel!
     
+    @IBOutlet weak var navTitle: UINavigationItem!
     var managedObjectContext: NSManagedObjectContext? {
         didSet {
             updateUI()
@@ -63,7 +64,7 @@ class ArticleTableViewController: CoreDataTableViewController {
         updateUI()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
-        
+        navTitle.title = typeOfArticle! + " List"
         if tableView.numberOfRowsInSection(1) == 0 {
             noArticlesLabel.text = "You have not read any " + typeToName[typeOfArticle!]! + " articles"
             //STYLE LABEL HERE
@@ -128,6 +129,9 @@ class ArticleTableViewController: CoreDataTableViewController {
                 if let cell = sender as? ArticleTableViewCell, let indexPath = tableView.indexPathForCell(cell),
                     let webvc = segue.destinationViewController as? WebViewController {
                     webvc.url = urls[indexPath.row]
+                                let backItem = UIBarButtonItem()
+                                backItem.title = ""
+                                navigationItem.backBarButtonItem = backItem
                 }
             }
         }

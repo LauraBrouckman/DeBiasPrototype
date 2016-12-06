@@ -22,15 +22,20 @@ class FriendGoalsViewController: UIViewController {
     @IBOutlet weak var conservativeButton: UIButton!
     @IBOutlet weak var veryConservativeButton: UIButton!
     
+    @IBOutlet weak var navTitle: UINavigationItem!
     var articlesRead = [Double]()
     var canSeeArticles = false
     var articles = [Article]()
     var name: String?
+    var firstName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         updateProgressValues()
+        let strSplit = name!.characters.split(" ")
+        let firstName = String(strSplit.first!)
+        navTitle.title = firstName + " Weekly Goals"
         
     }
     
@@ -92,7 +97,11 @@ class FriendGoalsViewController: UIViewController {
         else if let identifier = segue.identifier {
             if identifier == "showFriendArticles" {
                 if let button = sender as? UIButton, let articlevc = segue.destinationViewController as? FriendArticlesTableViewController {
+                    articlevc.title = self.navTitle.title
                     articlevc.name = self.name
+                    let backItem = UIBarButtonItem()
+                    backItem.title = ""
+                    navigationItem.backBarButtonItem = backItem
                     switch button {
                     case veryConservativeButton:
                         articlevc.typeOfArticle = "Very Conservative"

@@ -33,7 +33,7 @@ class FriendTableViewController: CoreDataTableViewController {
     @IBOutlet weak var sortDropDown: UIPickerView!
     var list = ["Number Articles","Diversity"]
 
-    
+   
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -108,11 +108,16 @@ class FriendTableViewController: CoreDataTableViewController {
         self.navigationController?.navigationBar.layer.shadowOffset = CGSizeMake(2.0, 2.0);
         self.navigationController?.navigationBar.layer.shadowRadius = 4;
         self.navigationController?.navigationBar.layer.shadowOpacity = 1;
+        self.tabBarController?.tabBar.barTintColor = UIColor(red: 240.0/255, green: 240/255, blue: 240/255, alpha: 1.0)
+        self.tabBarController?.tabBar.tintColor = UIColor(red: 28.0/255, green: 190/255, blue: 124/255, alpha: 1.0)
+        
         
         self.sortDropDown.hidden = true
         self.sortTextbox.text = "Number Articles"
         updateUI("diversity")
         sortByNumArticles = false
+        
+       
     }
     
     private func updateUI(sortKey: String) {
@@ -169,6 +174,9 @@ class FriendTableViewController: CoreDataTableViewController {
     
     let friendSegueIdentifier = "ShowFriendPieChart"
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
         if  segue.identifier == friendSegueIdentifier,
             let destination = segue.destinationViewController as? FriendPieChartViewController,
             cell = sender as? FriendTableViewCell
@@ -176,6 +184,7 @@ class FriendTableViewController: CoreDataTableViewController {
             destination.articles = cell.articles
             destination.name = cell.nameLabel.text!
             destination.canSeeArticles = cell.canSeeArticles
+           
         }
     }
     
