@@ -61,14 +61,16 @@ class FriendTableViewController: CoreDataTableViewController {
         self.sortDropDown.hidden = true
         if (self.list[row] == "Number Articles")
         {
-            updateUI("diversity")
-            sortByNumArticles = false
+            updateUI("numArticles")
+            sortByNumArticles = true
+        
         }
         else
         {
-            updateUI("numArticles")
-            sortByNumArticles = true
+            updateUI("diversity")
+            sortByNumArticles = false
         }
+        tableView.reloadData()
         
     }
     
@@ -114,10 +116,8 @@ class FriendTableViewController: CoreDataTableViewController {
         
         self.sortDropDown.hidden = true
         self.sortTextbox.text = "Number Articles"
-        updateUI("diversity")
-        sortByNumArticles = false
-        
-       
+        updateUI("numArticles")
+        sortByNumArticles = true
     }
     
     private func updateUI(sortKey: String) {
@@ -142,19 +142,16 @@ class FriendTableViewController: CoreDataTableViewController {
         if let friend = fetchedResultsController?.objectAtIndexPath(indexPath) as? User {
             var name: String?
             var profileImageFile: String?
-            var numArticles: Int?
             var articles = [Article]()
             var canSeeArticles: Bool?
             
             friend.managedObjectContext?.performBlockAndWait {
                 name = friend.name
                 profileImageFile = friend.picture_filename
-                numArticles = friend.articles!.count
                 articles = friend.articles!.allObjects as! [Article]
                 canSeeArticles = (friend.canSeeArticles == 1)
             }
             cell.nameLabel.text = name
-            cell.numArticlesLabel.text = String(numArticles!)
             cell.profilePicture.image = UIImage(named: profileImageFile!)
             cell.rankingLabel.text = String(indexPath.row + 1)
             cell.articles = articles

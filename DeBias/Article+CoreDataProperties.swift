@@ -2,7 +2,7 @@
 //  Article+CoreDataProperties.swift
 //  DeBias
 //
-//  Created by Elizabeth Brouckman on 11/30/16.
+//  Created by Elizabeth Brouckman on 12/6/16.
 //  Copyright © 2016 debias. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -20,6 +20,7 @@ extension Article {
     @NSManaged var type: String?
     @NSManaged var typeExplanation: String?
     @NSManaged var url: String?
+    @NSManaged var imageFile: String?
     @NSManaged var users: NSSet?
 
 }

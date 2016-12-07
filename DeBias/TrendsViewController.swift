@@ -79,7 +79,7 @@ class TrendsViewController: UIViewController {
         barChart.xAxis.labelPosition = .Bottom
         barChart.leftAxis.labelFont = UIFont(name: "Helvetica", size: CGFloat(15.0))!
         barChart.xAxis.labelFont = UIFont(name: "Helvetica", size: CGFloat(13.0))!
-
+        barChart.legend.enabled = false
 
     }
 

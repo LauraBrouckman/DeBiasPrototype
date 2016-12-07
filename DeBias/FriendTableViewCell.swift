@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import Charts
 
 class FriendTableViewCell: UITableViewCell {
     
     @IBOutlet weak var rankingLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
-    @IBOutlet weak var numArticlesLabel: UILabel!
     var canSeeArticles = false
     var articles = [Article]()
+    var articlesRead = [0.0, 0.0, 0.0, 0.0, 0.0]
+
+    @IBOutlet weak var pieChartView: PieChartView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +26,47 @@ class FriendTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        let categories = ["Very Conservative", "Conservative", "Neutral", "Liberal", "Very Liberal"]
+        for article in articles {
+            switch article.type! {
+            case "veryConservative":
+                articlesRead[0] += 1
+            case "conservative":
+                articlesRead[1] += 1
+            case "neutral":
+                articlesRead[2] += 1
+            case "liberal":
+                articlesRead[3] += 1
+            case "veryLiberal":
+                articlesRead[4] += 1
+            default: break
+            }
+        }
+        setChart(categories, values: articlesRead)
+    }
+    
+    func setChart(dataPoints: [String], values: [Double]) {
+        
+        var dataEntries: [ChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+            dataEntries.append(dataEntry)
+        }
+        
+        let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "")
+        let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
+        pieChartView.data = pieChartData
+        pieChartView.rotationEnabled = false
+        pieChartView.highlightPerTapEnabled = false
+        pieChartView.centerText = String(articles.count)
+        pieChartView.drawSliceTextEnabled = false
+        pieChartView.legend.enabled = false
+        var colors: [UIColor] = []
+        
+        colors = [Colors.darkRed, Colors.lightRed, Colors.purple, Colors.lightBlue, Colors.darkBlue]
+        
+        pieChartDataSet.colors = colors
     }
     
 
