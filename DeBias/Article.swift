@@ -12,7 +12,7 @@ import CoreData
 
 class Article: NSManagedObject {
 
-    class func addArticleToDB(title: String, author: String, type: String, source: String, typeExplanation: String, url: String, inManagedObjectContext context: NSManagedObjectContext) -> Article? {
+    class func addArticleToDB(title: String, author: String, type: String, source: String, typeExplanation: String, url: String, imageFile: String, inManagedObjectContext context: NSManagedObjectContext) -> Article? {
         let request = NSFetchRequest(entityName: "Article")
         request.predicate = NSPredicate(format: "title = %@", title)
         
@@ -29,6 +29,7 @@ class Article: NSManagedObject {
             result.type = type
             result.typeExplanation = typeExplanation
             result.url = url
+            result.imageFile = imageFile
             return result
         }
         return nil

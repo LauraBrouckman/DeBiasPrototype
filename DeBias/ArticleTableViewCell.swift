@@ -13,6 +13,7 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var articlePreviewImage: UIImageView!
     
     var title: String?
     var url: String?

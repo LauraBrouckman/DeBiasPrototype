@@ -17,7 +17,6 @@ class PieChartViewController: UIViewController {
     
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var detailsButton: UIButton!
-    @IBOutlet weak var accentLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +39,6 @@ class PieChartViewController: UIViewController {
         detailsButton.layer.cornerRadius = 6
         detailsButton.layer.borderWidth = 1.5
         detailsButton.layer.borderColor = UIColor.grayColor().CGColor
-        accentLabel.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.2)
         
         self.navigationController?.navigationBar.layer.shadowColor = UIColor.darkGrayColor().CGColor
         self.navigationController?.navigationBar.layer.shadowOffset = CGSizeMake(2.0, 2.0);
@@ -89,7 +87,7 @@ class PieChartViewController: UIViewController {
 //        
 //        for a in (veryConservataiveArticles + conservativeArticles + neutralArticles + liberalArticles + veryLiberalArticles) {
 //            self.managedObjectContext?.performBlock { [weak weakSelf = self] in
-//                Article.addArticleToDB(a["title"]!, author: a["author"]!, type: a["type"]!, source: a["source"]!, typeExplanation: a["typeExplanation"]!, url: a["url"]!, inManagedObjectContext: (weakSelf?.managedObjectContext)!)
+//                Article.addArticleToDB(a["title"]!, author: a["author"]!, type: a["type"]!, source: a["source"]!, typeExplanation: a["typeExplanation"]!, url: a["url"]!, imageFile: a["image"]!, inManagedObjectContext: (weakSelf?.managedObjectContext)!)
 //                do {
 //                    try (weakSelf?.managedObjectContext)!.save()
 //                } catch let error {

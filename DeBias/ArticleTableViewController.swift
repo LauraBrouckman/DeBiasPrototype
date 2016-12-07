@@ -84,6 +84,7 @@ class ArticleTableViewController: CoreDataTableViewController {
             var type: String?
             var typeExplanation: String?
             var url: String?
+            var imageFile: String?
             article.managedObjectContext?.performBlockAndWait {
                 title = article.title
                 author = article.author
@@ -91,6 +92,7 @@ class ArticleTableViewController: CoreDataTableViewController {
                 type = article.type
                 typeExplanation = article.typeExplanation
                 url = article.url
+                imageFile = article.imageFile
             }
             cell.titleLabel?.text = title
             cell.authorLabel?.text = author
@@ -99,6 +101,7 @@ class ArticleTableViewController: CoreDataTableViewController {
             cell.typeExplanation = typeExplanation
             cell.sourceLabel?.text = source
             cell.title = title
+            cell.articlePreviewImage.image = UIImage(named: imageFile!)
             urls[indexPath.row] = url!
         }
         return cell
@@ -121,6 +124,7 @@ class ArticleTableViewController: CoreDataTableViewController {
         
         presentViewController(alert, animated: true, completion: nil)
     }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
