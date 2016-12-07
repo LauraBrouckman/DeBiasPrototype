@@ -26,7 +26,15 @@ class FriendPieChartViewController: UIViewController
     //@IBOutlet weak var navTitle: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        navTitle.title = name
+        
+        let strSplit = name.characters.split(" ")
+        let firstName = String(strSplit.first!)
+        //String(strSplit.last!)
+        //var firstName: String = nameArr[0]
+        navTitle.title = firstName + "'s Overview"
+        //navTitle.leftBarButtonItem.title = ""
+        //navTitle.hidesBackButton = true
+        
         
         let categories = ["Very Conservative", "Conservative", "Neutral", "Liberal", "Very Liberal"]
         detailButton.backgroundColor = UIColor.clearColor()
@@ -85,7 +93,11 @@ class FriendPieChartViewController: UIViewController
                     goalsvc.articlesRead = self.articlesRead
                     goalsvc.articles = self.articles
                     goalsvc.canSeeArticles = self.canSeeArticles
-                    goalsvc.name = self.name
+                    goalsvc.name = self.navTitle.title
+                    //goalsvc.name = self.firstName
+                    let backItem = UIBarButtonItem()
+                    backItem.title = ""
+                    navigationItem.backBarButtonItem = backItem
                 }
             }
         }

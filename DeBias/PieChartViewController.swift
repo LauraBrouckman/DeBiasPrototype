@@ -44,6 +44,11 @@ class PieChartViewController: UIViewController {
         self.navigationController?.navigationBar.layer.shadowOffset = CGSizeMake(2.0, 2.0);
         self.navigationController?.navigationBar.layer.shadowRadius = 4;
         self.navigationController?.navigationBar.layer.shadowOpacity = 1;
+        
+        //self.tabBarController?.tabBar.selectedItem?.selectedImage. = Colors.darkRed
+        self.tabBarController?.tabBar.barTintColor = UIColor(red: 240.0/255, green: 240/255, blue: 240/255, alpha: 1.0)
+        self.tabBarController?.tabBar.tintColor = UIColor(red: 28.0/255, green: 190/255, blue: 124/255, alpha: 1.0)
+  
         addCoreData()
     }
     
@@ -98,7 +103,8 @@ class PieChartViewController: UIViewController {
 //        }
 //        
 //        var articles = veryConservataiveArticles + conservativeArticles + neutralArticles + liberalArticles + veryLiberalArticles as [AnyObject]
-//        let friends = ["Laura Brouckman", "Leslie Kurt", "Saamon Legoski", "Matthew Chen", "Harry Potter", "Ron Weasley", "Hermione Granger", "Bart Simpson", "Taylor Swift", "Barack Obama", "Sarah Brown", "Jeff Johnson", "Beyonce"]
+//        let friends = ["Serena van der Woodsen", "Chuck Bass", "Kanye West", "Justin Bieber", "Harry Potter", "Ron Weasley", "Hermione Granger", "Bart Simpson", "Taylor Swift", "Barack Obama", "Sarah Brown", "Jeff Johnson", "Beyonce"]
+        //let pictures = ["Serena.png", "Chuck.png", "Kanye.png", "Justin.png", "HarryPotter.png", "Ron.png", "Hermione.png", "Bart.png", "Taylor.png", "Obama.png", "default-profile-pic.png", "default-profile-pic.png", "Beyonce.png"]
 //        for f in friends {
 ////            // Choose random number of articles
 //            var friendArticles = [AnyObject]()
@@ -218,6 +224,13 @@ class PieChartViewController: UIViewController {
         pieChartDataSet.colors = colors
     }
     
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            let backItem = UIBarButtonItem()
+            backItem.title = ""
+            navigationItem.backBarButtonItem = backItem
+    }
+
     
     // Add animations to the pie chart where on touch (of certain section) pie chart rotates and label at top displays category name
     // Add button/interaction area where on press it segues to the next screen

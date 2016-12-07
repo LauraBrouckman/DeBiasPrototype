@@ -133,6 +133,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99983716011047363" blue="0.99994874000549316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.061123378574848175" green="0.86395448446273804" blue="0.61787146329879761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hgh-HX-7vk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AuQ-Bs-5jq"/>
                             <constraint firstItem="sDH-pT-rxt" firstAttribute="centerX" secondItem="hgh-HX-7vk" secondAttribute="centerX" id="KOM-Mo-f2A"/>
@@ -396,7 +397,7 @@
             </objects>
             <point key="canvasLocation" x="1721" y="-791"/>
         </scene>
-        <!--Article Table View Controller-->
+        <!--Article List-->
         <scene sceneID="Qvr-zx-rsT">
             <objects>
                 <tableViewController id="Cbv-iy-mkF" customClass="ArticleTableViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
@@ -489,6 +490,7 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="navTitle" destination="Ar3-hu-D29" id="FdS-eV-FHc"/>
                         <outlet property="noArticlesLabel" destination="aWN-Pf-WLS" id="kuo-17-tJ1"/>
                     </connections>
                 </tableViewController>
@@ -496,7 +498,7 @@
             </objects>
             <point key="canvasLocation" x="3140" y="-763"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Articles-->
         <scene sceneID="8CJ-Be-51o">
             <objects>
                 <viewController id="XhM-GZ-QMa" customClass="WebViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
@@ -536,6 +538,7 @@
                             <constraint firstItem="URo-fS-Mh0" firstAttribute="centerY" secondItem="IdZ-ua-aNU" secondAttribute="centerY" id="u3K-A9-FYd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Articles" id="r1E-Kz-qnS"/>
                     <connections>
                         <outlet property="activity" destination="URo-fS-Mh0" id="0cj-Nv-0un"/>
                         <outlet property="label" destination="TBh-TR-lNM" id="dHZ-SK-ufE"/>
@@ -634,7 +637,7 @@
             </objects>
             <point key="canvasLocation" x="2886" y="58"/>
         </scene>
-        <!--Friend Articles Table View Controller-->
+        <!--Title-->
         <scene sceneID="jgt-J2-9HW">
             <objects>
                 <tableViewController id="cj9-b5-DSn" customClass="FriendArticlesTableViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
@@ -702,7 +705,9 @@
                             <outlet property="delegate" destination="cj9-b5-DSn" id="tWP-IP-g4A"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="GxH-eA-JGu"/>
                     <connections>
+                        <outlet property="navTitle" destination="GxH-eA-JGu" id="mBz-Bh-O5Y"/>
                         <outlet property="noArticleLabel" destination="7cd-WC-ztj" id="RCb-zs-LmD"/>
                     </connections>
                 </tableViewController>
@@ -710,7 +715,7 @@
             </objects>
             <point key="canvasLocation" x="3053" y="701"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Article-->
         <scene sceneID="XJ7-UE-5Ek">
             <objects>
                 <viewController id="JIb-65-4bZ" customClass="WebViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
@@ -748,6 +753,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Dh6-0W-ThJ" secondAttribute="trailing" constant="-26" id="yKd-Jg-Xoh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Article" id="bdA-ut-RMj"/>
                     <connections>
                         <outlet property="activity" destination="yu2-Ic-DUM" id="VKY-oX-ZZD"/>
                         <outlet property="label" destination="GPe-Yz-Bzn" id="2Wa-lw-xRW"/>
@@ -811,7 +817,7 @@
             </objects>
             <point key="canvasLocation" x="1721" y="599"/>
         </scene>
-        <!--Friend Goals View Controller-->
+        <!--Title-->
         <scene sceneID="eAT-Ag-o4Q">
             <objects>
                 <viewController id="nlG-a4-eXG" customClass="FriendGoalsViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
@@ -933,11 +939,13 @@
                             <constraint firstItem="Yds-3v-GUL" firstAttribute="leading" secondItem="CGB-Qj-tBh" secondAttribute="leadingMargin" id="yAo-ay-auQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="b8c-S2-3mz"/>
                     <connections>
                         <outlet property="conservativeButton" destination="2Ju-Lj-UmA" id="hCM-TE-I4B"/>
                         <outlet property="conservativeProgressBar" destination="Wab-9H-RH7" id="jgF-4m-DyY"/>
                         <outlet property="liberalButton" destination="dHs-KJ-0ga" id="zLw-Pn-UkG"/>
                         <outlet property="liberalProgressBar" destination="pcb-17-aLW" id="PD2-Iw-s3m"/>
+                        <outlet property="navTitle" destination="b8c-S2-3mz" id="k2f-Eq-9Oy"/>
                         <outlet property="neutralButton" destination="B0Z-Gi-nAy" id="tvF-5C-N1k"/>
                         <outlet property="neutralProgressBar" destination="fuL-Ad-Jmb" id="dBL-Tl-dEG"/>
                         <outlet property="veryConservativeButton" destination="oRi-bb-xTo" id="PU3-ut-BMs"/>
@@ -958,15 +966,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.99983716011047363" blue="0.99994874000549316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="zgT-IP-y5J" customClass="FriendToolbarView" customModule="DeBias" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="64" width="600" height="68"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Var-LL-o8d">
-                                    <rect key="frame" x="25" y="10" width="48" height="48"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Var-LL-o8d">
+                                    <rect key="frame" x="16" y="10" width="40" height="40"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="48" id="kIj-gY-y8T"/>
-                                        <constraint firstAttribute="height" constant="48" id="xGZ-p3-sTs"/>
+                                        <constraint firstAttribute="width" constant="40" id="kIj-gY-y8T"/>
+                                        <constraint firstAttribute="height" constant="40" id="xGZ-p3-sTs"/>
                                     </constraints>
                                     <state key="normal" image="addFriend.png"/>
                                     <connections>
@@ -994,8 +1003,17 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrD-Go-gkt">
+                                    <rect key="frame" x="0.0" y="67" width="377" height="0.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.54733392459999997" green="0.54733392459999997" blue="0.54733392459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.54733392459999997" green="0.54733392459999997" blue="0.54733392459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="Var-LL-o8d" firstAttribute="centerY" secondItem="zgT-IP-y5J" secondAttribute="centerY" id="1BJ-Zr-jds"/>
                                 <constraint firstItem="Var-LL-o8d" firstAttribute="leading" secondItem="zgT-IP-y5J" secondAttribute="leading" constant="25" id="c9S-87-4xF"/>
@@ -1077,7 +1095,7 @@
             </objects>
             <point key="canvasLocation" x="877" y="598"/>
         </scene>
-        <!--Add Friend Table View Controller-->
+        <!--Add Friends-->
         <scene sceneID="xuj-3Q-rdF">
             <objects>
                 <tableViewController id="Fxh-cJ-2GV" customClass="AddFriendTableViewController" customModule="DeBias" customModuleProvider="target" sceneMemberID="viewController">
@@ -1139,6 +1157,7 @@
                             <outlet property="delegate" destination="Fxh-cJ-2GV" id="di6-LD-aaX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Add Friends" id="LgH-na-Z7k"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzj-Bg-cdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1150,11 +1169,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xMg-jn-icK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Me" image="profile-icon" id="3P4-pe-Co4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="XIK-IN-RhO">
+                    <navigationBar key="navigationBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="XIK-IN-RhO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.12552084028720856" green="0.84765851497650146" blue="0.55089902877807617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.12552084029999999" green="0.847658515" blue="0.55089902879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

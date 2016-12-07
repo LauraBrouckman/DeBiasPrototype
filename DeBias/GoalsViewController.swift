@@ -189,6 +189,9 @@ class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerView
             if identifier == "showArticles" {
                 if let button = sender as? UIButton, let articlevc = segue.destinationViewController as? ArticleTableViewController {
                     articlevc.managedObjectContext = managedObjectContext
+                                let backItem = UIBarButtonItem()
+                                backItem.title = ""
+                                navigationItem.backBarButtonItem = backItem
                     switch button {
                     case veryConservativeButton:
                         articlevc.typeOfArticle = "veryConservative"
