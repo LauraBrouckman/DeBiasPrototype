@@ -12,97 +12,54 @@ import CoreData
 class FriendTableViewController: CoreDataTableViewController {
     var friends = [Friend]()
     var sortByNumArticles = true
-    
     var managedObjectContext: NSManagedObjectContext? =
         (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
-//    @IBAction func switchSort(sender: UISwitch) {
-//            if (sortByNumArticles)
-//            {
-//                updateUI("diversity")
-//                sortByNumArticles = false
-//            }else
-//            {
-//                updateUI("numArticles")
-//                sortByNumArticles = true
-//            }
-//    }
+    @IBOutlet weak var dropdownView: UIView!
+    @IBOutlet weak var numArticlesButton: UIButton!
+    @IBOutlet weak var diversityButton: UIButton!
+    
+    @IBAction func sortByDiversity(sender: UIButton) {
+        print("diversity")
+        updateUI("diversity")
+        sortByNumArticles = false
+        self.dropdownView.hidden = true
+        self.sortTextbox.hidden = false
+        self.sortTextbox.text = "Diversity"
+    }
+    @IBAction func tapGesture(sender: UITapGestureRecognizer) {
+        updateUI("numArticles")
+        sortByNumArticles = true
+        self.dropdownView.hidden = true
+        self.sortTextbox.hidden = false
+        self.sortTextbox.text = "Number of Articles"
+    }
+    
+    @IBAction func closeMenu(sender: UITapGestureRecognizer) {
+        self.dropdownView.hidden = true
+        self.sortTextbox.hidden = false
+    }
     
     
     @IBOutlet weak var sortTextbox: UITextField!
-    @IBOutlet weak var sortDropDown: UIPickerView!
-    var list = ["Number Articles","Diversity"]
 
-   
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-        
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        return list.count
-        
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        
-        self.view.endEditing(true)
-        return list[row]
-        
-        
-        
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        self.sortTextbox.text = self.list[row]
-        self.sortDropDown.hidden = true
-        if (self.list[row] == "Number Articles")
-        {
-            updateUI("numArticles")
-            sortByNumArticles = true
-        
-        }
-        else
-        {
-            updateUI("diversity")
-            sortByNumArticles = false
-        }
-        tableView.reloadData()
-        
-    }
-    
     func textFieldDidBeginEditing(textField: UITextField) {
-        
         if textField == self.sortTextbox {
-            self.sortDropDown.hidden = false
-            //if you dont want the users to se the keyboard type:
-            
+            self.dropdownView.hidden = false
+            self.sortTextbox.hidden = true
+            if sortByNumArticles {
+                self.numArticlesButton.backgroundColor = UIColor(red: 28.0/255, green: 190/255, blue: 124/255, alpha: 0.15)
+                self.diversityButton.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1)
+            } else {
+                self.diversityButton.backgroundColor = UIColor(red: 28.0/255, green: 190/255, blue: 124/255, alpha: 0.15)
+                self.numArticlesButton.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1)
+            }
+            self.tableView.bringSubviewToFront(self.dropdownView)
+            self.dropdownView.layer.zPosition+=10;
             textField.endEditing(true)
-            
         }
         
-        
     }
-
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
-        
-        var pickerLabel = view as? UILabel;
-        
-        if (pickerLabel == nil)
-        {
-            pickerLabel = UILabel()
-            
-            pickerLabel?.font = UIFont(name: "Montserrat", size: 8)
-        }
-        
-        pickerLabel?.text = self.list[row]
-        
-        return pickerLabel!;
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -114,10 +71,16 @@ class FriendTableViewController: CoreDataTableViewController {
         self.tabBarController?.tabBar.tintColor = UIColor(red: 28.0/255, green: 190/255, blue: 124/255, alpha: 1.0)
         
         
-        self.sortDropDown.hidden = true
-        self.sortTextbox.text = "Number Articles"
+       // self.sortDropDown.hidden = true
+        self.sortTextbox.text = "Number of Articles"
         updateUI("numArticles")
         sortByNumArticles = true
+        self.dropdownView.hidden = true
+        self.dropdownView.layer.borderWidth = 1
+        self.dropdownView.layer.borderColor = UIColor(red:0.7, green:0.7, blue:0.7, alpha: 1.0).CGColor
+        self.dropdownView.layer.cornerRadius = 6.0
+        self.dropdownView.clipsToBounds = true
+
     }
     
     private func updateUI(sortKey: String) {
@@ -178,7 +141,7 @@ class FriendTableViewController: CoreDataTableViewController {
             let destination = segue.destinationViewController as? FriendPieChartViewController,
             cell = sender as? FriendTableViewCell
         {
-            destination.articles = cell.articles
+            destination.articles = cell.articles!
             destination.name = cell.nameLabel.text!
             destination.canSeeArticles = cell.canSeeArticles
            

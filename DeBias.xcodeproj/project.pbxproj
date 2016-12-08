@@ -51,7 +51,6 @@
 		30E51DE41DF77B2800015A75 /* example-article.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DE31DF77B2800015A75 /* example-article.jpg */; };
 		30E51DFD1DF780D300015A75 /* neutralKellog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DE51DF780D300015A75 /* neutralKellog.jpg */; };
 		30E51DFE1DF780D300015A75 /* consAliens.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DE61DF780D300015A75 /* consAliens.png */; };
-		30E51DFF1DF780D300015A75 /* consElaineChao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DE71DF780D300015A75 /* consElaineChao.jpg */; };
 		30E51E001DF780D300015A75 /* consFires.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DE81DF780D300015A75 /* consFires.JPG */; };
 		30E51E011DF780D300015A75 /* consStevenMnuchin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DE91DF780D300015A75 /* consStevenMnuchin.jpg */; };
 		30E51E021DF780D300015A75 /* consWSJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DEA1DF780D300015A75 /* consWSJ.jpg */; };
@@ -68,11 +67,19 @@
 		30E51E0D1DF780D300015A75 /* vConsGore.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF51DF780D300015A75 /* vConsGore.png */; };
 		30E51E0E1DF780D300015A75 /* vConsInfidels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF61DF780D300015A75 /* vConsInfidels.jpg */; };
 		30E51E0F1DF780D300015A75 /* vConsIsis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF71DF780D300015A75 /* vConsIsis.jpg */; };
-		30E51E101DF780D300015A75 /* vConsTrumpRomney.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF81DF780D300015A75 /* vConsTrumpRomney.jpg */; };
 		30E51E111DF780D300015A75 /* veryLiberalInda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF91DF780D300015A75 /* veryLiberalInda.jpg */; };
 		30E51E121DF780D300015A75 /* veryLiberalManipulateTrump.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DFA1DF780D300015A75 /* veryLiberalManipulateTrump.jpg */; };
 		30E51E131DF780D300015A75 /* veryLiberalPentagon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DFB1DF780D300015A75 /* veryLiberalPentagon.jpg */; };
 		30E51E141DF780D300015A75 /* veryLiberalSyria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DFC1DF780D300015A75 /* veryLiberalSyria.jpg */; };
+		30E51E211DF7896C00015A75 /* Bart.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51E181DF7896C00015A75 /* Bart.png */; };
+		30E51E221DF7896C00015A75 /* Beyonce.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51E191DF7896C00015A75 /* Beyonce.png */; };
+		30E51E261DF7896C00015A75 /* Obama.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51E1D1DF7896C00015A75 /* Obama.png */; };
+		30E51E271DF7896C00015A75 /* Ron.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51E1E1DF7896C00015A75 /* Ron.png */; };
+		30E51E291DF7896C00015A75 /* Taylor.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51E201DF7896C00015A75 /* Taylor.png */; };
+		30E51E2D1DF78F0A00015A75 /* Hermione.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51E2C1DF78F0A00015A75 /* Hermione.png */; };
+		30E51E2F1DF7A26B00015A75 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30E51E2E1DF7A1DC00015A75 /* Roboto-Regular.ttf */; };
+		30E51E311DF7A30000015A75 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51E301DF7A30000015A75 /* logo.png */; };
+		30E51E3B1DF90E7200015A75 /* green-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51E3A1DF90E7200015A75 /* green-circle.png */; };
 		9F2072DA1DE3A6D9003AD907 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072D91DE3A6D9003AD907 /* Friend.swift */; };
 		9F2072DE1DE3A8D6003AD907 /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */; };
 		9F33AD161DF23384008DEED5 /* BadgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33AD151DF23384008DEED5 /* BadgesViewController.swift */; };
@@ -83,14 +90,8 @@
 		9F92842F1DED396900EBD85F /* FriendPieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F92842E1DED396900EBD85F /* FriendPieChartViewController.swift */; };
 		9FEB11BE1DF7D23A00E32920 /* Chuck.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11BD1DF7D23A00E32920 /* Chuck.png */; };
 		9FEB11C21DF7D25800E32920 /* Justin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11C11DF7D25800E32920 /* Justin.png */; };
-		9FEB11C61DF7D26000E32920 /* Hermione.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11C51DF7D26000E32920 /* Hermione.png */; };
-		9FEB11CE1DF7D26F00E32920 /* Obama.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11CD1DF7D26F00E32920 /* Obama.png */; };
-		9FEB11D01DF7D27200E32920 /* Ron.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11CF1DF7D27200E32920 /* Ron.png */; };
-		9FEB11D41DF7D36400E32920 /* Beyonce.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11D31DF7D36400E32920 /* Beyonce.png */; };
 		9FEB11D61DF7D41F00E32920 /* HarryPotter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11D51DF7D41F00E32920 /* HarryPotter.png */; };
 		9FEB11D81DF7D42300E32920 /* Kanye.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11D71DF7D42300E32920 /* Kanye.png */; };
-		9FEB11DA1DF7DF7B00E32920 /* Bart.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11D91DF7DF7B00E32920 /* Bart.png */; };
-		9FEB11DE1DF7DFD400E32920 /* Taylor.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11DD1DF7DFD400E32920 /* Taylor.png */; };
 		9FEB11E01DF7DFD800E32920 /* Serena.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB11DF1DF7DFD800E32920 /* Serena.png */; };
 		9FEB65601DF91A2E00976E55 /* settings-icon1a.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB655F1DF91A2D00976E55 /* settings-icon1a.png */; };
 /* End PBXBuildFile section */
@@ -164,6 +165,21 @@
 		30E51DFA1DF780D300015A75 /* veryLiberalManipulateTrump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = veryLiberalManipulateTrump.jpg; sourceTree = "<group>"; };
 		30E51DFB1DF780D300015A75 /* veryLiberalPentagon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = veryLiberalPentagon.jpg; sourceTree = "<group>"; };
 		30E51DFC1DF780D300015A75 /* veryLiberalSyria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = veryLiberalSyria.jpg; sourceTree = "<group>"; };
+		30E51E161DF7894200015A75 /* HarryPotter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HarryPotter.png; sourceTree = "<group>"; };
+		30E51E181DF7896C00015A75 /* Bart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bart.png; sourceTree = "<group>"; };
+		30E51E191DF7896C00015A75 /* Beyonce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Beyonce.png; sourceTree = "<group>"; };
+		30E51E1A1DF7896C00015A75 /* HarryPotter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HarryPotter.png; sourceTree = "<group>"; };
+		30E51E1B1DF7896C00015A75 /* Justin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Justin.png; sourceTree = "<group>"; };
+		30E51E1C1DF7896C00015A75 /* Kanye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kanye.png; sourceTree = "<group>"; };
+		30E51E1D1DF7896C00015A75 /* Obama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obama.png; sourceTree = "<group>"; };
+		30E51E1E1DF7896C00015A75 /* Ron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ron.png; sourceTree = "<group>"; };
+		30E51E1F1DF7896C00015A75 /* Serena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Serena.png; sourceTree = "<group>"; };
+		30E51E201DF7896C00015A75 /* Taylor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Taylor.png; sourceTree = "<group>"; };
+		30E51E2A1DF78E0700015A75 /* Chuck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chuck.png; sourceTree = "<group>"; };
+		30E51E2C1DF78F0A00015A75 /* Hermione.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hermione.png; sourceTree = "<group>"; };
+		30E51E2E1DF7A1DC00015A75 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		30E51E301DF7A30000015A75 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		30E51E3A1DF90E7200015A75 /* green-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-circle.png"; sourceTree = "<group>"; };
 		9F2072D91DE3A6D9003AD907 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		9F2072DD1DE3A8D6003AD907 /* FriendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
 		9F33AD151DF23384008DEED5 /* BadgesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgesViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +229,7 @@
 				9FEB11DF1DF7DFD800E32920 /* Serena.png */,
 				9FEB11D71DF7D42300E32920 /* Kanye.png */,
 				9FEB11C51DF7D26000E32920 /* Hermione.png */,
+				30E51E2E1DF7A1DC00015A75 /* Roboto-Regular.ttf */,
 				30E51DE31DF77B2800015A75 /* example-article.jpg */,
 				305792661DF52FAA0036495E /* addFriend.png */,
 				30E51E151DF7837500015A75 /* Article Pics */,
@@ -220,7 +237,21 @@
 				305792641DF52FA20036495E /* gray-circle2.png */,
 				301CDE171DEBBB41007D3B94 /* default-profile-pic.png */,
 				30333C8D1DDBCF7D00902916 /* friends-icon2.png */,
+				30E51E3A1DF90E7200015A75 /* green-circle.png */,
 				30333CED1DE4D90F00902916 /* edit-icon2.png */,
+				30E51E181DF7896C00015A75 /* Bart.png */,
+				30E51E2C1DF78F0A00015A75 /* Hermione.png */,
+				30E51E191DF7896C00015A75 /* Beyonce.png */,
+				30E51E1A1DF7896C00015A75 /* HarryPotter.png */,
+				30E51E301DF7A30000015A75 /* logo.png */,
+				30E51E1B1DF7896C00015A75 /* Justin.png */,
+				30E51E2A1DF78E0700015A75 /* Chuck.png */,
+				30E51E1C1DF7896C00015A75 /* Kanye.png */,
+				30E51E1D1DF7896C00015A75 /* Obama.png */,
+				30E51E1E1DF7896C00015A75 /* Ron.png */,
+				30E51E1F1DF7896C00015A75 /* Serena.png */,
+				30E51E201DF7896C00015A75 /* Taylor.png */,
+				30E51E161DF7894200015A75 /* HarryPotter.png */,
 				305792741DF531D50036495E /* blue-circle.png */,
 				305792751DF531D50036495E /* purple-circle.png */,
 				305792761DF531D50036495E /* red-circle.png */,
@@ -364,7 +395,6 @@
 				TargetAttributes = {
 					308204821DD9590A008AD2C4 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = AZH8QXDTL7;
 						LastSwiftMigration = 0810;
 					};
 				};
@@ -392,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E51E2F1DF7A26B00015A75 /* Roboto-Regular.ttf in Resources */,
 				305792651DF52FA20036495E /* gray-circle2.png in Resources */,
 				30E51E021DF780D300015A75 /* consWSJ.jpg in Resources */,
 				30E51DE41DF77B2800015A75 /* example-article.jpg in Resources */,
@@ -400,48 +431,51 @@
 				30E51DFE1DF780D300015A75 /* consAliens.png in Resources */,
 				30333C8C1DDBCF7700902916 /* me-icon2.png in Resources */,
 				30E51E001DF780D300015A75 /* consFires.JPG in Resources */,
-				9FEB11DE1DF7DFD400E32920 /* Taylor.png in Resources */,
 				30E51E051DF780D300015A75 /* liberalTribe.jpg in Resources */,
 				3057927D1DF531D50036495E /* trophy.png in Resources */,
 				308204911DD9590A008AD2C4 /* Assets.xcassets in Resources */,
 				30E51E091DF780D300015A75 /* neutralFlagBurning.jpg in Resources */,
 				30E51E0D1DF780D300015A75 /* vConsGore.png in Resources */,
-				30E51E101DF780D300015A75 /* vConsTrumpRomney.jpg in Resources */,
-				9FEB11C61DF7D26000E32920 /* Hermione.png in Resources */,
+				30E51E211DF7896C00015A75 /* Bart.png in Resources */,
+				30E51E0D1DF780D300015A75 /* vConsGore.png in Resources */,
 				30E51E041DF780D300015A75 /* liberalPelosi.jpg in Resources */,
 				30E51E141DF780D300015A75 /* veryLiberalSyria.jpg in Resources */,
 				30E51E0A1DF780D300015A75 /* neutralPlane.png in Resources */,
 				30333CEE1DE4D90F00902916 /* edit-icon2.png in Resources */,
 				30E51E071DF780D300015A75 /* liberalWalmart.jpeg in Resources */,
 				30E51E011DF780D300015A75 /* consStevenMnuchin.jpg in Resources */,
-				9FEB11D41DF7D36400E32920 /* Beyonce.png in Resources */,
-				30E51DFF1DF780D300015A75 /* consElaineChao.jpg in Resources */,
 				30333C8E1DDBCF7D00902916 /* friends-icon2.png in Resources */,
 				305792671DF52FAA0036495E /* addFriend.png in Resources */,
 				9FEB11C21DF7D25800E32920 /* Justin.png in Resources */,
 				9FEB65601DF91A2E00976E55 /* settings-icon1a.png in Resources */,
+				30333C8E1DDBCF7D00902916 /* friends-icon2.png in Resources */,
+				305792671DF52FAA0036495E /* addFriend.png in Resources */,
 				3082048C1DD9590A008AD2C4 /* Main.storyboard in Resources */,
 				30E51E0C1DF780D300015A75 /* neutralTrudeau.jpeg in Resources */,
 				305792791DF531D50036495E /* blue-circle.png in Resources */,
 				30E51E131DF780D300015A75 /* veryLiberalPentagon.jpg in Resources */,
 				30E51E111DF780D300015A75 /* veryLiberalInda.jpg in Resources */,
 				9FEB11D61DF7D41F00E32920 /* HarryPotter.png in Resources */,
+				30E51E3B1DF90E7200015A75 /* green-circle.png in Resources */,
+				30E51E2D1DF78F0A00015A75 /* Hermione.png in Resources */,
 				305792691DF530DB0036495E /* arrow2.png in Resources */,
 				30E51E0F1DF780D300015A75 /* vConsIsis.jpg in Resources */,
+				30E51E291DF7896C00015A75 /* Taylor.png in Resources */,
+				30E51E221DF7896C00015A75 /* Beyonce.png in Resources */,
+				30E51E271DF7896C00015A75 /* Ron.png in Resources */,
 				30E51E081DF780D300015A75 /* neutralDelta.png in Resources */,
-				9FEB11D01DF7D27200E32920 /* Ron.png in Resources */,
 				30E51E0B1DF780D300015A75 /* neutralTracyMorgan.jpg in Resources */,
 				301CDE181DEBBB41007D3B94 /* default-profile-pic.png in Resources */,
 				9FEB11E01DF7DFD800E32920 /* Serena.png in Resources */,
 				3057927A1DF531D50036495E /* purple-circle.png in Resources */,
+				30E51E311DF7A30000015A75 /* logo.png in Resources */,
 				3057927C1DF531D50036495E /* trophy-b-and-w.png in Resources */,
 				30E51E0E1DF780D300015A75 /* vConsInfidels.jpg in Resources */,
 				30E51DE01DF7720500015A75 /* plus-icon.png in Resources */,
 				30E51E031DF780D300015A75 /* liberalElection.jpg in Resources */,
-				9FEB11DA1DF7DF7B00E32920 /* Bart.png in Resources */,
 				9FEB11BE1DF7D23A00E32920 /* Chuck.png in Resources */,
-				9FEB11CE1DF7D26F00E32920 /* Obama.png in Resources */,
 				9FEB11D81DF7D42300E32920 /* Kanye.png in Resources */,
+				30E51E261DF7896C00015A75 /* Obama.png in Resources */,
 				30E51E061DF780D300015A75 /* liberalTrumpTwitter.jpeg in Resources */,
 				30E51E121DF780D300015A75 /* veryLiberalManipulateTrump.jpg in Resources */,
 				3057927B1DF531D50036495E /* red-circle.png in Resources */,
@@ -609,15 +643,16 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = DeBias/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.debias.DeBias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -629,6 +664,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = DeBias/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;

@@ -54,11 +54,11 @@ class ArticleTableViewController: CoreDataTableViewController {
     
     let typeToName: Dictionary<String, String> =
         [
-            "veryConservative": "very conservative",
-            "conservative": "conservative",
-            "neutral": "neutral",
-            "liberal": "liberal",
-            "veryLiberal": "very liberal"
+            "veryConservative": "Very Conservative",
+            "conservative": "Conservative",
+            "neutral": "Neutral",
+            "liberal": "Liberal",
+            "veryLiberal": "Very Liberal"
         ]
     let typeToTitle: Dictionary<String, String> =
         [
@@ -68,6 +68,7 @@ class ArticleTableViewController: CoreDataTableViewController {
             "liberal": "Liberal",
             "veryLiberal": "Very Liberal"
     ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -75,8 +76,7 @@ class ArticleTableViewController: CoreDataTableViewController {
         tableView.estimatedRowHeight = 140
         navTitle.title = typeToTitle[typeOfArticle!]! + " Article List"
         if tableView.numberOfRowsInSection(1) == 0 {
-            noArticlesLabel.text = "You have not read any " + typeToName[typeOfArticle!]! + " articles"
-            //STYLE LABEL HERE
+            noArticlesLabel.text = "You have not read any " + typeToName[typeOfArticle!]!.lowercaseString + " articles"
         } else {
             noArticlesLabel.text = ""
         }
@@ -120,7 +120,7 @@ class ArticleTableViewController: CoreDataTableViewController {
     override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! ArticleTableViewCell
         let title = "Article Classification"
-        let starter = "The article " + cell.title! + " was classified as "
+        let starter = "The article '" + cell.title! + "' was classified as "
         let message =  starter + typeToName[cell.type!]! + " because " + cell.typeExplanation!
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert);
         alert.modalInPopover = true;
