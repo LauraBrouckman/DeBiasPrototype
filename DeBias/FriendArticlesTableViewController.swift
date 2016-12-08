@@ -62,6 +62,7 @@ class FriendArticlesTableViewController: UITableViewController {
             cell.type = article.type
             cell.url = article.url
             cell.title = article.title
+            cell.articlePreviewImage.image = UIImage(named: article.imageFile!)
             return cell
         }
         return c
@@ -85,7 +86,7 @@ class FriendArticlesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! ArticleTableViewCell
         let title = "Article Classification"
-        let starter = "The article " + cell.title! + " was classified as "
+        let starter = "The article '" + cell.title! + "' was classified as "
         let message =  starter + typeOfArticle!.lowercaseString + " because " + cell.typeExplanation!
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert);
         alert.modalInPopover = true;

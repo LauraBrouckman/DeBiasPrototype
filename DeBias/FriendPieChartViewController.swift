@@ -29,12 +29,11 @@ class FriendPieChartViewController: UIViewController
         
         let strSplit = name.characters.split(" ")
         let firstName = String(strSplit.first!)
-        //String(strSplit.last!)
-        //var firstName: String = nameArr[0]
-        navTitle.title = firstName + "'s Overview"
-        //navTitle.leftBarButtonItem.title = ""
-        //navTitle.hidesBackButton = true
-        
+        if firstName == "Me" {
+            navTitle.title = "My Overview"
+        } else {
+            navTitle.title = firstName + "'s Overview"
+        }
         
         let categories = ["Very Conservative", "Conservative", "Neutral", "Liberal", "Very Liberal"]
         detailButton.backgroundColor = UIColor.clearColor()

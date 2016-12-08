@@ -41,13 +41,15 @@ class FriendGoalsViewController: UIViewController {
     
     func updateForProgressBar(progressBar: ProgressBarView, key: Int, maxGoal: Double, color: UIColor, type: String) {
         
-        progressBar.progressBarProportion = articlesRead[key] / maxGoal
+        let progressBarProportion = articlesRead[key] / maxGoal
         progressBar.drawLine = false
         progressBar.goalLineProportion = articlesRead[key] / maxGoal
         progressBar.goal = Int(articlesRead[key])
         progressBar.progressBarColor = color
         progressBar.type = type
         progressBar.totalBarWidthProportion = 1.1
+        progressBar.prepareForEditing(0.0, newProp: progressBarProportion)
+
     }
 
     

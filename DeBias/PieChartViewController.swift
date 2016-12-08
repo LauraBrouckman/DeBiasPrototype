@@ -48,8 +48,13 @@ class PieChartViewController: UIViewController {
         //self.tabBarController?.tabBar.selectedItem?.selectedImage. = Colors.darkRed
         self.tabBarController?.tabBar.barTintColor = UIColor(red: 240.0/255, green: 240/255, blue: 240/255, alpha: 1.0)
         self.tabBarController?.tabBar.tintColor = UIColor(red: 28.0/255, green: 190/255, blue: 124/255, alpha: 1.0)
-  
-        addCoreData()
+        
+        let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("launchedBefore")
+        if launchedBefore  {
+        } else {
+            addCoreData()
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "launchedBefore")
+        }
     }
     
     func shuffleArray(list: [AnyObject]) -> [AnyObject]{
@@ -65,7 +70,7 @@ class PieChartViewController: UIViewController {
         }
         return tempList
     }
- 
+    
     func addCoreData() {
 //        addArticles()
 //        let veryConservataiveArticles = getVeryConservativeArticles()
@@ -103,10 +108,11 @@ class PieChartViewController: UIViewController {
 //        }
 //        
 //        var articles = veryConservataiveArticles + conservativeArticles + neutralArticles + liberalArticles + veryLiberalArticles as [AnyObject]
-//        let friends = ["Serena van der Woodsen", "Chuck Bass", "Kanye West", "Justin Bieber", "Harry Potter", "Ron Weasley", "Hermione Granger", "Bart Simpson", "Taylor Swift", "Barack Obama", "Sarah Brown", "Jeff Johnson", "Beyonce"]
-        //let pictures = ["Serena.png", "Chuck.png", "Kanye.png", "Justin.png", "HarryPotter.png", "Ron.png", "Hermione.png", "Bart.png", "Taylor.png", "Obama.png", "default-profile-pic.png", "default-profile-pic.png", "Beyonce.png"]
-//        for f in friends {
-////            // Choose random number of articles
+//        let friends = ["Serena VDW", "Chuck Bass", "Kanye West", "Justin Bieber", "Harry Potter", "Ron Weasley", "Hermione Granger", "Bart Simpson", "Taylor Swift", "Barack Obama", "Sarah Brown", "Jeff Johnson", "Beyonce"]
+//        let pictures = ["Serena.png", "Chuck.png", "Kanye.png", "Justin.png", "HarryPotter.png", "Ron.png", "Hermione.png", "Bart.png", "Taylor.png", "Obama.png", "default-profile-pic.png", "default-profile-pic.png", "Beyonce.png"]
+//        for i in 0..<friends.count {
+//            //            // Choose random number of articles
+//            let f = friends[i]
 //            var friendArticles = [AnyObject]()
 //            articles = shuffleArray(articles)
 //            let numArticles = Int(arc4random_uniform(24))
@@ -128,7 +134,6 @@ class PieChartViewController: UIViewController {
 //                }
 //            }
 //            let isFriend = Int(arc4random_uniform(2))
-//            print("IS FRIEND \(isFriend)")
 //            let canSeeArticles = (Int(arc4random_uniform(2)) == 1)
 //            let diversity = getDiversity(friendArticleTypes, numArticles: friendArticles.count)
 //            self.managedObjectContext?.performBlock { [weak weakSelf = self] in
@@ -137,7 +142,7 @@ class PieChartViewController: UIViewController {
 //                    let article = Article.getArticleByName(a as! String, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
 //                    friendArticleObjects.append(article!)
 //                }
-//                User.addUserToDB(f, friend: (isFriend == 1), canSeeArticles: canSeeArticles, picture_filename: "default-profile-pic.png", diversity: diversity, articles: friendArticleObjects, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
+//                User.addUserToDB(f, friend: (isFriend == 1), canSeeArticles: canSeeArticles, picture_filename: pictures[i], diversity: diversity, articles: friendArticleObjects, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
 //                do {
 //                    try (weakSelf?.managedObjectContext)!.save()
 //                } catch let error {
@@ -171,20 +176,20 @@ class PieChartViewController: UIViewController {
 //            myArticlesRead[4] += 1
 //        }
 //        let diversity = getDiversity(myArticlesRead, numArticles: myArticles.count)
-//                    managedObjectContext?.performBlock { [weak weakSelf = self] in
-//                        var myArticleObjects = [Article]()
-//                        for a in myArticles {
-//                            let article = Article.getArticleByName(a as! String, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
-//                            myArticleObjects.append(article!)
-//                        }
-//                        User.addUserToDB("Me", friend: true, canSeeArticles: true, picture_filename: "default-profile-pic.png", diversity: diversity, articles: myArticleObjects, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
-//                        do {
-//                            try (weakSelf?.managedObjectContext)!.save()
-//                        } catch let error {
-//                            print(error)
-//                        }
-//                        
-//                    }
+//        managedObjectContext?.performBlock { [weak weakSelf = self] in
+//            var myArticleObjects = [Article]()
+//            for a in myArticles {
+//                let article = Article.getArticleByName(a as! String, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
+//                myArticleObjects.append(article!)
+//            }
+//            User.addUserToDB("Me", friend: true, canSeeArticles: true, picture_filename: "default-profile-pic.png", diversity: diversity, articles: myArticleObjects, inManagedObjectContext: (weakSelf?.managedObjectContext!)!)
+//            do {
+//                try (weakSelf?.managedObjectContext)!.save()
+//            } catch let error {
+//                print(error)
+//            }
+//            
+//        }
     }
     
     func getDiversity(articles: Array<Int>, numArticles: Int) -> Float
@@ -224,13 +229,13 @@ class PieChartViewController: UIViewController {
         pieChartDataSet.colors = colors
     }
     
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            let backItem = UIBarButtonItem()
-            backItem.title = ""
-            navigationItem.backBarButtonItem = backItem
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
     }
-
+    
     
     // Add animations to the pie chart where on touch (of certain section) pie chart rotates and label at top displays category name
     // Add button/interaction area where on press it segues to the next screen
