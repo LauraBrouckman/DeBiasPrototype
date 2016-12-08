@@ -21,6 +21,7 @@ class FriendPieChartViewController: UIViewController
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var detailButton: UIButton!
     @IBOutlet weak var navTitle: UINavigationItem!
+    //@IBOutlet weak var navTitle: UINavigationItem!
     //    @IBOutlet weak var navTitle: UINavigationItem!
     //@IBOutlet weak var navTitle: UINavigationItem!
     //@IBOutlet weak var navTitle: UINavigationItem!
@@ -87,6 +88,9 @@ class FriendPieChartViewController: UIViewController
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
         if let identifier = segue.identifier {
             if identifier == "showFriendGoals"{
                 if let goalsvc = segue.destinationViewController as? FriendGoalsViewController {
@@ -95,9 +99,7 @@ class FriendPieChartViewController: UIViewController
                     goalsvc.canSeeArticles = self.canSeeArticles
                     goalsvc.name = self.navTitle.title
                     //goalsvc.name = self.firstName
-                    let backItem = UIBarButtonItem()
-                    backItem.title = ""
-                    navigationItem.backBarButtonItem = backItem
+                    
                 }
             }
         }

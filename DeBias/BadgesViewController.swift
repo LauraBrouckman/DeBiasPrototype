@@ -64,6 +64,13 @@ class BadgesViewController: UICollectionViewController{
 //
     return cell
     }
+    override func prepareForSegue(segue:
+        UIStoryboardSegue, sender: AnyObject?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+    }
+
     
 }
 

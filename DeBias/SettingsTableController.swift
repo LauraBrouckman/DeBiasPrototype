@@ -29,20 +29,20 @@ class SettingsTableController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
 
-        if (indexPath.row == 0)
-        {
-            let cellIdentifier = "SettingsFieldCell1"
-            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! SettingsTableCell
-            return cell
-        }
-        else if (indexPath.row == 1)
+//        if (indexPath.row == 0)
+//        {
+//            let cellIdentifier = "SettingsFieldCell1"
+//            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! SettingsTableCell
+//            return cell
+//        }
+       if (indexPath.row == 0)
         {
             let cellIdentifier2 = "SettingsFieldCell2"
             let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier2, forIndexPath: indexPath) as! SettingsTableCell

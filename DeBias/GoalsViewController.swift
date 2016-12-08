@@ -185,6 +185,9 @@ class GoalsViewController: UIViewController, UIPickerViewDataSource,UIPickerView
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
         if let identifier = segue.identifier {
             if identifier == "showArticles" {
                 if let button = sender as? UIButton, let articlevc = segue.destinationViewController as? ArticleTableViewController {

@@ -16,6 +16,7 @@ class ArticleTableViewController: CoreDataTableViewController {
     @IBOutlet weak var noArticlesLabel: UILabel!
     
     @IBOutlet weak var navTitle: UINavigationItem!
+    //@IBOutlet weak var navTitle: UINavigationItem!
     var managedObjectContext: NSManagedObjectContext? {
         didSet {
             updateUI()
@@ -59,12 +60,20 @@ class ArticleTableViewController: CoreDataTableViewController {
             "liberal": "liberal",
             "veryLiberal": "very liberal"
         ]
+    let typeToTitle: Dictionary<String, String> =
+        [
+            "veryConservative": "Very Conservative",
+            "conservative": "Conservative",
+            "neutral": "Neutral",
+            "liberal": "Liberal",
+            "veryLiberal": "Very Liberal"
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
-        navTitle.title = typeOfArticle! + " List"
+        navTitle.title = typeToTitle[typeOfArticle!]! + " Article List"
         if tableView.numberOfRowsInSection(1) == 0 {
             noArticlesLabel.text = "You have not read any " + typeToName[typeOfArticle!]! + " articles"
             //STYLE LABEL HERE
@@ -128,6 +137,9 @@ class ArticleTableViewController: CoreDataTableViewController {
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+                let backItem = UIBarButtonItem()
+                backItem.title = ""
+                navigationItem.backBarButtonItem = backItem
         if let identifier = segue.identifier {
             if identifier == "openWebview"{
                 if let cell = sender as? ArticleTableViewCell, let indexPath = tableView.indexPathForCell(cell),

@@ -14,6 +14,7 @@ class FriendArticlesTableViewController: UITableViewController {
     var typeOfArticle: String?
     var name: String?
     
+    //@IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var navTitle: UINavigationItem!
     
     @IBOutlet weak var noArticleLabel: UILabel!
@@ -68,6 +69,9 @@ class FriendArticlesTableViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+                let backItem = UIBarButtonItem()
+                backItem.title = ""
+                navigationItem.backBarButtonItem = backItem
         if let identifier = segue.identifier {
             if identifier == "openWebview"{
                 if let cell = sender as? ArticleTableViewCell, let indexPath = tableView.indexPathForCell(cell),
@@ -100,7 +104,24 @@ class FriendArticlesTableViewController: UITableViewController {
         presentViewController(alert, animated: true, completion: nil)
     }
     
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let backItem = UIBarButtonItem()
+//        backItem.title = ""
+//        navigationItem.backBarButtonItem = backItem
+//    }
  
+//    override func prepareForSegue(segue:
+//        UIStoryboardSegue, sender: AnyObject?) {
+//        let backItem = UIBarButtonItem()
+//        backItem.title = ""
+//        navigationItem.backBarButtonItem = backItem
+//    }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let backItem = UIBarButtonItem()
+//        backItem.title = ""
+//        navigationItem.backBarButtonItem = backItem
+//    }
 
     /*
     // Override to support conditional editing of the table view.

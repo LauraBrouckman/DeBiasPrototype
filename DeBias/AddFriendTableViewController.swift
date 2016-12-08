@@ -126,5 +126,12 @@ class AddFriendTableViewController: CoreDataTableViewController {
         
     }
     
+    override func prepareForSegue(segue:
+        UIStoryboardSegue, sender: AnyObject?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+    }
+    
     
 }

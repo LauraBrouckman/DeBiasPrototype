@@ -22,6 +22,7 @@ class FriendGoalsViewController: UIViewController {
     @IBOutlet weak var conservativeButton: UIButton!
     @IBOutlet weak var veryConservativeButton: UIButton!
     
+    //@IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var navTitle: UINavigationItem!
     var articlesRead = [Double]()
     var canSeeArticles = false
@@ -77,7 +78,11 @@ class FriendGoalsViewController: UIViewController {
         return typeArticles
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue:
+        UIStoryboardSegue, sender: AnyObject?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
         if !self.canSeeArticles {
             let title = "Can not view articles"
             let message = name! + " does not allowed other users to see the articles that they have read."
@@ -99,9 +104,7 @@ class FriendGoalsViewController: UIViewController {
                 if let button = sender as? UIButton, let articlevc = segue.destinationViewController as? FriendArticlesTableViewController {
                     articlevc.title = self.navTitle.title
                     articlevc.name = self.name
-                    let backItem = UIBarButtonItem()
-                    backItem.title = ""
-                    navigationItem.backBarButtonItem = backItem
+                   
                     switch button {
                     case veryConservativeButton:
                         articlevc.typeOfArticle = "Very Conservative"
