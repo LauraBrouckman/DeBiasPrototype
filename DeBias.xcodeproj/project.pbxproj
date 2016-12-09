@@ -158,6 +158,7 @@
 		308204911DD9590A008AD2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308204901DD9590A008AD2C4 /* Assets.xcassets */; };
 		308204941DD9590A008AD2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308204921DD9590A008AD2C4 /* LaunchScreen.storyboard */; };
 		30C034521DF0FF80006E927A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C034511DF0FF80006E927A /* WebViewController.swift */; };
+		30D61E6B1DFA7A4C00B7C69F /* logo-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 30D61E6A1DFA7A4C00B7C69F /* logo-1.png */; };
 		30E51DE01DF7720500015A75 /* plus-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DDF1DF7720500015A75 /* plus-icon.png */; };
 		30E51DE21DF775A200015A75 /* ArticleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E51DE11DF775A200015A75 /* ArticleInfoViewController.swift */; };
 		30E51DE41DF77B2800015A75 /* example-article.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DE31DF77B2800015A75 /* example-article.jpg */; };
@@ -362,6 +363,7 @@
 		308204931DD9590A008AD2C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		308204951DD9590A008AD2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C034511DF0FF80006E927A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		30D61E6A1DFA7A4C00B7C69F /* logo-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-1.png"; sourceTree = "<group>"; };
 		30E51DDF1DF7720500015A75 /* plus-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-icon.png"; sourceTree = "<group>"; };
 		30E51DE11DF775A200015A75 /* ArticleInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleInfoViewController.swift; sourceTree = "<group>"; };
 		30E51DE31DF77B2800015A75 /* example-article.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "example-article.jpg"; sourceTree = "<group>"; };
@@ -580,6 +582,7 @@
 				30333C8D1DDBCF7D00902916 /* friends-icon2.png */,
 				30E51E3A1DF90E7200015A75 /* green-circle.png */,
 				30333CED1DE4D90F00902916 /* edit-icon2.png */,
+				30D61E6A1DFA7A4C00B7C69F /* logo-1.png */,
 				30E51E181DF7896C00015A75 /* Bart.png */,
 				30E51E2C1DF78F0A00015A75 /* Hermione.png */,
 				30E51E191DF7896C00015A75 /* Beyonce.png */,
@@ -786,6 +789,7 @@
 				30333CEE1DE4D90F00902916 /* edit-icon2.png in Resources */,
 				30E51E071DF780D300015A75 /* liberalWalmart.jpeg in Resources */,
 				30E51E011DF780D300015A75 /* consStevenMnuchin.jpg in Resources */,
+				30D61E6B1DFA7A4C00B7C69F /* logo-1.png in Resources */,
 				30333C8E1DDBCF7D00902916 /* friends-icon2.png in Resources */,
 				305792671DF52FAA0036495E /* addFriend.png in Resources */,
 				9FEB11C21DF7D25800E32920 /* Justin.png in Resources */,

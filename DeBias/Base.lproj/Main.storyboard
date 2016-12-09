@@ -40,15 +40,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trZ-YT-hS9">
-                                            <rect key="frame" x="318" y="8" width="51" height="31"/>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Push Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Co-PI-BOq">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Co-PI-BOq">
                                             <rect key="frame" x="8" y="14" width="139" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trZ-YT-hS9">
+                                            <rect key="frame" x="532" y="8" width="51" height="31"/>
+                                        </switch>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="trZ-YT-hS9" firstAttribute="centerY" secondItem="2tH-xW-zhh" secondAttribute="centerY" id="OQF-SD-IlH"/>
+                                        <constraint firstItem="2Co-PI-BOq" firstAttribute="centerY" secondItem="2tH-xW-zhh" secondAttribute="centerY" id="Oa7-QY-1ez"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="2Co-PI-BOq" secondAttribute="leading" id="giU-MP-ykE"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="trZ-YT-hS9" secondAttribute="trailing" constant="10" id="rqH-nF-Blw"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsFieldCell3" rowHeight="50" id="MuW-ts-gby" customClass="SettingsTableCell" customModule="DeBias" customModuleProvider="target">
@@ -58,15 +64,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Up6-QT-cFf">
-                                            <rect key="frame" x="318" y="9" width="51" height="31"/>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allow Friends to View Articles I've Read" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSw-LQ-jZk">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Friends to View Articles I've Read" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSw-LQ-jZk">
                                             <rect key="frame" x="8" y="14" width="300" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Up6-QT-cFf">
+                                            <rect key="frame" x="533" y="9" width="51" height="31"/>
+                                        </switch>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="leadingMargin" secondItem="TSw-LQ-jZk" secondAttribute="leading" id="F0T-9Z-5iK"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Up6-QT-cFf" secondAttribute="trailing" constant="10" id="Hzf-uv-UAq"/>
+                                        <constraint firstItem="Up6-QT-cFf" firstAttribute="centerY" secondItem="KX5-zV-Gid" secondAttribute="centerY" id="Sco-hX-OBs"/>
+                                        <constraint firstItem="TSw-LQ-jZk" firstAttribute="centerY" secondItem="KX5-zV-Gid" secondAttribute="centerY" id="euo-aV-zeg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
