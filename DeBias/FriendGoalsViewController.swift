@@ -9,7 +9,7 @@
 import UIKit
 
 class FriendGoalsViewController: UIViewController {
-
+    
     @IBOutlet weak var veryConservativeProgressBar: ProgressBarView!
     @IBOutlet weak var conservativeProgressBar: ProgressBarView!
     @IBOutlet weak var neutralProgressBar: ProgressBarView!
@@ -32,7 +32,7 @@ class FriendGoalsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         updateProgressValues()
         let strSplit = name!.characters.split(" ")
         let firstName = String(strSplit.first!)
@@ -50,9 +50,9 @@ class FriendGoalsViewController: UIViewController {
         progressBar.type = type
         progressBar.totalBarWidthProportion = 1.1
         progressBar.prepareForEditing(0.0, newProp: progressBarProportion)
-
+        
     }
-
+    
     
     func updateProgressValues()
     {
@@ -79,55 +79,55 @@ class FriendGoalsViewController: UIViewController {
         }
         return typeArticles
     }
-
-    override func prepareForSegue(segue:
-        UIStoryboardSegue, sender: AnyObject?) {
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
-        if !self.canSeeArticles {
-            let title = "Can not view articles"
-            let message = name! + " does not allowed other users to see the articles that they have read."
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert);
-            alert.modalInPopover = true;
-            
-            alert.addAction(UIAlertAction(
-                title: "Got it!",
-                style: .Default)
-            { (action: UIAlertAction) ->  Void in
-                }
-            )
-            
-            presentViewController(alert, animated: true, completion: nil)
-        }
-        
-        else if let identifier = segue.identifier {
+        if let identifier = segue.identifier {
             if identifier == "showFriendArticles" {
-                if let button = sender as? UIButton, let articlevc = segue.destinationViewController as? FriendArticlesTableViewController {
-                    articlevc.title = self.navTitle.title
-                    articlevc.name = self.name
-                   
-                    switch button {
-                    case veryConservativeButton:
-                        articlevc.typeOfArticle = "Very Conservative"
-                        articlevc.articles = getArticlesOfType("veryConservative")
-                    case conservativeButton:
-                        articlevc.typeOfArticle = "Conservative"
-                        articlevc.articles = getArticlesOfType("conservative")
-                    case neutralButton:
-                        articlevc.typeOfArticle = "Neutral"
-                        articlevc.articles = getArticlesOfType("neutral")
-                    case liberalButton:
-                        articlevc.typeOfArticle = "Liberal"
-                        articlevc.articles = getArticlesOfType("liberal")
-                    case veryLiberalButton:
-                        articlevc.typeOfArticle = "Very Liberal"
-                        articlevc.articles = getArticlesOfType("veryLiberal")
-                    default: break
+                if !self.canSeeArticles {
+                    let title = "Can not view articles"
+                    let message = name! + " does not allowed other users to see the articles that they have read."
+                    let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert);
+                    alert.modalInPopover = true;
+                    
+                    alert.addAction(UIAlertAction(
+                        title: "Got it!",
+                        style: .Default)
+                    { (action: UIAlertAction) ->  Void in
+                        }
+                    )
+                    
+                    presentViewController(alert, animated: true, completion: nil)
+                }
+                else {
+                    if let button = sender as? UIButton, let articlevc = segue.destinationViewController as? FriendArticlesTableViewController {
+                        articlevc.title = self.navTitle.title
+                        articlevc.name = self.name
+                        
+                        switch button {
+                        case veryConservativeButton:
+                            articlevc.typeOfArticle = "Very Conservative"
+                            articlevc.articles = getArticlesOfType("veryConservative")
+                        case conservativeButton:
+                            articlevc.typeOfArticle = "Conservative"
+                            articlevc.articles = getArticlesOfType("conservative")
+                        case neutralButton:
+                            articlevc.typeOfArticle = "Neutral"
+                            articlevc.articles = getArticlesOfType("neutral")
+                        case liberalButton:
+                            articlevc.typeOfArticle = "Liberal"
+                            articlevc.articles = getArticlesOfType("liberal")
+                        case veryLiberalButton:
+                            articlevc.typeOfArticle = "Very Liberal"
+                            articlevc.articles = getArticlesOfType("veryLiberal")
+                        default: break
+                        }
                     }
                 }
+                
             }
         }
     }
-
 }

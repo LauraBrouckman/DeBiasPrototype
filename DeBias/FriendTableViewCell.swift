@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Charts
+//import Charts
 
 class FriendTableViewCell: UITableViewCell {
     
@@ -26,6 +26,7 @@ class FriendTableViewCell: UITableViewCell {
     @IBOutlet weak var pieChartView: PieChartView!
     
     override func awakeFromNib() {
+        updatePieChart()
         super.awakeFromNib()
     }
 
@@ -36,6 +37,7 @@ class FriendTableViewCell: UITableViewCell {
     
     
     func updatePieChart() {
+        articlesRead = [0.0, 0.0, 0.0, 0.0, 0.0]
         let categories = ["Very Conservative", "Conservative", "Neutral", "Liberal", "Very Liberal"]
         if let a = articles {
             for article in a {

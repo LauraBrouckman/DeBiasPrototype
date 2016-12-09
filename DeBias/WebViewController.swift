@@ -30,7 +30,6 @@ class WebViewController: UIViewController, UIWebViewDelegate {
             {
                 let requestObj = NSURLRequest(URL: nsurl)
                 webView.loadRequest(requestObj)
-                print("here")
             }
         }
 

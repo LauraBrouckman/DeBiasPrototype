@@ -20,7 +20,6 @@ class FriendTableViewController: CoreDataTableViewController {
     @IBOutlet weak var diversityButton: UIButton!
     
     @IBAction func sortByDiversity(sender: UIButton) {
-        print("diversity")
         updateUI("diversity")
         sortByNumArticles = false
         self.dropdownView.hidden = true

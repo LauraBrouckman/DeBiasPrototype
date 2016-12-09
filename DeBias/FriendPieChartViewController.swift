@@ -9,7 +9,7 @@
 
 
 import UIKit
-import Charts
+//import Charts
 
 class FriendPieChartViewController: UIViewController
 {
