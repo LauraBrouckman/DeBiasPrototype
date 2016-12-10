@@ -111,6 +111,7 @@ class ArticleTableViewController: CoreDataTableViewController {
             cell.typeExplanation = typeExplanation
             cell.sourceLabel?.text = source
             cell.title = title
+            print(imageFile)
             cell.articlePreviewImage.image = UIImage(named: imageFile!)
             urls[indexPath.row] = url!
         }

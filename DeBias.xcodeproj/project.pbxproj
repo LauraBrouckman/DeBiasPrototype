@@ -159,6 +159,10 @@
 		308204941DD9590A008AD2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308204921DD9590A008AD2C4 /* LaunchScreen.storyboard */; };
 		30C034521DF0FF80006E927A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C034511DF0FF80006E927A /* WebViewController.swift */; };
 		30D61E6B1DFA7A4C00B7C69F /* logo-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 30D61E6A1DFA7A4C00B7C69F /* logo-1.png */; };
+		30D61E6C1DFB555A00B7C69F /* vConsTrumpRomney.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF81DF780D300015A75 /* vConsTrumpRomney.jpg */; };
+		30D61E6D1DFB556D00B7C69F /* consElaineChao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DE71DF780D300015A75 /* consElaineChao.jpg */; };
+		30D61E6F1DFB565800B7C69F /* vConsGore.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF51DF780D300015A75 /* vConsGore.png */; };
+		30D61E711DFB56B800B7C69F /* veryLiberalInda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30D61E6E1DFB55CB00B7C69F /* veryLiberalInda.jpg */; };
 		30E51DE01DF7720500015A75 /* plus-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DDF1DF7720500015A75 /* plus-icon.png */; };
 		30E51DE21DF775A200015A75 /* ArticleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E51DE11DF775A200015A75 /* ArticleInfoViewController.swift */; };
 		30E51DE41DF77B2800015A75 /* example-article.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DE31DF77B2800015A75 /* example-article.jpg */; };
@@ -177,10 +181,8 @@
 		30E51E0A1DF780D300015A75 /* neutralPlane.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF21DF780D300015A75 /* neutralPlane.png */; };
 		30E51E0B1DF780D300015A75 /* neutralTracyMorgan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF31DF780D300015A75 /* neutralTracyMorgan.jpg */; };
 		30E51E0C1DF780D300015A75 /* neutralTrudeau.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF41DF780D300015A75 /* neutralTrudeau.jpeg */; };
-		30E51E0D1DF780D300015A75 /* vConsGore.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF51DF780D300015A75 /* vConsGore.png */; };
 		30E51E0E1DF780D300015A75 /* vConsInfidels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF61DF780D300015A75 /* vConsInfidels.jpg */; };
 		30E51E0F1DF780D300015A75 /* vConsIsis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF71DF780D300015A75 /* vConsIsis.jpg */; };
-		30E51E111DF780D300015A75 /* veryLiberalInda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DF91DF780D300015A75 /* veryLiberalInda.jpg */; };
 		30E51E121DF780D300015A75 /* veryLiberalManipulateTrump.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DFA1DF780D300015A75 /* veryLiberalManipulateTrump.jpg */; };
 		30E51E131DF780D300015A75 /* veryLiberalPentagon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DFB1DF780D300015A75 /* veryLiberalPentagon.jpg */; };
 		30E51E141DF780D300015A75 /* veryLiberalSyria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30E51DFC1DF780D300015A75 /* veryLiberalSyria.jpg */; };
@@ -364,6 +366,7 @@
 		308204951DD9590A008AD2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C034511DF0FF80006E927A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		30D61E6A1DFA7A4C00B7C69F /* logo-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-1.png"; sourceTree = "<group>"; };
+		30D61E6E1DFB55CB00B7C69F /* veryLiberalInda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = veryLiberalInda.jpg; sourceTree = "<group>"; };
 		30E51DDF1DF7720500015A75 /* plus-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-icon.png"; sourceTree = "<group>"; };
 		30E51DE11DF775A200015A75 /* ArticleInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleInfoViewController.swift; sourceTree = "<group>"; };
 		30E51DE31DF77B2800015A75 /* example-article.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "example-article.jpg"; sourceTree = "<group>"; };
@@ -595,6 +598,7 @@
 				30E51E1E1DF7896C00015A75 /* Ron.png */,
 				30E51E1F1DF7896C00015A75 /* Serena.png */,
 				30E51E201DF7896C00015A75 /* Taylor.png */,
+				30D61E6E1DFB55CB00B7C69F /* veryLiberalInda.jpg */,
 				30E51E161DF7894200015A75 /* HarryPotter.png */,
 				305792741DF531D50036495E /* blue-circle.png */,
 				305792751DF531D50036495E /* purple-circle.png */,
@@ -767,6 +771,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D61E711DFB56B800B7C69F /* veryLiberalInda.jpg in Resources */,
+				30D61E6F1DFB565800B7C69F /* vConsGore.png in Resources */,
+				30D61E6D1DFB556D00B7C69F /* consElaineChao.jpg in Resources */,
+				30D61E6C1DFB555A00B7C69F /* vConsTrumpRomney.jpg in Resources */,
 				30E51E2F1DF7A26B00015A75 /* Roboto-Regular.ttf in Resources */,
 				305792651DF52FA20036495E /* gray-circle2.png in Resources */,
 				30E51E021DF780D300015A75 /* consWSJ.jpg in Resources */,
@@ -780,9 +788,7 @@
 				3057927D1DF531D50036495E /* trophy.png in Resources */,
 				308204911DD9590A008AD2C4 /* Assets.xcassets in Resources */,
 				30E51E091DF780D300015A75 /* neutralFlagBurning.jpg in Resources */,
-				30E51E0D1DF780D300015A75 /* vConsGore.png in Resources */,
 				30E51E211DF7896C00015A75 /* Bart.png in Resources */,
-				30E51E0D1DF780D300015A75 /* vConsGore.png in Resources */,
 				30E51E041DF780D300015A75 /* liberalPelosi.jpg in Resources */,
 				30E51E141DF780D300015A75 /* veryLiberalSyria.jpg in Resources */,
 				30E51E0A1DF780D300015A75 /* neutralPlane.png in Resources */,
@@ -800,7 +806,6 @@
 				30E51E0C1DF780D300015A75 /* neutralTrudeau.jpeg in Resources */,
 				305792791DF531D50036495E /* blue-circle.png in Resources */,
 				30E51E131DF780D300015A75 /* veryLiberalPentagon.jpg in Resources */,
-				30E51E111DF780D300015A75 /* veryLiberalInda.jpg in Resources */,
 				9FEB11D61DF7D41F00E32920 /* HarryPotter.png in Resources */,
 				30E51E3B1DF90E7200015A75 /* green-circle.png in Resources */,
 				30E51E2D1DF78F0A00015A75 /* Hermione.png in Resources */,

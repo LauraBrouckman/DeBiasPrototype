@@ -81,7 +81,12 @@ class ProgressBarView: UIView {
     func prepareForEditing(oldProp: Double, newProp: Double){
         let maxBarWidth = CGFloat(315.0)
         // fill with yellow
-        let startShape = UIBezierPath(roundedRect: CGRect(x: bounds.minX + 10, y: bounds.minY + 30, width: maxBarWidth * CGFloat(oldProp), height: 50), cornerRadius: 6).CGPath
+        var oldBarWidth = maxBarWidth * CGFloat(oldProp)
+        if oldBarWidth > maxBarWidth {
+            oldBarWidth = maxBarWidth
+        }
+        
+        let startShape = UIBezierPath(roundedRect: CGRect(x: bounds.minX + 10, y: bounds.minY + 30, width: oldBarWidth, height: 50), cornerRadius: 6).CGPath
 
         shapeLayer.path = startShape
         shapeLayer.fillColor = progressBarColor.CGColor
@@ -89,7 +94,12 @@ class ProgressBarView: UIView {
         // 1
         // begin with a circle with a 50 points radius
         // animation end with a large circle with 500 points radius
-        let endShape = UIBezierPath(roundedRect: CGRect(x: bounds.minX + 10, y: bounds.minY + 30, width: maxBarWidth * CGFloat(newProp), height: 50), cornerRadius: 6).CGPath
+        var newBarWidth = maxBarWidth * CGFloat(newProp)
+        if newBarWidth > maxBarWidth {
+            newBarWidth = maxBarWidth
+        }
+        
+        let endShape = UIBezierPath(roundedRect: CGRect(x: bounds.minX + 10, y: bounds.minY + 30, width: newBarWidth, height: 50), cornerRadius: 6).CGPath
         
         // set initial shape
         shapeLayer.path = startShape
